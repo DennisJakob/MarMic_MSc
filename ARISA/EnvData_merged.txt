@@ -1,0 +1,31 @@
+Sample_ID	Treatment	Replicate	Temperature	Timepoint	Sample	Student_group
+0_fed_1	fed	1	0	t1	Sediment	4
+0_fed_2	fed	2	0	t1	Sediment	4
+0_unfed_1	unfed	1	0	t1	Sediment	4
+0_unfed_2	unfed	2	0	t1	Sediment	4
+18_fed_1	fed	1	18	t1	Sediment	2
+18_fed_2	fed	2	18	t1	Sediment	2
+18_unfed_1	unfed	1	18	t1	Sediment	2
+18_unfed_2	unfed	2	18	t1	Sediment	2
+28_fed_1	fed	1	28	t1	Sediment	3
+28_fed_2	fed	2	28	t1	Sediment	3
+28_unfed_1	unfed	1	28	t1	Sediment	3
+28_unfed_2	unfed	2	28	t1	Sediment	3
+5_fed_1	fed	1	5	t1	Sediment	1
+5_fed_2	fed	2	5	t1	Sediment	1
+5_unfed_1	unfed	1	5	t1	Sediment	1
+5_unfed_2	unfed	2	5	t1	Sediment	1
+Chitin_1,06mg_1	Chitin	1	NA	NA	Chitin	5
+Chitin_1,06mg_2	Chitin	2	NA	NA	Chitin	5
+Chitin_10,6mg_1	Chitin	1	NA	NA	Chitin	5
+Chitin_10,6mg_2	Chitin	2	NA	NA	Chitin	5
+Chitin_106mg_1	Chitin	1	NA	NA	Chitin	5
+Chitin_106mg_2	Chitin	2	NA	NA	Chitin	5
+nc_1	control	NA	NA	NA	NA	NA
+nc_2	control	NA	NA	NA	NA	NA
+nc_3	control	NA	NA	NA	NA	NA
+nc_4	control	NA	NA	NA	NA	NA
+pc_1	control	NA	NA	NA	NA	NA
+pc_2	control	NA	NA	NA	NA	NA
+t0_1	none	1	NA	t0		5
+t0_2	none	2	NA	t0		5

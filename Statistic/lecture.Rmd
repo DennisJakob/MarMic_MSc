@@ -1,0 +1,80 @@
+---
+title: "statistics notebook"
+output: html_notebook
+---
+
+# An ecologically-flavoured introduction to statistics*
+
+## literature
+- Galileo Galilei - Il saggiatore
+- Sally Calrdwell - Statisctics unplugged
+- ??? - Statistics
+- Darrell Huff - How to lie with statistics
+- Shannons theory of information (degree of surprise / contrast)
+
+## static
+$\rightarrow$ numerical value which characterises the sample or population from which it was derived
+$\rightarrow$ statistics in the study of the collection, analysis, interpretation, presentation, and organisation of data
+- *population* (sample set):
+- *sample* (event set): \
+$\rightarrow$ must be representative
+- *in toto*: in totality
+
+
+## statistical estimator
+- $\mu$ is the population *mean*
+- $\overline{x}$ is the sample *mean*
+$\rightarrow$ a sample size of 3 is too small to calculate the mean
+
+## Plan an experiment
+$\rightarrow$ design your experiment with the data analysis in mind
+- minimum number if replicates needed $\rightarrow$ perform a power analysis
+- disentangle the influence of confounding variables
+- determine the statistical analyses that will be used
+- one replicates a treatment/effect on an experimental unit
+- the effect needs to be independet on one experimental unit
+- replicates need to be independet on one another
+
+## data types
+- binary (logical)
+- quantitative (discontinuous)
+- quantitative (continuous)
+- ordinal / ranked
+- categorical / nominal
+
+
+
+## formulas
+*the (arithmetic) mean*
+$\rightarrow$ multiple means! check!
+
+*the median*: $\sigma ^2 = \frac{1}{\overline{x}} \sum $
+
+*the mode*: value that occurs most often (multiple modes possible)
+
+*concept of central moments* / *central limit theorem*
+
+- skewness: 
+- kurtosis
+- range: 
+- population variance: 
+- sample variance
+- standard deviation
+- coefficient of variation
+- probability
+- frequentists
+- baysian
+- p value = probability value
+- Z-score
+
+# data transformations
+
+
+
+
+
+
+
+
+
+
