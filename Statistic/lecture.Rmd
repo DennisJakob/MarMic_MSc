@@ -3,7 +3,7 @@ title: "statistics notebook"
 output: html_notebook
 ---
 
-# An ecologically-flavoured introduction to statistics
+# An ecologically-flavoured introduction to statistics - Day 1
 
 ## Goal
 acquire an intuition about statistical methods: their nature, usage scenarios, and limitations
@@ -19,35 +19,25 @@ acquire an intuition about statistical methods: their nature, usage scenarios, a
 [mathematic symbols](https://www.calvin.edu/~rpruim/courses/s341/S17/from-class/MathinRmd.html)
 [rmarkdown cheatsheet](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
 
+
 ## Definitions
 ### Statistic
 A numerical value which characterises the *sample* or *population* from which it was derived
+$\rightarrow$ statistics is the study of the collection, analysis, interpretation, presentation, and organisation of data
 ### Population (sample set)
 A complete set fo items that share at least one property in common that is the subject of a statistical analysis.
-### Sample
+### Sample (event set)
 A *limited number* of observations systematically or (pseudo)randomly selected from a population, whose analysis may yield generalisations about the source population. $\rightarrow$ must be representative
 ### Statistical estimator
 The estimators estimate a population parameter based on sample data
-$\overline{x}$
 
-
-
-
-$\rightarrow$ statistics in the study of the collection, analysis, interpretation, presentation, and organisation of data
-### 
-
-
-- *sample* (event set): $\rightarrow$ must be representative
-- *in toto*: in totality
-
-
-## statistical estimator
+- $\overline{x}$ estimates $\mu$
 - $\mu$ is the population *mean*
 - $\overline{x}$ is the sample *mean*
-$\rightarrow$ a sample size of 3 is too small to calculate the mean
+- a sample size of 3 is too small to calculate the mean
 
 ## Plan an experiment
-$\rightarrow$ design your experiment with the data analysis in mind
+Design your experiment with the data analysis in mind!
 
 - minimum number if replicates needed $\rightarrow$ perform a power analysis
 - disentangle the influence of confounding variables
@@ -62,43 +52,59 @@ $\rightarrow$ design your experiment with the data analysis in mind
 - quantitative (discontinuous)
 - quantitative (continuous)
 - ordinal / ranked
-- categorical / nominal
+- categorical / nominal (can be transformed with dummy numeric variables)
 
-## formulas
+## Location of data
+### Pythagorean means
+- *the arithmetic mean*: $\overline{x}=\frac{1}{n}\sum_{i=1}^{n} x_{i}$
+$\rightarrow$ often refered to as expected value E(X), where X is a random variable
+- *the geometric mean*: $\sqrt[n]{\prod_{i=1}^{n} x_{i}}$
+- *the harmonic mean*: $\overline{x}=n\sum_{i=1}^{n} \frac{1}{x_{i}}$
+$\rightarrow$ inequality concerning AM, GM, and HM: $AM \ge GM \ge HM$
 
-- *the (arithmetic) mean*: $$\overline{x}=\frac{1}{n}\sum_{i=1}^{n} x_{i}$$
-- *the (geometric) mean*: 
-- *the median*: $\sigma ^2 = \frac{1}{\overline{x}} \sum $
-- *the mode*: value that occurs most often (multiple modes possible)
-- *concept of central moments* / *central limit theorem*: 
+### Statistical location
+- *the median*: order your data and take the middle value
+- *the mode*: most commen value of a data series
+$\rightarrow$ multiple modes possible: unimodal<bimodal<multimodal
+$\rightarrow$ different distributions call for different measures of center! The arithmetic mean is not always valid!
+- *skewness*: measure of symmetry
+$\rightarrow$ negative (left) skewness: the mean of the data values is less than the median
+$\rightarrow$ positive (right) skewness: the mean of the data values is larger than the median
 
-- skewness: 
-- kurtosis
-- range: 
-- population variance: 
-- sample variance
-- standard deviation
-- coefficient of variation
-- probability
-- frequentists
-- baysian
-- p value = probability value
-- Z-score: $\rightarrow$ standardization 
-- EQ: entity qwuality
+## Spread of data
 
-# data transformations
+- *range*: highest - lowest value
+- *sample variance*: $s^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x_{i}-\overline{x})^2$ 
+$\rightarrow$ $s^2 \ge 0$
+$\rightarrow$ $s^2 = 0$ all values are equal
+- *standard deviation*: $s = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n} (x_{i}-\overline{x})^2}$
+$\rightarrow$ standardised form of the variance
+- *coefficient of variation*: $\frac{s}{\overline{x}}$
+$\rightarrow$ used when comparing multiple samples with different means. Standardisation!
+- *concept of central moments*: variance, skewness, and kurtosis are all related through this concept
 
-
-
-- random variable: 
-
-
-
-# day 2
+# An ecologically-flavoured introduction to statistics - Day 2
 
 *The Random Variable*
 $\rightarrow$ a variable whose value varies according to chance
 $\rightarrow$ each value has an assigned probability
+
+## Normal distribution
+
+- $X \sim N(\mu, \sigma)$
+- only controlled by two variables
+- *probability density funciton*: $P(X) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$
+- Even if each sample-derived ramdom variable in a large collection of random variables (from the same population) is non-Gaussian, their means are distributed normally!
+$\rightarrow$ *central limit theorem*
+
+## Data transformation
+
+- $y' = my+b$
+- $y' = \sqrt{y}$
+- $y' = \log{y}$
+- *Z-score*: $Z = \frac{x_{i}-\overline{x}}{S_{x}}$
+$\rightarrow$ standardization! without units!
+$\rightarrow$ Based on the normal distribution, standardises normal data to zero mean and unit variance
 
 ## Various Distributions
 *The Student's t distribution*
