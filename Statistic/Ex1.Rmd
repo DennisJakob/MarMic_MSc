@@ -1,0 +1,179 @@
+---
+title: "Excercise 1"
+author: "Dennis Jakob"
+date: "11/4/2019"
+output: html_document
+---
+
+# Task 1
+Create a vector of *100 numbers* from a normal distribution with $\mu$ = 0 and $\sigma ^2$ = 1. (see ?rnorm). Store this in an object called “myNorm.01.100”.
+
+```{r}
+set.seed(10)
+
+myNorm.01.100 <- rnorm(
+  n = 100,  
+  mean = 0, 
+  sd = 1     
+)
+```
+
+# Task 2
+Calculate the different measures of location and spread. (see?mean).
+
+```{r}
+# calculate mean
+myMean <- mean(myNorm.01.100)
+# calculate median
+myMedian <- median(myNorm.01.100)
+# create mode function
+MyMode <- function (x) {  
+  x.round <- round(x,1)  
+  x.table <- table(x.round) 
+  mode <- x.table[x.table == max(x.table)] 
+  return(mode)
+} 
+# calculate mode
+myMode <- MyMode(myNorm.01.100)
+# calculate variance
+myVar <- var(myNorm.01.100)
+# calculate standard deviation
+mySD <- sd(myNorm.01.100)
+# calculate range
+myRange <- range(myNorm.01.100)
+```
+
+# Task 3
+Plot the 100 observations from tow normal distributions, the first one with $\mu = 5$ and $\sigma ^2 = 3$ and the second with $\mu = 5$ and $\sigma ^2 = 10$ (“myNorm.53.100” and “myNorm.510.100”). What can you say about the difference between the two? (See ?hist)
+
+```{r}
+set.seed(10)
+myNorm.53.100 <- rnorm(100, 5, 3)
+
+set.seed(10)
+myNorm.510.100 <- rnorm(100, 5, 10)
+
+par(mfrow = c(1,2)) 
+hist(myNorm.53.100)
+hist(myNorm.510.100)
+```
+
+# Task 4
+Calculate and plot the z-scores for both normal distributions. Explain your results.
+
+```{r}
+# calculate z-score for myNorm.53.100
+myNorm.53.100.zscore <- (myNorm.53.100 - mean(myNorm.53.100)) / sd(myNorm.53.100)
+scale(myNorm.53.100)
+# calculate z-score for myNorm.510.100
+myNorm.510.100.zscore <- (myNorm.510.100 - mean(myNorm.510.100)) / sd(myNorm.510.100)
+scale(myNorm.510.100)
+
+par(mfrow = c(1,2)) 
+plot(scale(myNorm.53.100))
+plot(scale(myNorm.510.100))
+```
+
+# Task 5
+Load the table "bioenv-1.csv" and histogram columns a, b and c. (see ?read.csv).
+1. Make sure R understands that your data are numeric. (see?class)
+2. Calculate the various measures of location spread discussed in the lecture. What can you say about these distributions?
+3. Transform the non-normal distributions such that they approach normality. Which transformations did you use and why?
+
+```{r}
+# 1.
+bioenv1 <- read.csv(
+  "statsI/bioenv-1.csv",
+  header = T,
+  sep = "\t", 
+  row.names = 1)
+bioenv1 <- bioenv1[bioenv1$a != "no data", ] # subsets dataframe by deleting lines with missing data
+bioenv1$a <- as.integer(bioenv1$a)
+```
+
+```{r}
+# 2.
+bioenv1.analysis <- data.frame()
+for (i in 1:ncol(bioenv1)) {
+  bioenv1.analysis[1,i] <- mean(bioenv1[,i])
+  bioenv1.analysis[2,i] <- median(bioenv1[,i])
+  bioenv1.analysis[3,i] <- MyMode(bioenv1[,i])
+  bioenv1.analysis[4,i] <- var(bioenv1[,i])
+  bioenv1.analysis[5,i] <- sd(bioenv1[,i])
+}
+rownames(bioenv1.analysis) <- (c("mean", "median", "mode", "var", "SD"))
+colnames(bioenv1.analysis) <- colnames(bioenv1)
+
+bioenv1.range <- list()
+for (i in 1:ncol(bioenv1)) {
+  bioenv1.range[[i]] <- range(bioenv1[,i])
+}
+```
+
+```{r}
+# 3.
+
+par(mfrow = c(1,3))
+hist(bioenv1$a)
+hist(sqrt(bioenv1$a))
+hist(log(bioenv1$a)) # brings it closer to normal distribution
+
+par(mfrow = c(1,3))
+qqnorm(bioenv1$a)
+qqline(bioenv1$a)
+qqnorm(sqrt(bioenv1$a), main = "sqrt transform")
+qqline(sqrt(bioenv1$a), main = "log transform")
+qqnorm(log(bioenv1$a + 0.1))
+qqline(log(bioenv1$a + 0.1))
+
+# species "b"
+par(mfrow = c(1,3))
+hist(bioenv1$b)
+hist(sqrt(bioenv1$b))
+hist(log(bioenv1$b)) # brings it closer to normal distribution
+
+par(mfrow = c(1,3))
+qqnorm(bioenv1$b)
+qqline(bioenv1$b)
+qqnorm(sqrt(bioenv1$b), main = "sqrt transform")
+qqline(sqrt(bioenv1$b))
+qqnorm(log(bioenv1$b + 0.1), main = "log transform")
+qqline(log(bioenv1$b + 0.1))
+
+# species "c"
+par(mfrow = c(1,3))
+hist(bioenv1$c)
+hist(sqrt(bioenv1$c))
+hist(log(bioenv1$c)) # brings it closer to normal distribution
+
+par(mfrow = c(1,3))
+qqnorm(bioenv1$c)
+qqline(bioenv1$c)
+qqnorm(sqrt(bioenv1$c), main = "sqrt transform")
+qqline(sqrt(bioenv1$c))
+qqnorm(log(bioenv1$c + 0.1), main = "log transform")
+qqline(log(bioenv1$c + 0.1))
+```
+
+# Task 6
+Calculate the coefficients of variation for your distributions. Can you compare this statistic across samples with different locations and spreads? Why?
+
+```{r}
+for (i in 1:ncol(bioenv1)) {
+  bioenv1.analysis[6,i] <- sd(bioenv1[,i])/mean(bioenv1[,i])
+}
+rownames(bioenv1.analysis) <- paste(c(rownames(bioenv1.analysis[1:(length(rownames(bioenv1.analysis))-1),]), "CV"), sep = "")
+```
+
+# Task 7
+Find out how to calculate the geometric mean in R. Do so for your various distributions.
+
+```{r}
+for (i in 1:ncol(bioenv1)) {
+  bioenv1.analysis[7,i] <- prod(bioenv1[,i] + 1 )^(1/length(bioenv1[,i])) -1
+}
+rownames(bioenv1.analysis) <- paste(c(rownames(bioenv1.analysis[1:(length(rownames(bioenv1.analysis))-1),]), "g.mean"), sep = "")
+```
+
+
+

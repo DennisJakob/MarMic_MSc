@@ -1750,21 +1750,36 @@ summary {
 
 <!-- rnb-text-begin -->
 <div id="an-ecologically-flavoured-introduction-to-statistics" class="section level1">
-<h1>An ecologically-flavoured introduction to statistics*</h1>
+<h1>An ecologically-flavoured introduction to statistics</h1>
+<div id="goal" class="section level2">
+<h2>Goal</h2>
+<p>acquire an intuition about statistical methods: their nature, usage scenarios, and limitations</p>
+</div>
 <div id="literature" class="section level2">
 <h2>literature</h2>
 <ul>
 <li>Galileo Galilei - Il saggiatore</li>
 <li>Sally Calrdwell - Statisctics unplugged</li>
-<li>??? - Statistics</li>
+<li>David Fredman, Robert Pisani, Roger Purves - Statistics</li>
 <li>Darrell Huff - How to lie with statistics</li>
 <li>Shannons theory of information (degree of surprise / contrast)</li>
 </ul>
 </div>
-<div id="static" class="section level2">
-<h2>static</h2>
-<p><span class="math inline">\(\rightarrow\)</span> numerical value which characterises the sample or population from which it was derived <span class="math inline">\(\rightarrow\)</span> statistics in the study of the collection, analysis, interpretation, presentation, and organisation of data - <em>population</em> (sample set): - <em>sample</em> (event set):<br />
-<span class="math inline">\(\rightarrow\)</span> must be representative - <em>in toto</em>: in totality</p>
+<div id="links" class="section level2">
+<h2>Links</h2>
+<p><a href="https://www.calvin.edu/~rpruim/courses/s341/S17/from-class/MathinRmd.html">mathematic symbols</a> <a href="https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">rmarkdown cheatsheet</a></p>
+</div>
+<div id="definitions" class="section level2">
+<h2>Definitions</h2>
+<div id="statistic" class="section level3">
+<h3>Statistic</h3>
+<p>A numerical value which characterises the <em>sample</em> or <em>population</em> from which it was derived ### Population (sample set) A complete set fo items that share at least one property in common that is the subject of a statistical analysis. ### Sample A <em>limited number</em> of observations systematically or (pseudo)randomly selected from a population, whose analysis may yield generalisations about the source population. <span class="math inline">\(\rightarrow\)</span> must be representative ### Statistical estimator The estimators estimate a population parameter based on sample data <span class="math inline">\(\overline{x}\)</span></p>
+<p><span class="math inline">\(\rightarrow\)</span> statistics in the study of the collection, analysis, interpretation, presentation, and organisation of data ###</p>
+<ul>
+<li><em>sample</em> (event set): <span class="math inline">\(\rightarrow\)</span> must be representative</li>
+<li><em>in toto</em>: in totality</li>
+</ul>
+</div>
 </div>
 <div id="statistical-estimator" class="section level2">
 <h2>statistical estimator</h2>
@@ -1775,7 +1790,15 @@ summary {
 </div>
 <div id="plan-an-experiment" class="section level2">
 <h2>Plan an experiment</h2>
-<p><span class="math inline">\(\rightarrow\)</span> design your experiment with the data analysis in mind - minimum number if replicates needed <span class="math inline">\(\rightarrow\)</span> perform a power analysis - disentangle the influence of confounding variables - determine the statistical analyses that will be used - one replicates a treatment/effect on an experimental unit - the effect needs to be independet on one experimental unit - replicates need to be independet on one another</p>
+<p><span class="math inline">\(\rightarrow\)</span> design your experiment with the data analysis in mind</p>
+<ul>
+<li>minimum number if replicates needed <span class="math inline">\(\rightarrow\)</span> perform a power analysis</li>
+<li>disentangle the influence of confounding variables</li>
+<li>determine the statistical analyses that will be used</li>
+<li>one replicates a treatment/effect on an experimental unit</li>
+<li>the effect needs to be independet on one experimental unit</li>
+<li>replicates need to be independet on one another</li>
+</ul>
 </div>
 <div id="data-types" class="section level2">
 <h2>data types</h2>
@@ -1789,11 +1812,12 @@ summary {
 </div>
 <div id="formulas" class="section level2">
 <h2>formulas</h2>
-<p><em>the (arithmetic) mean</em> <span class="math inline">\(\rightarrow\)</span> multiple means! check!</p>
-<p><em>the median</em>: $^2 =  $</p>
-<p><em>the mode</em>: value that occurs most often (multiple modes possible)</p>
-<p><em>concept of central moments</em> / <em>central limit theorem</em></p>
 <ul>
+<li><em>the (arithmetic) mean</em>: <span class="math display">\[\overline{x}=\frac{1}{n}\sum_{i=1}^{n} x_{i}\]</span></li>
+<li><em>the (geometric) mean</em>:</li>
+<li><em>the median</em>: $^2 =  $</li>
+<li><em>the mode</em>: value that occurs most often (multiple modes possible)</li>
+<li><p><em>concept of central moments</em> / <em>central limit theorem</em>:</p></li>
 <li>skewness:</li>
 <li>kurtosis</li>
 <li>range:</li>
@@ -1805,16 +1829,43 @@ summary {
 <li>frequentists</li>
 <li>baysian</li>
 <li>p value = probability value</li>
-<li>Z-score</li>
+<li>Z-score: <span class="math inline">\(\rightarrow\)</span> standardization</li>
+<li><p>EQ: entity qwuality</p></li>
 </ul>
 </div>
 </div>
 <div id="data-transformations" class="section level1">
 <h1>data transformations</h1>
+<ul>
+<li>random variable:</li>
+</ul>
+</div>
+<div id="day-2" class="section level1">
+<h1>day 2</h1>
+<p><em>The Random Variable</em> <span class="math inline">\(\rightarrow\)</span> a variable whose value varies according to chance <span class="math inline">\(\rightarrow\)</span> each value has an assigned probability</p>
+<div id="various-distributions" class="section level2">
+<h2>Various Distributions</h2>
+<p><em>The Student’s t distribution</em></p>
+<p>n = ~ 30 <span class="math inline">\(X \sim f(p_{1} \dots p_{n})\)</span> <span class="math inline">\(X \sim T(\nu)\)</span> <span class="math inline">\(\nu &gt; 0\)</span></p>
+<p><em>The Discrete Random Variable</em> <span class="math inline">\(\rightarrow\)</span> probability mass function</p>
+<p><em>The Binomial Distribution</em> <span class="math inline">\(\rightarrow\)</span> popular discrete variables <span class="math inline">\(\rightarrow\)</span> Bernoulli distribution: yes / no results</p>
+<p>n: number of trials !!! <span class="math inline">\(\rightarrow\)</span> the one complement: q = 1-p</p>
+<p><em>The Poisson Distribution</em> <span class="math inline">\(\rightarrow\)</span> discrete probability mass function</p>
+</div>
+<div id="character" class="section level2">
+<h2>Character</h2>
+<p><em>Covariance</em> <span class="math inline">\(\rightarrow\)</span> how do the variances of two variables relate?</p>
+<p><em>Correlation</em> <span class="math inline">\(\rightarrow\)</span> Pearson’s coefficient: only linear correlation - Cov(X,Y)/sx*sy - cares about values <span class="math inline">\(\rightarrow\)</span> Spearman’s rank coefficient: - gives the data ranks - useful for ordinal data</p>
+<p><em>Linear Regression</em> - y = mx + b - x is the explainatory factor (independent variable) - y is the response (dependent variable) - m is the slope - b is the intercept</p>
+<ul>
+<li>R2: How much covariation does this model explain</li>
+<li>residual: difference between predicted and observed values</li>
+</ul>
 <!-- rnb-text-end -->
 </div>
+</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAic3RhdGlzdGljcyBub3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyBBbiBlY29sb2dpY2FsbHktZmxhdm91cmVkIGludHJvZHVjdGlvbiB0byBzdGF0aXN0aWNzKgoKIyMgbGl0ZXJhdHVyZQotIEdhbGlsZW8gR2FsaWxlaSAtIElsIHNhZ2dpYXRvcmUKLSBTYWxseSBDYWxyZHdlbGwgLSBTdGF0aXNjdGljcyB1bnBsdWdnZWQKLSA/Pz8gLSBTdGF0aXN0aWNzCi0gRGFycmVsbCBIdWZmIC0gSG93IHRvIGxpZSB3aXRoIHN0YXRpc3RpY3MKLSBTaGFubm9ucyB0aGVvcnkgb2YgaW5mb3JtYXRpb24gKGRlZ3JlZSBvZiBzdXJwcmlzZSAvIGNvbnRyYXN0KQoKIyMgc3RhdGljCiRccmlnaHRhcnJvdyQgbnVtZXJpY2FsIHZhbHVlIHdoaWNoIGNoYXJhY3RlcmlzZXMgdGhlIHNhbXBsZSBvciBwb3B1bGF0aW9uIGZyb20gd2hpY2ggaXQgd2FzIGRlcml2ZWQKJFxyaWdodGFycm93JCBzdGF0aXN0aWNzIGluIHRoZSBzdHVkeSBvZiB0aGUgY29sbGVjdGlvbiwgYW5hbHlzaXMsIGludGVycHJldGF0aW9uLCBwcmVzZW50YXRpb24sIGFuZCBvcmdhbmlzYXRpb24gb2YgZGF0YQotICpwb3B1bGF0aW9uKiAoc2FtcGxlIHNldCk6Ci0gKnNhbXBsZSogKGV2ZW50IHNldCk6IFwKJFxyaWdodGFycm93JCBtdXN0IGJlIHJlcHJlc2VudGF0aXZlCi0gKmluIHRvdG8qOiBpbiB0b3RhbGl0eQoKCiMjIHN0YXRpc3RpY2FsIGVzdGltYXRvcgotICRcbXUkIGlzIHRoZSBwb3B1bGF0aW9uICptZWFuKgotICRcb3ZlcmxpbmV7eH0kIGlzIHRoZSBzYW1wbGUgKm1lYW4qCiRccmlnaHRhcnJvdyQgYSBzYW1wbGUgc2l6ZSBvZiAzIGlzIHRvbyBzbWFsbCB0byBjYWxjdWxhdGUgdGhlIG1lYW4KCiMjIFBsYW4gYW4gZXhwZXJpbWVudAokXHJpZ2h0YXJyb3ckIGRlc2lnbiB5b3VyIGV4cGVyaW1lbnQgd2l0aCB0aGUgZGF0YSBhbmFseXNpcyBpbiBtaW5kCi0gbWluaW11bSBudW1iZXIgaWYgcmVwbGljYXRlcyBuZWVkZWQgJFxyaWdodGFycm93JCBwZXJmb3JtIGEgcG93ZXIgYW5hbHlzaXMKLSBkaXNlbnRhbmdsZSB0aGUgaW5mbHVlbmNlIG9mIGNvbmZvdW5kaW5nIHZhcmlhYmxlcwotIGRldGVybWluZSB0aGUgc3RhdGlzdGljYWwgYW5hbHlzZXMgdGhhdCB3aWxsIGJlIHVzZWQKLSBvbmUgcmVwbGljYXRlcyBhIHRyZWF0bWVudC9lZmZlY3Qgb24gYW4gZXhwZXJpbWVudGFsIHVuaXQKLSB0aGUgZWZmZWN0IG5lZWRzIHRvIGJlIGluZGVwZW5kZXQgb24gb25lIGV4cGVyaW1lbnRhbCB1bml0Ci0gcmVwbGljYXRlcyBuZWVkIHRvIGJlIGluZGVwZW5kZXQgb24gb25lIGFub3RoZXIKCiMjIGRhdGEgdHlwZXMKLSBiaW5hcnkgKGxvZ2ljYWwpCi0gcXVhbnRpdGF0aXZlIChkaXNjb250aW51b3VzKQotIHF1YW50aXRhdGl2ZSAoY29udGludW91cykKLSBvcmRpbmFsIC8gcmFua2VkCi0gY2F0ZWdvcmljYWwgLyBub21pbmFsCgoKCiMjIGZvcm11bGFzCip0aGUgKGFyaXRobWV0aWMpIG1lYW4qCiRccmlnaHRhcnJvdyQgbXVsdGlwbGUgbWVhbnMhIGNoZWNrIQoKKnRoZSBtZWRpYW4qOiAkXHNpZ21hIF4yID0gXGZyYWN7MX17XG92ZXJsaW5le3h9fSBcc3VtICQKCip0aGUgbW9kZSo6IHZhbHVlIHRoYXQgb2NjdXJzIG1vc3Qgb2Z0ZW4gKG11bHRpcGxlIG1vZGVzIHBvc3NpYmxlKQoKKmNvbmNlcHQgb2YgY2VudHJhbCBtb21lbnRzKiAvICpjZW50cmFsIGxpbWl0IHRoZW9yZW0qCgotIHNrZXduZXNzOiAKLSBrdXJ0b3NpcwotIHJhbmdlOiAKLSBwb3B1bGF0aW9uIHZhcmlhbmNlOiAKLSBzYW1wbGUgdmFyaWFuY2UKLSBzdGFuZGFyZCBkZXZpYXRpb24KLSBjb2VmZmljaWVudCBvZiB2YXJpYXRpb24KLSBwcm9iYWJpbGl0eQotIGZyZXF1ZW50aXN0cwotIGJheXNpYW4KLSBwIHZhbHVlID0gcHJvYmFiaWxpdHkgdmFsdWUKLSBaLXNjb3JlCgojIGRhdGEgdHJhbnNmb3JtYXRpb25zCgoKCgoKCgoKCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAic3RhdGlzdGljcyBub3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyBBbiBlY29sb2dpY2FsbHktZmxhdm91cmVkIGludHJvZHVjdGlvbiB0byBzdGF0aXN0aWNzCgojIyBHb2FsCmFjcXVpcmUgYW4gaW50dWl0aW9uIGFib3V0IHN0YXRpc3RpY2FsIG1ldGhvZHM6IHRoZWlyIG5hdHVyZSwgdXNhZ2Ugc2NlbmFyaW9zLCBhbmQgbGltaXRhdGlvbnMKCiMjIGxpdGVyYXR1cmUKLSBHYWxpbGVvIEdhbGlsZWkgLSBJbCBzYWdnaWF0b3JlCi0gU2FsbHkgQ2FscmR3ZWxsIC0gU3RhdGlzY3RpY3MgdW5wbHVnZ2VkCi0gRGF2aWQgRnJlZG1hbiwgUm9iZXJ0IFBpc2FuaSwgUm9nZXIgUHVydmVzIC0gU3RhdGlzdGljcwotIERhcnJlbGwgSHVmZiAtIEhvdyB0byBsaWUgd2l0aCBzdGF0aXN0aWNzCi0gU2hhbm5vbnMgdGhlb3J5IG9mIGluZm9ybWF0aW9uIChkZWdyZWUgb2Ygc3VycHJpc2UgLyBjb250cmFzdCkKCiMjIExpbmtzClttYXRoZW1hdGljIHN5bWJvbHNdKGh0dHBzOi8vd3d3LmNhbHZpbi5lZHUvfnJwcnVpbS9jb3Vyc2VzL3MzNDEvUzE3L2Zyb20tY2xhc3MvTWF0aGluUm1kLmh0bWwpCltybWFya2Rvd24gY2hlYXRzaGVldF0oaHR0cHM6Ly9yc3R1ZGlvLmNvbS93cC1jb250ZW50L3VwbG9hZHMvMjAxNS8wMi9ybWFya2Rvd24tY2hlYXRzaGVldC5wZGYpCgojIyBEZWZpbml0aW9ucwojIyMgU3RhdGlzdGljCkEgbnVtZXJpY2FsIHZhbHVlIHdoaWNoIGNoYXJhY3RlcmlzZXMgdGhlICpzYW1wbGUqIG9yICpwb3B1bGF0aW9uKiBmcm9tIHdoaWNoIGl0IHdhcyBkZXJpdmVkCiMjIyBQb3B1bGF0aW9uIChzYW1wbGUgc2V0KQpBIGNvbXBsZXRlIHNldCBmbyBpdGVtcyB0aGF0IHNoYXJlIGF0IGxlYXN0IG9uZSBwcm9wZXJ0eSBpbiBjb21tb24gdGhhdCBpcyB0aGUgc3ViamVjdCBvZiBhIHN0YXRpc3RpY2FsIGFuYWx5c2lzLgojIyMgU2FtcGxlCkEgKmxpbWl0ZWQgbnVtYmVyKiBvZiBvYnNlcnZhdGlvbnMgc3lzdGVtYXRpY2FsbHkgb3IgKHBzZXVkbylyYW5kb21seSBzZWxlY3RlZCBmcm9tIGEgcG9wdWxhdGlvbiwgd2hvc2UgYW5hbHlzaXMgbWF5IHlpZWxkIGdlbmVyYWxpc2F0aW9ucyBhYm91dCB0aGUgc291cmNlIHBvcHVsYXRpb24uICRccmlnaHRhcnJvdyQgbXVzdCBiZSByZXByZXNlbnRhdGl2ZQojIyMgU3RhdGlzdGljYWwgZXN0aW1hdG9yClRoZSBlc3RpbWF0b3JzIGVzdGltYXRlIGEgcG9wdWxhdGlvbiBwYXJhbWV0ZXIgYmFzZWQgb24gc2FtcGxlIGRhdGEKJFxvdmVybGluZXt4fSQKCgoKCiRccmlnaHRhcnJvdyQgc3RhdGlzdGljcyBpbiB0aGUgc3R1ZHkgb2YgdGhlIGNvbGxlY3Rpb24sIGFuYWx5c2lzLCBpbnRlcnByZXRhdGlvbiwgcHJlc2VudGF0aW9uLCBhbmQgb3JnYW5pc2F0aW9uIG9mIGRhdGEKIyMjIAoKCi0gKnNhbXBsZSogKGV2ZW50IHNldCk6ICRccmlnaHRhcnJvdyQgbXVzdCBiZSByZXByZXNlbnRhdGl2ZQotICppbiB0b3RvKjogaW4gdG90YWxpdHkKCgojIyBzdGF0aXN0aWNhbCBlc3RpbWF0b3IKLSAkXG11JCBpcyB0aGUgcG9wdWxhdGlvbiAqbWVhbioKLSAkXG92ZXJsaW5le3h9JCBpcyB0aGUgc2FtcGxlICptZWFuKgokXHJpZ2h0YXJyb3ckIGEgc2FtcGxlIHNpemUgb2YgMyBpcyB0b28gc21hbGwgdG8gY2FsY3VsYXRlIHRoZSBtZWFuCgojIyBQbGFuIGFuIGV4cGVyaW1lbnQKJFxyaWdodGFycm93JCBkZXNpZ24geW91ciBleHBlcmltZW50IHdpdGggdGhlIGRhdGEgYW5hbHlzaXMgaW4gbWluZAoKLSBtaW5pbXVtIG51bWJlciBpZiByZXBsaWNhdGVzIG5lZWRlZCAkXHJpZ2h0YXJyb3ckIHBlcmZvcm0gYSBwb3dlciBhbmFseXNpcwotIGRpc2VudGFuZ2xlIHRoZSBpbmZsdWVuY2Ugb2YgY29uZm91bmRpbmcgdmFyaWFibGVzCi0gZGV0ZXJtaW5lIHRoZSBzdGF0aXN0aWNhbCBhbmFseXNlcyB0aGF0IHdpbGwgYmUgdXNlZAotIG9uZSByZXBsaWNhdGVzIGEgdHJlYXRtZW50L2VmZmVjdCBvbiBhbiBleHBlcmltZW50YWwgdW5pdAotIHRoZSBlZmZlY3QgbmVlZHMgdG8gYmUgaW5kZXBlbmRldCBvbiBvbmUgZXhwZXJpbWVudGFsIHVuaXQKLSByZXBsaWNhdGVzIG5lZWQgdG8gYmUgaW5kZXBlbmRldCBvbiBvbmUgYW5vdGhlcgoKIyMgZGF0YSB0eXBlcwoKLSBiaW5hcnkgKGxvZ2ljYWwpCi0gcXVhbnRpdGF0aXZlIChkaXNjb250aW51b3VzKQotIHF1YW50aXRhdGl2ZSAoY29udGludW91cykKLSBvcmRpbmFsIC8gcmFua2VkCi0gY2F0ZWdvcmljYWwgLyBub21pbmFsCgojIyBmb3JtdWxhcwoKLSAqdGhlIChhcml0aG1ldGljKSBtZWFuKjogJCRcb3ZlcmxpbmV7eH09XGZyYWN7MX17bn1cc3VtX3tpPTF9XntufSB4X3tpfSQkCi0gKnRoZSAoZ2VvbWV0cmljKSBtZWFuKjogCi0gKnRoZSBtZWRpYW4qOiAkXHNpZ21hIF4yID0gXGZyYWN7MX17XG92ZXJsaW5le3h9fSBcc3VtICQKLSAqdGhlIG1vZGUqOiB2YWx1ZSB0aGF0IG9jY3VycyBtb3N0IG9mdGVuIChtdWx0aXBsZSBtb2RlcyBwb3NzaWJsZSkKLSAqY29uY2VwdCBvZiBjZW50cmFsIG1vbWVudHMqIC8gKmNlbnRyYWwgbGltaXQgdGhlb3JlbSo6IAoKLSBza2V3bmVzczogCi0ga3VydG9zaXMKLSByYW5nZTogCi0gcG9wdWxhdGlvbiB2YXJpYW5jZTogCi0gc2FtcGxlIHZhcmlhbmNlCi0gc3RhbmRhcmQgZGV2aWF0aW9uCi0gY29lZmZpY2llbnQgb2YgdmFyaWF0aW9uCi0gcHJvYmFiaWxpdHkKLSBmcmVxdWVudGlzdHMKLSBiYXlzaWFuCi0gcCB2YWx1ZSA9IHByb2JhYmlsaXR5IHZhbHVlCi0gWi1zY29yZTogJFxyaWdodGFycm93JCBzdGFuZGFyZGl6YXRpb24gCi0gRVE6IGVudGl0eSBxd3VhbGl0eQoKIyBkYXRhIHRyYW5zZm9ybWF0aW9ucwoKCgotIHJhbmRvbSB2YXJpYWJsZTogCgoKCiMgZGF5IDIKCipUaGUgUmFuZG9tIFZhcmlhYmxlKgokXHJpZ2h0YXJyb3ckIGEgdmFyaWFibGUgd2hvc2UgdmFsdWUgdmFyaWVzIGFjY29yZGluZyB0byBjaGFuY2UKJFxyaWdodGFycm93JCBlYWNoIHZhbHVlIGhhcyBhbiBhc3NpZ25lZCBwcm9iYWJpbGl0eQoKIyMgVmFyaW91cyBEaXN0cmlidXRpb25zCipUaGUgU3R1ZGVudCdzIHQgZGlzdHJpYnV0aW9uKgoKbiA9IH4gMzAKJFggXHNpbSBmKHBfezF9IFxkb3RzIHBfe259KSQKJFggXHNpbSBUKFxudSkkCiRcbnUgPiAwJAoKKlRoZSBEaXNjcmV0ZSBSYW5kb20gVmFyaWFibGUqCiRccmlnaHRhcnJvdyQgcHJvYmFiaWxpdHkgbWFzcyBmdW5jdGlvbgoKKlRoZSBCaW5vbWlhbCBEaXN0cmlidXRpb24qCiRccmlnaHRhcnJvdyQgcG9wdWxhciBkaXNjcmV0ZSB2YXJpYWJsZXMKJFxyaWdodGFycm93JCBCZXJub3VsbGkgZGlzdHJpYnV0aW9uOiB5ZXMgLyBubyByZXN1bHRzCgpuOiBudW1iZXIgb2YgdHJpYWxzICEhIQokXHJpZ2h0YXJyb3ckIHRoZSBvbmUgY29tcGxlbWVudDogcSA9IDEtcAoKKlRoZSBQb2lzc29uIERpc3RyaWJ1dGlvbiogCiRccmlnaHRhcnJvdyQgZGlzY3JldGUgcHJvYmFiaWxpdHkgbWFzcyBmdW5jdGlvbgoKIyMgQ2hhcmFjdGVyCgoqQ292YXJpYW5jZSoKJFxyaWdodGFycm93JCBob3cgZG8gdGhlIHZhcmlhbmNlcyBvZiB0d28gdmFyaWFibGVzIHJlbGF0ZT8KCipDb3JyZWxhdGlvbioKJFxyaWdodGFycm93JCBQZWFyc29uJ3MgY29lZmZpY2llbnQ6IG9ubHkgbGluZWFyIGNvcnJlbGF0aW9uCi0gQ292KFgsWSkvc3gqc3kKLSBjYXJlcyBhYm91dCB2YWx1ZXMKJFxyaWdodGFycm93JCBTcGVhcm1hbidzIHJhbmsgY29lZmZpY2llbnQ6IAotIGdpdmVzIHRoZSBkYXRhIHJhbmtzCi0gdXNlZnVsIGZvciBvcmRpbmFsIGRhdGEKCipMaW5lYXIgUmVncmVzc2lvbioKLSB5ID0gbXggKyBiCi0geCBpcyB0aGUgZXhwbGFpbmF0b3J5IGZhY3RvciAoaW5kZXBlbmRlbnQgdmFyaWFibGUpCi0geSBpcyB0aGUgcmVzcG9uc2UgKGRlcGVuZGVudCB2YXJpYWJsZSkKLSBtIGlzIHRoZSBzbG9wZQotIGIgaXMgdGhlIGludGVyY2VwdAoKLSBSMjogSG93IG11Y2ggY292YXJpYXRpb24gZG9lcyB0aGlzIG1vZGVsIGV4cGxhaW4KLSByZXNpZHVhbDogZGlmZmVyZW5jZSBiZXR3ZWVuIHByZWRpY3RlZCBhbmQgb2JzZXJ2ZWQgdmFsdWVzCgoKCgoKCg==</div>
 
 
 

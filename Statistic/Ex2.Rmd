@@ -1,0 +1,202 @@
+---
+title: "Excercise 2"
+author: "Dennis Jakob"
+date: "11/5/2019"
+output: html_document
+---
+
+# Task 1
+Plot a normal distribution N(0, 1) and the t-student distributions with 2, 5, 30 and 100 degrees of freedom. What happens when n increases? What parameter of the t distribution does this affect? (see ?seq, ?dnorm and ?plot)
+
+```{r}
+# plot the density function of N(0,1)
+xseq <- seq(-5,5,0.01)
+xdnorm.0.1 <- dnorm(x=xseq,
+                    mean=0,
+                    sd=1) 
+xdt.2 <- dt(xseq,df=2)
+xdt.5 <- dt(xseq,df=5)
+xdt.30 <- dt(xseq,df=30)
+xdt.100 <- dt(xseq,df=100)
+
+# plot the normal distribution
+plot(xseq,
+     xdnorm.0.1,
+     type="l",
+     lwd=2.5)
+# add the density function of T(df), f = 2,5,30,100 in the plot
+points(xseq,xdt.2,col="blue", type="l")
+points(xseq,xdt.5,col="red", type="l")
+points(xseq,xdt.30,col="green", type="l")
+points(xseq,xdt.100,col="orange", type="l")
+```
+The higher the degrees of freedom get, the more does the Student distribution approach a nomal distribution. $\rightarrow$ the number of replicates of trials is increased
+The the probability for the mean increases, the tails get narrower.
+
+# Task 2
+Plot two binomial distributions: B(20,0.5) and B(50,0.3). Can you approximate any of these with a normal distribution? (see ?rbinom)
+
+```{r}
+p = 0.5 # probability of success
+q = 1-p # complement of success
+n = 1000 # number "experiments"
+
+# number of trials = 20
+set.seed(3)
+binom.1K.20.5 <- rbinom(n=n,
+                        size=20,
+                        prob=p)
+hist(binom.1K.20.5,
+     freq=T)
+
+# number of trials = 50
+set.seed(3)
+binom.1K.50.5 <- rbinom(n=n,
+                        size=50,
+                        prob=p)
+hist(binom.1K.50.5,
+     freq=T)
+
+# binom.1K.50.5 will be used for the approximation
+binmo.1K.50.5.mean <- 50*p
+binmo.1K.50.5.sd <- sqrt(50*p*q)
+
+xseq <- seq(0,50,0.1)
+norm.approx <- dnorm(x=xseq,
+                     mean=binmo.1K.50.5.mean,
+                     sd=binmo.1K.50.5.sd)
+
+set.seed(3)
+binom.1K.50.5 <- rbinom(n=n,
+                        size=50,
+                        prob=p)
+hist(binom.1K.50.5,
+     freq=F)
+lines(xseq,
+      norm.approx,
+      col="red")
+```
+
+# Task 3
+Plot a Poisson distribution Pois(12). What does the value of lambda control. How could you approximate it to a normal distribution? (see ?rpois)
+
+```{r}
+# Overlay histograms
+hist(rpois(1000,lambda=12),xlim=c(0,30),ylim=c(0,250),col=rgb(0,0,0.5,0.5))
+hist(rnorm(1000,mean=12,sd=sqrt(12)),add=T,col=rgb(0.5,0,0,0.5))
+```
+Lambda describes the means of the distribution. Means and variance are equal.
+
+# Task 4
+Given X ~ N(0,1), what is the probability of obtaining x from X, such that x > 1.96. Compare this with T(i) for i = 10, 20, 30, 100 and 100000. (see ?pnorm and ?pt)
+
+```{r}
+plot
+pnorm(q=1.96,mean=0,sd=1,lower.tail=F) # 0.0249979
+pt(q=1.96,df=10) # 0.9607819
+pt(q=1.96,df=20) # 0.9679609
+pt(q=1.96,df=30) # 0.9703288
+pt(q=1.96,df=100) # 0.9736105
+pt(q=1.96,df=100000) # 0.9750007
+```
+The probability is lowered in the t-distribution with df = 10.
+For a high df the t-distribution approaches the normal distribution.
+
+# Task 5
+From table bioenv-2, find the covariance and correlation between the species abundance variables and temperature. Are any of these correlations significant? Do this with parametric (pearson) and nonparametric (spearman) methods.
+Follow up by plotting these variables against one another (see ?pairs). What do you observe?
+
+```{r}
+bioenv2 <- read.csv(
+  "statsI/bioenv-2.csv",
+  header = T,
+  sep = ",", 
+  row.names = 1)
+head(bioenv2)
+str(bioenv2)
+
+# species vs temperature
+bioenv2.analysis <- data.frame()
+for (i in 1:(ncol(bioenv2)-1)) {
+  bioenv2.analysis[1,i] <- cov(x = bioenv2[,i],
+                               y = bioenv2$Temperature,
+                               method = "pearson")
+  bioenv2.analysis[2,i] <- cov(x = bioenv2[,i],
+                               y = bioenv2$Temperature,
+                               method = "spearman")
+  bioenv2.analysis[3,i] <- cor(x = bioenv2[,i],
+                               y = bioenv2$Temperature,
+                               method = "pearson")
+  bioenv2.analysis[4,i] <- cor(x = bioenv2[,i],
+                               y = bioenv2$Temperature,
+                               method = "spearman")
+}
+colnames(bioenv2.analysis) <- colnames(bioenv2[,1:4])
+rownames(bioenv2.analysis) <- c("cov.pearson", "cov.spearman", "cor.pearson", "cor.spearman")
+
+# correlation test
+bioenv2.cor.test.pearson <- list()
+bioenv2.cor.test.spearman <- list()
+for (i in 1:(ncol(bioenv2)-1)) {
+  bioenv2.cor.test.pearson[[i]] <- cor.test(x=bioenv2[,i],
+                                            y=bioenv2$Temperature,
+                                            method="pearson")
+  bioenv2.cor.test.spearman[[i]] <- cor.test(x=bioenv2[,i],
+                                             y=bioenv2$Temperature,
+                                             method="spearman")
+}
+
+# plotting variables against each other
+par(mfrow = c(2,2))
+for (i in 1:(ncol(bioenv2)-1)) {
+  plot(bioenv2$Temperature,bioenv2[,i])
+}
+par(mfrow = c(1,1))
+pairs(bioenv2)
+```
+
+# Task 6
+Calculate and plot a linear regression for an appropriate pair of variables in your data table. How much are the explained and residual variability? Are the residuals normally distributed? Perform residual plots.
+
+```{r}
+bioenv2.lm <- list()
+par(mfrow=c(2,2))
+for (i in 1:(ncol(bioenv2)-1)) {
+  bioenv2.lm[[i]] <- lm(bioenv2[,i]~bioenv2$Temperature)
+  plot(bioenv2$Temperature,bioenv2[,i])
+  abline(bioenv2.lm[[i]],lwd=2,col="red")
+}
+# summary(bioenv2.lm[[1]])
+
+# regression is the explained part
+SSreg <- var(bioenv2.lm[[4]]$fitted.values) 
+SStotal <- var(bioenv2$d)
+R2 <- SSreg/SStotal
+# everything that is not explained is residual
+residual <- SStotal - SSreg
+```
+
+# Task 7
+Calculate the total, residual and fitted variability.
+
+```{r}
+bioenv2.variability <- data.frame()
+for (i in 1:(ncol(bioenv2)-1)) {
+  bioenv2.variability[1,i] <- var(residuals(bioenv2.lm[[i]]))
+  bioenv2.variability[2,i] <- var(fitted(bioenv2.lm[[i]]))
+  bioenv2.variability[3,i] <- var(bioenv2[,i])
+  bioenv2.variability[4,i] <- bioenv2.variability[1,i] + bioenv2.variability[2,i]
+  bioenv2.variability[5,i] <- bioenv2.variability[2,i]/(bioenv2.variability[1,i] + bioenv2.variability[2,i])
+}
+colnames(bioenv2.variability) <- colnames(bioenv2[,1:4])
+rownames(bioenv2.variability) <- c("r.variability", "f.variability", "t.variability", "r+f.variability", "f/r+f.variability")
+```
+
+
+
+
+
+
+
+
+

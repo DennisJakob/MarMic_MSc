@@ -3,21 +3,41 @@ title: "statistics notebook"
 output: html_notebook
 ---
 
-# An ecologically-flavoured introduction to statistics*
+# An ecologically-flavoured introduction to statistics
+
+## Goal
+acquire an intuition about statistical methods: their nature, usage scenarios, and limitations
 
 ## literature
 - Galileo Galilei - Il saggiatore
 - Sally Calrdwell - Statisctics unplugged
-- ??? - Statistics
+- David Fredman, Robert Pisani, Roger Purves - Statistics
 - Darrell Huff - How to lie with statistics
 - Shannons theory of information (degree of surprise / contrast)
 
-## static
-$\rightarrow$ numerical value which characterises the sample or population from which it was derived
+## Links
+[mathematic symbols](https://www.calvin.edu/~rpruim/courses/s341/S17/from-class/MathinRmd.html)
+[rmarkdown cheatsheet](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+
+## Definitions
+### Statistic
+A numerical value which characterises the *sample* or *population* from which it was derived
+### Population (sample set)
+A complete set fo items that share at least one property in common that is the subject of a statistical analysis.
+### Sample
+A *limited number* of observations systematically or (pseudo)randomly selected from a population, whose analysis may yield generalisations about the source population. $\rightarrow$ must be representative
+### Statistical estimator
+The estimators estimate a population parameter based on sample data
+$\overline{x}$
+
+
+
+
 $\rightarrow$ statistics in the study of the collection, analysis, interpretation, presentation, and organisation of data
-- *population* (sample set):
-- *sample* (event set): \
-$\rightarrow$ must be representative
+### 
+
+
+- *sample* (event set): $\rightarrow$ must be representative
 - *in toto*: in totality
 
 
@@ -28,6 +48,7 @@ $\rightarrow$ a sample size of 3 is too small to calculate the mean
 
 ## Plan an experiment
 $\rightarrow$ design your experiment with the data analysis in mind
+
 - minimum number if replicates needed $\rightarrow$ perform a power analysis
 - disentangle the influence of confounding variables
 - determine the statistical analyses that will be used
@@ -36,23 +57,20 @@ $\rightarrow$ design your experiment with the data analysis in mind
 - replicates need to be independet on one another
 
 ## data types
+
 - binary (logical)
 - quantitative (discontinuous)
 - quantitative (continuous)
 - ordinal / ranked
 - categorical / nominal
 
-
-
 ## formulas
-*the (arithmetic) mean*
-$\rightarrow$ multiple means! check!
 
-*the median*: $\sigma ^2 = \frac{1}{\overline{x}} \sum $
-
-*the mode*: value that occurs most often (multiple modes possible)
-
-*concept of central moments* / *central limit theorem*
+- *the (arithmetic) mean*: $$\overline{x}=\frac{1}{n}\sum_{i=1}^{n} x_{i}$$
+- *the (geometric) mean*: 
+- *the median*: $\sigma ^2 = \frac{1}{\overline{x}} \sum $
+- *the mode*: value that occurs most often (multiple modes possible)
+- *concept of central moments* / *central limit theorem*: 
 
 - skewness: 
 - kurtosis
@@ -65,13 +83,66 @@ $\rightarrow$ multiple means! check!
 - frequentists
 - baysian
 - p value = probability value
-- Z-score
+- Z-score: $\rightarrow$ standardization 
+- EQ: entity qwuality
 
 # data transformations
 
 
 
+- random variable: 
 
+
+
+# day 2
+
+*The Random Variable*
+$\rightarrow$ a variable whose value varies according to chance
+$\rightarrow$ each value has an assigned probability
+
+## Various Distributions
+*The Student's t distribution*
+
+n = ~ 30
+$X \sim f(p_{1} \dots p_{n})$
+$X \sim T(\nu)$
+$\nu > 0$
+
+*The Discrete Random Variable*
+$\rightarrow$ probability mass function
+
+*The Binomial Distribution*
+$\rightarrow$ popular discrete variables
+$\rightarrow$ Bernoulli distribution: yes / no results
+
+n: number of trials !!!
+$\rightarrow$ the one complement: q = 1-p
+
+*The Poisson Distribution* 
+$\rightarrow$ discrete probability mass function
+
+## Character
+
+*Covariance*
+$\rightarrow$ how do the variances of two variables relate?
+
+*Correlation*
+$\rightarrow$ Pearson's coefficient: only linear correlation
+- Cov(X,Y)/sx*sy
+- cares about values
+$\rightarrow$ Spearman's rank coefficient: 
+- gives the data ranks
+- useful for ordinal data
+
+*Linear Regression*
+- y = mx + b
+- x is the explainatory factor (independent variable)
+- y is the response (dependent variable)
+- m is the slope
+- b is the intercept
+
+- R2: How much covariation does this model explain
+- residual: difference between predicted and observed values
 
 
 
