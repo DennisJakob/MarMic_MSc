@@ -16,9 +16,10 @@ acquire an intuition about statistical methods: their nature, usage scenarios, a
 - Shannons theory of information (degree of surprise / contrast)
 
 ## Links
-[mathematic symbols](https://www.calvin.edu/~rpruim/courses/s341/S17/from-class/MathinRmd.html)
-[rmarkdown cheatsheet](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
 
+- [mathematic symbols 1](https://www.calvin.edu/~rpruim/courses/s341/S17/from-class/MathinRmd.html)
+- [mathematic symbols 2](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
+- [rmarkdown cheatsheet](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
 
 ## Definitions
 ### Statistic
@@ -85,9 +86,12 @@ $\rightarrow$ used when comparing multiple samples with different means. Standar
 
 # An ecologically-flavoured introduction to statistics - Day 2
 
-*The Random Variable*
-$\rightarrow$ a variable whose value varies according to chance
-$\rightarrow$ each value has an assigned probability
+## The Random Variable
+
+- $X \sim f(p_{1} \dots p_{n})$
+- $(x_{i} \dots x_{n}) \in X$
+- a variable whose value varies according to chance
+- each value has an assigned probability
 
 ## Normal distribution
 
@@ -107,24 +111,44 @@ $\rightarrow$ standardization! without units!
 $\rightarrow$ Based on the normal distribution, standardises normal data to zero mean and unit variance
 
 ## Various Distributions
-*The Student's t distribution*
 
-n = ~ 30
-$X \sim f(p_{1} \dots p_{n})$
-$X \sim T(\nu)$
-$\nu > 0$
+### The Student's t distribution
+The result of trying to estimate the mean of a normally distributed population when *n is small and $\sigma$ is unknown*
 
-*The Discrete Random Variable*
-$\rightarrow$ probability mass function
+- n = ~ 30
+- $X \sim f(p_{1} \dots p_{n})$
+- $X \sim T(\nu)$
+- $\nu > 0$: the degrees of freedom
 
-*The Binomial Distribution*
-$\rightarrow$ popular discrete variables
-$\rightarrow$ Bernoulli distribution: yes / no results
+### Degrees of freedom
+The number of independent units of information used in the estimation of a parameter or calculation of a statistic ~ the numer of values that are 'free to vary' in this process.
+n values have n degrees of freedom until something (e.g. a mean) is estimated - this consumes a degree of freedom $\rightarrow$ this does not apply to non-parametric tests (e.g. spearman correlation coefficient) because the tests use ranks.
 
-n: number of trials !!!
-$\rightarrow$ the one complement: q = 1-p
+### The Discrete Random Variable
+A variable whose value, *which is always an integer*, varies according to 'chance'. Each possible value has a probability assigned to it.
 
-*The Poisson Distribution* 
+- probability mass function for a discrete variable
+- assigns a probability to a discrete outcome
+- $\overline{x} \rightarrow \mu_{x} = \sum_{i=1}^N p_{i} x_{i}$
+- $s^2 \rightarrow \sigma_{x}^2 = \sum_{i=1}^N p_{i}(x_{i}-\mu_{x})^2$
+
+### The Binomial Distribution
+The discrete probability distribution of the number of successes in n, independent yes/no experiments. Each trial is associated with a probability of success p, and a probability of failure q (complement), where $q = 1 -p$ (One of the popular discrete variables)
+
+- $X \sim B(n,p)$
+- $n \in N$: number of trials $\rightarrow$ not the number of samples from a B(n,p) distribution, but trials within the distribution
+- $p \in [0,1]$: failure, success
+- the number of successes k, after n independet trials is given by: $P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}$ $\rightarrow$ 
+- Bernoulli distribution: yes / no results
+
+### The Poisson Distribution
+Associated with rare events $\rightarrow$ probability of k events happening in a given time period or in a given spatial range where $\lambda$ is the expected number of events (known or estimated)
+$\rightarrow$ $\approx B(n,p)$ with large n and small p
+
+- $X \sim Pois(\lambda)$
+- $\lambda > 0$: equivalent to E(X) and Var(X)
+- for $k \in \{1,2,\dots,n\}$, the probability mass funtion of X is: $P(X=k)=\frac{\lambda^ke^{-\lambda}}{k!}$
+
 $\rightarrow$ discrete probability mass function
 
 ## Character
@@ -150,7 +174,7 @@ $\rightarrow$ Spearman's rank coefficient:
 - R2: How much covariation does this model explain
 - residual: difference between predicted and observed values
 
-
+# An ecologically-flavoured introduction to statistics - Day 3
 
 
 
