@@ -132,6 +132,8 @@ A variable whose value, *which is always an integer*, varies according to 'chanc
 - $\overline{x} \rightarrow \mu_{x} = \sum_{i=1}^N p_{i} x_{i}$
 - $s^2 \rightarrow \sigma_{x}^2 = \sum_{i=1}^N p_{i}(x_{i}-\mu_{x})^2$
 
+![](media/random_variable.jpg)
+
 ### The Binomial Distribution
 The discrete probability distribution of the number of successes in n, independent yes/no experiments. Each trial is associated with a probability of success p, and a probability of failure q (complement), where $q = 1 -p$ (One of the popular discrete variables)
 
@@ -174,7 +176,65 @@ $\rightarrow$ Spearman's rank coefficient:
 - R2: How much covariation does this model explain
 - residual: difference between predicted and observed values
 
+- the model transforms the x variable to an approximation of y
+
 # An ecologically-flavoured introduction to statistics - Day 3
+
+## $H_{0}$: The null hypothesis
+Good experimentalists attempt to falsify hypotheses
+
+## Hypothesis testing
+### General procedure
+
+- clearly state $H_{0}, H_{A}, \alpha$ and n
+- generate the null distribution
+- collect data
+-
+-
+
+### What is a statistically 'significant' result?
+If we assume a certain sampling distribution holds for a given statistic, then we can predict how it 'should' ...
+
+### The logic of the P value
+
+### Confidence interval
+
+### The one-sample t-test
+
+### The two-sample t-test
+- insterested in the location
+
+### Z-test
+- squares missing
+
+### F-test
+- interested in the shape
+
+### Analysis of Variance (ANOVA)
+- homoscedasticity
+- heteroscedasticity: the variance increases with the x variable
+- SSbetween --> fit
+- SSwithin --> error
+
+### The $\chi^2$
+
+### Fisher's exact test
+
+## Non-parametric tests
+- more robust
+
+## Resampling
+
+### Jackknifing
+
+### Bootstrapping
+
+### Permutation
+- within rows
+- of rows
+- within columns
+- of columns
+
 
 
 
