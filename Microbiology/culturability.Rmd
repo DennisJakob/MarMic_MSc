@@ -238,13 +238,13 @@ boat_cfu <- rbind(boat_16["cfu/ml seawater",], boat_8["cfu/ml seawater",], boat_
 ```
 
 ```{r}
-cfu_total_rel <- rbind(yardslip_cfu, tab_cfu, boat_cfu)
-rownames(cfu_total_rel) <- seq(1,12,1)
+cfu_total_abs <- rbind(yardslip_cfu, tab_cfu, boat_cfu)
+rownames(cfu_total_abs) <- seq(1,12,1)
 
-cfu_total_abs <- cbind(cfu_total_rel[,1:2],cfu_total_rel[,3:18]*100/10^6)
+cfu_total_rel <- cbind(cfu_total_abs[,1:2],cfu_total_abs[,3:18]*100/10^6)
 
 
-write.table(cfu_total_rel, "culturability_rel.txt", sep = "\t")
 write.table(cfu_total_abs, "culturability_abs.txt", sep = "\t")
+write.table(cfu_total_rel, "culturability_rel.txt", sep = "\t")
 ```
 
