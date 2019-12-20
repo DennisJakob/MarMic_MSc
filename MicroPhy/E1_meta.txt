@@ -1,0 +1,5 @@
+sample	experiment	organism	c(acceptor) [mM]	acceptor	c(donor) [mM]	donor
+DL1	1	R45364	20	NH4	0,00125	methane
+DL2	1	R45364	20	NH4	0,00125	methane
+DL3	1	R45364	20	NH4	0,00125	methane
+DL4	1	R45364	20	NH4	0,00125	methane
