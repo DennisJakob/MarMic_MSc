@@ -1,5 +1,4 @@
 require("tidyverse")
-
 # script for analysis of colorimetric data 
 # marmic practical - microbial physiology - experiment 2
 
@@ -24,11 +23,6 @@ ammonium_mean$OD <- ammonium_mean$OD-NH4_blanc # substract blanc
 ammonium_conc <- as.data.frame(ammonium_mean$sample) # create dataframe for ammonium concentrations in samples
 ammonium_conc[,2] <- ammonium_mean$OD/NH4_coef # calculate concentration
 colnames(ammonium_conc) <- c("sample", "concentration")
-
-#data <- merge(x = meta_sub, y = ammonium_conc, by = "sample")
-#colnames(data)[10] <- "c(NH4+)"
-#rownames(data) <- seq(1,64,1)
-#plot(data[c(1,2,17,18,33,34,49,50),2], data[c(1,2,17,18,33,34,49,50),10])
 
 # nitrite
 nitrite_mean <- as.data.frame(nitrite_1$sample)
@@ -58,7 +52,31 @@ colnames(nitrate_conc) <- c("sample", "concentration")
 conc <- cbind(ammonium_conc, nitrite_conc$concentration, nitrate_conc$concentration) # combine calculated concentrations
 colnames(conc) <- c("sample", "c(NH4+)", "c(NO2-)", "c(NO3-)")
 data <- merge(x = meta_sub, y = conc, by = "sample") # merge with meta data
-data[,13:15] <- data[,10:12]*data$dilution.factor
-colnames(data)[13:15] <- c("c(NH4+) sample", "c(NO2-) sample", "c(NO3-) sample")
+data[,14:16] <- data[,11:13]*data$dilution.factor
+colnames(data)[14:16] <- c("c(NH4+) sample", "c(NO2-) sample", "c(NO3-) sample")
 
 write.table(data, "E2_results.txt", sep = "\t", row.names=F) # export table as tab separated file
+
+
+#============ in progress =============
+
+# plots
+data_sort <- data[order(data$origin),]
+ggplot(data=data_sort[1:8,]) + 
+  geom_point(aes(x=data_sort$time..min.[1:8],y=data_sort$`c(NH4+) sample`[1:8],colour="red"),
+             size=3) +
+  geom_point(aes(x=data_sort$time..min.[1:8],y=data_sort$`c(NO2-) sample`[1:8],colour="blue"),
+             size=3) +
+  geom_point(aes(x=data_sort$time..min.[1:8],y=data_sort$`c(NO3-) sample`[1:8],colour="green"),
+             size=3) +
+  scale_fill_hue(name = "N species", labels = c("NH4+", "NO2-", "NO3-")) +
+  theme_bw()
+
+
+
+png("nmds_controls.png")
+
+dev.off()
+
+
+

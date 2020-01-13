@@ -181,33 +181,118 @@ $\rightarrow$ Spearman's rank coefficient:
 # An ecologically-flavoured introduction to statistics - Day 3
 
 ## $H_{0}$: The null hypothesis
-Good experimentalists attempt to falsify hypotheses
+
+- Good experimentalists attempt to falsify hypotheses, *not* to confirm them (e.g. confirm $H_{0}$, that there is no effect present)
+- [Journal of Articles in Support of the Null Hypothesis](https://www.jasnh.com)
+
+Example with background distribution (N, $\sigma$)
+- $H_{0}:E(activity)=\mu$ and $H_{A}:E(activity)<\mu$ 
+- $H_{0}:E(activity)=\mu$ and $H_{A}:E(activity)>\mu$
+- $H_{0}:E(activity)=\mu$ and $H_{A}:E(activity)\neq\mu$
 
 ## Hypothesis testing
+
+![](media/hypothesis_testing.png)
+$\rightarrow$ the goal of a good experiment is to minimise both Type I and Type II errors
+
 ### General procedure
 
 - clearly state $H_{0}, H_{A}, \alpha$ and n
 - generate the null distribution
-- collect data
--
--
+- collect data and calculate the test statistic
+- locate where the statistic is in the null distribution
+- draw conclusion
 
 ### What is a statistically 'significant' result?
-If we assume a certain sampling distribution holds for a given statistic, then we can predict how it 'should' ...
+If we assume a certain sampling distribution holds for a given statistic, then we can predict how it 'should' behave and react when there's a strong deviation from that expectation.
 
 ### The logic of the P value
+A P value reflects the probability that $H_{0}$ is true. If it is small (e.g. < 0.05) we can reject $H_{0}$.
+It is the probability that one would obtain a test statistic at least as exrtreme as the one observed by chance alone, given $H_{0}$ is true.
+
+- P values have nothing to do with the effect size
+- a large P value doesn't mean that the effect size is not there
+- most of the time it's more a question of experimental or sampling design (i.e. low n)
+- the interpretation of P values is more involved than noted here! Most researchers use them incorrectly, giving them for too much weight
+- low P values do not mean that you will automatically be able to replicate your result or generalise your interpretation
+- be careful with overreplication
+- [Regina Nuzzo - Statistical Errors](https://www.nature.com/articles/506150a)
 
 ### Confidence interval
+- Often prefered by journals instead of p values
+- I can make statements based on my datas variations and the stability of the number of replicates I have, about how likely it is / in which range I would expect the true population parameter (the mean standard deviation) to fall into
+- It's more than giving a location of a sample mean I am providing an interval where the sample statistic can catch
+- If the population parameter is not in the confidence interval calculated from the observed data, then the data is considered as odd
+- confidence level
+- [Understanding Confidence Intervals: Statistics Help](https://www.youtube.com/watch?v=tFWsuO9f74o)
+- $\overline{x} \pm (z {\frac{\sigma}{\sqrt{n}}})$
+- $\rightarrow$ sample mean plusminus the z score times the standard error (variance divided by square root of number of samples) 
+- sample mean from normally distributed data will itself be normally distributed (with $\mu$ and standard error ($\frac{\sigma}{\sqrt{n}})$)
+- Z scores have a cumulative normal distribution (kind of the factor of sigma for a desired confidence)
+
+- confidence intervals refer to the reliability of an estimation based on some data, not the probability of the parameter actually falling into the interval (the population parameter doesn't change!)
+- confidence intervals do not predict where most of your data fall
+- like P values, there is no guarantee that the confidence interval will hold in an independent experiment
+
+## statistical tests
+
+![](media/tests_overview.png)
+
+- most test rely on *independet* populations (difference between sample means)
+- some other test rely on *related* populations
+
+### t-test
+
+- independent, random samples
+- normally distributions
+- populations variances are unknown but are assumed to be equal
+- students t distribution (for small n)
+- Z-test for normal distributions (for large n)
+- t-test can be used for large n but behaves like the Z test $\rightarrow$ that is why people only talk about the t-test 
 
 ### The one-sample t-test
 
+- compare some E(X) to some known value with a known distribution
+- usually this value is a mean belonging to a normal distribution
+- $H_{0}$: no significant differance between $\mu$ and x
+- $H_{A}$: significant difference beween $\mu$ and x
+- test statistic is t-statistic
+- $t_{obs}=\frac{\overline{X}-\mu}{\frac{s}{\sqrt{n}}}$
+- $t_{obs}>t_{n-1,\alpha}$ then we reject $H_{0}$
+- $t_{obs}\leq t_{n-1,\alpha}$ then we accept $H_{0}$ (or *not requect* it)
+- $t_{n-1,\alpha} \rightarrow$ is the critical value
+
 ### The two-sample t-test
+
 - insterested in the location
+- similar to one-sided t-test
+- covariance instead of variance
+- instead of substracting the mean from a given mean we substract the mean of the distribution from the mean of another distribution 
+- $t_{obs}=\frac{\overline{X}-\overline{Y}}{\sqrt{\frac{s_{x}^{2}}{n_{x}^{2}}+\frac{s_{y}^{2}}{n_{y}^{2}}}}$
+- $t_{obs}>t_{n-2,\alpha}$ then we reject $H_{0}$
+- $t_{obs}\leq t_{n-2,\alpha}$ then we accept $H_{0}$ (or *not requect* it)
+- $t_{n-2,\alpha} \rightarrow$ is the critical value
 
 ### Z-test
+
+- kind of the 
 - squares missing
+- $z=\frac{\overline{x}-\mu}{\frac{\sigma_{x}}{\sqrt{n}}}$
+- $z_{obs}>z_{\alpha}$ then we reject $H_{0}$
+- $z_{obs}\leq z_{\alpha}$ then we accept $H_{0}$ (or *not requect* it)
+- $z_{\alpha} \rightarrow$ is the critical value
 
 ### F-test
+
+[](https://www.youtube.com/watch?v=5IlnXyGIEPI&feature=youtu.be)
+--> 50:41 min
+
+
+
+
+
+
+
 - interested in the shape
 
 ### Analysis of Variance (ANOVA)

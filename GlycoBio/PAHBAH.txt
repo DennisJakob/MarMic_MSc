@@ -1,0 +1,38 @@
+Time	Sample	Concentration	Assay	Result
+20:52	blank			0,000
+20:52	S	0	Laminarin	0,091
+20:53	S	0.125	Laminarin	0,657
+20:53	S	0.25	Laminarin	1,198
+20:53	S	0.5	Laminarin	2,428
+20:54	S	1	Laminarin	4,922
+20:54	S	2	Laminarin	9,313
+20:54	S	4	Laminarin	14,652
+20:54	O. t.	1	Laminarin	0,145
+20:54	O. t.	2	Laminarin	0,164
+20:55	O. t.	3	Laminarin	0,175
+20:55	O. t.	4	Laminarin	0,162
+20:55	O. t.	5	Laminarin	0,151
+20:55	O. t.	6	Laminarin	0,145
+20:55	Tn	1	Laminarin	3,875
+20:56	Tn	2	Laminarin	5,052
+20:56	Tn	3	Laminarin	4,884
+20:56	Tn	4	Laminarin	2,638
+20:56	Tn	5	Laminarin	3,269
+20:56	Tn	6	Laminarin	3,276
+20:56	S	0	Starch	0,059
+20:57	S	0.125	Starch	0,747
+20:57	S	0.25	Starch	1,261
+20:57	S	0.5	Starch	2,409
+20:59	S	1	Starch	9,499
+20:59	S	2	Starch	2,915
+20:59	O. t.	1	Starch	0,541
+20:59	O. t.	2	Starch	0,507
+20:59	O. t.	3	Starch	0,543
+21:00	O. t.	4	Starch	0,104
+21:00	O. t.	5	Starch	0,089
+21:00	O. t.	6	Starch	0,096
+21:00	Tn	1	Starch	0,632
+21:00	Tn	2	Starch	0,668
+21:00	Tn	3	Starch	0,629
+21:00	Tn	4	Starch	0,628
+21:01	Tn	5	Starch	0,683

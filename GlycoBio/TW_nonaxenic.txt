@@ -1,0 +1,16 @@
+No. 	Peak Name	Retention Time	Area 	Height 	Relative Area 	Relative Height 	Amount 
+		min	nC*min	nC	%	%	
+ED_1	ED_1	ED_1	ED_1	ED_1	ED_1	ED_1	ED_1
+1  		2,217	0,240	4,821	5,49	8,02	n.a.
+2  		2,283	0,274	5,370	6,26	8,93	n.a.
+3  	Glucose	2,367	0,529	11,983	12,07	19,92	n.a.
+4  		3,567	2,182	13,185	49,82	21,92	n.a.
+n.a.	Laminaribiose	n.a.	n.a.	n.a.	n.a.	n.a.	n.a.
+5  	Agar DP4	4,550	0,323	5,755	7,37	9,57	n.a.
+6  	Laminaritriose	4,683	0,729	16,558	16,64	27,53	n.a.
+7  	Agar DP6	5,033	0,103	2,470	2,35	4,11	n.a.
+n.a.	Laminaritetraose	n.a.	n.a.	n.a.	n.a.	n.a.	n.a.
+n.a.	Laminaripentaose	n.a.	n.a.	n.a.	n.a.	n.a.	n.a.
+n.a.	Laminarihexaose	n.a.	n.a.	n.a.	n.a.	n.a.	n.a.
+Total:			4,380 	60,142 	100,00 	100,00 	0,000 
+							
