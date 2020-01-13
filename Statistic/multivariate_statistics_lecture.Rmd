@@ -1,0 +1,73 @@
+---
+title: "multivariate statistics"
+output: html_notebook
+---
+# Lecture 1
+
+# introduction
+
+[GUSTA ME](https://mb3is.megx.net/gustame)
+
+normal distribution is 
+
+$$\alpha = 0.05 \rightarrow 5\%$$ chance of FP type I error
+$$1-(1-\alpha)^n$$ is still $\alpha$ for n=1 but gets higher for more n>1
+
+multiple testing problem
+
+hypercube
+
+## aims
+
+### sorting and grouping
+
+nmds
+- multidimentional space put into two dimensions
+
+dendrogram
+- hierachical cluster analysis
+
+### investigation of dependence (co-variation, dependence)
+
+dependence analysis $\rightarrow$ regression
+
+- two dimensions --> line
+- three dimensions --> plane
+- four dimensions --> volume
+
+anosim (is similar to anova)
+
+to explain a dependence we build a model (RDA, etc.)
+
+### investigation of correlation
+sample matrix --> correlation matrix
+drop variables with low variance
+
+## Dissimilarity
+everything is dissimilarity, distance is only a subset
+
+dissimilarity matrix
+--> dissimilarity value for each pair of samples
+
+similarty coefficient
+- simple matching (example of a symmetrical coefficient --> 1,1 0,0)
+-- $$\frac{a+d}{a+b+c+d}$$
+
+- jaccard coefficient
+-- $$\frac{a}{a+b+c}$$
+
+# Euclidean space
+euclidean distance between two points in two dimensional space is a line
+often we need non euclidean measures to explain ecological problems
+
+# Bray-Curtis dissimilarity
+
+$$D_{eucledian}=\sqrt{(\sum{y_{1,j}-y_{1,j}})^2}$$
+$$D_{Bray-Curtis}=\frac{\sum_{lower}^{upper}}{}$$
+
+
+
+
+
+
+
