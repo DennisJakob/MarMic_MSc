@@ -6,6 +6,16 @@ output: html_notebook
 
 # introduction
 
+Q: What does the zero say to the eight? 
+A: Nice belt!
+
+What is the difference between logic and statistic? 
+Logic is a systematic method for getting the wrong conclusion with confidence.
+Statistics is a systematic method for getting the wrong conclusion with 95% confidence.
+
+
+
+
 [GUSTA ME](https://mb3is.megx.net/gustame)
 
 normal distribution is 
@@ -63,7 +73,42 @@ often we need non euclidean measures to explain ecological problems
 # Bray-Curtis dissimilarity
 
 $$D_{eucledian}=\sqrt{(\sum{y_{1,j}-y_{1,j}})^2}$$
-$$D_{Bray-Curtis}=\frac{\sum_{lower}^{upper}}{}$$
+$$D_{Bray-Curtis}=\frac{\sum_{j=1}^{p}y_{1,j}-y_{2,j}{\sum_{j=1}^{p}(y_{1,j}-y_{2,j})}$$
+
+
+
+
+# PCA
+
+first PCA is the axis that separates the data points the most
+
+pca builds PCs with a combination of linear regressions from the variable
+
+- standardize
+- build PCs
+- sort PCs 
+- plot 
+
+SVD singular value decomposition
+
+# coenospace
+- PCA - principal component analysis
+- CA - correspondance analysis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

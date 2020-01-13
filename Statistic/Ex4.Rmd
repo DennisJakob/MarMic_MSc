@@ -1,0 +1,94 @@
+---
+title: "Ex4"
+author: "Dennis Jakob"
+date: "1/13/2020"
+output: html_document
+---
+```{r}
+require(vegan)
+require(corrgram)
+require(viridis)
+data("varespec")
+```
+
+
+1) Analyze the distribution and correlation of the variables of the varespec dataset 
+1.1) What is in varespec?
+```{r}
+# inspect data
+?varespec
+dim(varespec)
+str(varespec)
+
+# check data wirh correlelogram
+corrgram(varespec,
+         lower.panel = panel.shade,
+         upper.panel = NULL,
+         text.panel = panel.txt,
+         col.regions = viridis)
+```
+
+2) Perform a PCA with this data
+```{r}
+# base R
+varspec.pca <- prcomp(varespec,
+                      scale. = T)
+biplot(varspec.pca)
+
+# vegan rda (redundancy analysis)
+varespec.rda <- rda(varespec)
+varespec.rda.scale <- rda(varespec,
+                          scale = T)
+```
+
+3) Plot the objects and variables in the first and second PCs, and in second and third PC 
+3.1) What information is inside your PCA object?
+```{r}
+# PC1 and PC2
+biplot(varespec.rda,
+       choices = c(1,2),
+       scaling = "species",
+       display = c("sites", "species"))
+
+# PC2 and PC3
+biplot(varespec.rda,
+       choices = c(2,3),
+       scaling = "species",
+       display = c("sites", "species"))
+
+# PC1 and PC2 scaled
+biplot(varespec.rda.scale,
+       choices = c(1,2),
+       scaling = "species",
+       display = c("sites", "species"))
+
+# PC2 and PC3 scaled
+biplot(varespec.rda.scale,
+       choices = c(2,3),
+       scaling = "species",
+       display = c("sites", "species"))
+
+```
+
+
+4) How much variability is explained by the first three PCs?
+```{r}
+summary(varespec.rda)
+summary(varespec.rda.scale)
+```
+
+5) What is the difference between standardizing and not standardizing the data matrix?
+
+-
+-
+
+6) Which are the variables that contribute the most to the first PC?
+
+- Pleuschr
+- Cladstel
+
+7) After plotting the first 2 PCs what can you say about sampling site 28?
+7.1) And what about the correlation between variables? (consider type 1 and 2 scaling).
+
+- Pleuschr is highest at site 28
+- you cannot really see it with type 2 scaling
