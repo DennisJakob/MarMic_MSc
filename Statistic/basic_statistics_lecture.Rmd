@@ -1,5 +1,5 @@
 ---
-title: "statistics notebook"
+title: "basic statistics lecture"
 output: html_notebook
 ---
 
