@@ -1,0 +1,76 @@
+---
+title: "Ex_dbRDA"
+author: "Dennis Jakob"
+date: "1/15/2020"
+output: html_document
+---
+# dbRDA exercise
+
+1) What is the difference between RDA and db-RDA?
+```{r}
+require(vegan)
+require(corrgram)
+trees <- read.csv("statsII/trees.csv", header = T)
+
+# prepare the data
+row.names(trees) <- trees$ECOSYS
+spec <- trees[,11:23]
+env <- trees[,3:10]
+
+# rows with only zeros cannot be handled by capscale
+spec = spec + 0.001
+```
+
+2) Perform and plot an dbRDS using the trees.csv data set. Use the rankindex function to select an appropriate dissimilarity measures. Examine the data to determine which are the explanatory and response variables.
+```{r}
+# select a dissimilarity index
+rankindex(grad = env,
+          veg  = spec,
+          method = "spearman")
+
+# perform dbRDA
+spec.dbRDA <- capscale(spec ~ .,
+                       env,
+                       dist = "bray") 
+ordiplot(spec.dbRDA,
+         type="t",
+         scaling=1)
+ordiplot(spec.dbRDA,
+         type="t",
+         scaling=2)
+```
+
+3) How much are the constrained and unconstrained variabilities?
+```{r}
+# check variabilities
+spec.dbRDA$CCA$tot.chi
+spec.dbRDA$CA$tot.chi
+spec.dbRDA$tot.chi
+
+# check constrained variance
+spec.dbRDA$CCA$tot.chi/spec.dbRDA$tot.chi
+# check unconstrained variance
+spec.dbRDA$CA$tot.chi/spec.dbRDA$tot.chi
+```
+
+4) Test the significance of the model and the individual variables.
+```{r}
+# permutation tests to access significance of constraints
+anova(spec.dbRDA) # overall test of the significance 
+anova(spec.dbRDA,
+      by="terms",
+      perm.max=999)
+```
+
+5) Compute the correlation between the dbRDA first two axes and the explanatory variables.
+```{r}
+# correlation of the variables to the first two dbRDA axes
+spec.dbRDA.species.scores = scores(spec.dbRDA,
+                                   choices = c(1:2),
+                                   display = "sites")
+cor(cbind(spec.dbRDA.species.scores,
+          env))
+corrgram(cbind(spec.dbRDA.species.scores,
+          env))
+```
+

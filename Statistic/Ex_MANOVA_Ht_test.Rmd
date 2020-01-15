@@ -1,0 +1,54 @@
+---
+title: "Ex_MANOVA_Ht_test"
+author: "Dennis Jakob"
+date: "1/15/2020"
+output: html_document
+---
+# MANOVA and Hotelling's T-squared tests 
+1) What are the differences between MANOVA and ANOVA?
+
+2) Check if the means from the clay, water and sand samples differ.
+2.1) Make sure the assumptions of the are met.
+```{r}
+library(vegan)
+library(stats)
+library(ICS)
+library(Hotelling)
+
+samples <- read.csv("statsII/groups.table.csv",
+                    header = T)
+samples
+
+# check variable distribution
+shapiro.test(samples[materials == "clay", 2])
+shapiro.test(samples[materials == "clay", 3])
+shapiro.test(samples[materials == "clay", 4])
+
+mvnorm.kur.test(samples[materials == "clay", 2:4])
+mvnorm.kur.test(samples[materials == "water", 2:4])
+mvnorm.kur.test(samples[materials == "sand", 2:4])
+
+# check homogeneity of variances
+bartlett.test(samples[,2],
+              g = materials)
+bartlett.test(samples[,3],
+              g = materials)
+bartlett.test(samples[,4],
+              g = materials)
+
+# perform MANOVA
+fit <- manova(as.matrix(samples[,2:4]) ~ materials)
+summary(fit,
+        test = "Wilks")
+```
+
+3) Apply the Hotelling's T-squared test to determine which samples means are different.
+```{r}
+# Hotelling t squared test
+htest_ws <- hotelling.test(samples[materials == "water", 2:4],
+                        samples[materials == "sand", 2:4])
+htest_ws
+htest_wc <- hotelling.test(samples[materials == "water", 2:4],
+                        samples[materials == "clay", 2:4])
+htest_wc
+```
