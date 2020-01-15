@@ -1,0 +1,63 @@
+---
+title: "CA"
+author: "Dennis Jakob"
+date: "1/15/2020"
+output: html_document
+---
+```{r}
+require(vegan)
+require(corrgram)
+require(viridis)
+require(scatterplot3d)
+require(tidyverse)
+data("varespec")
+```
+
+# CA exercise
+
+1) What is the difference between the CA and PCA?
+
+- PCA can only be used for data with linear relations between the variables
+- CA can be used for unimodal data (non-linear) by using Chi^2 statistics
+
+2) Perform a CA based on the varespec dataset
+```{r}
+# perform hellinger transformnation
+varespec.hel <- decostand(varespec, "hellinger")
+matplot(varespec,
+        type = "l",
+        pch=1,
+        col = 1:dim(varespec)[2])
+matplot(varespec.hel,
+        type = "l",
+        pch=1,
+        col = 1:dim(varespec)[2])
+
+# perform CA
+varespec.cca <- cca(varespec)
+summary(varespec.cca)
+varespec.cca$CA$tot.chi
+(sum(varespec.cca$CA$eig[1:2])/sum(varespec.cca$CA$eig))*100
+
+varespec.hel.cca <- cca(varespec.hel)
+summary(varespec.hel.cca)
+varespec.hel.cca$CA$tot.chi
+(sum(varespec.hel.cca$CA$eig[1:2])/sum(varespec.hel.cca$CA$eig))*100
+```
+helinger transformation is often used for bacterial abundances. removes also zeros.
+
+3) Plot the first two CA axes
+3.1) How much inertia is captured in these 2 axes?
+3.2) What is the total inertia?
+```{r}
+plot(varespec.hel.cca,
+     choices = c(1,2),
+     scaling = 2)
+(sum(varespec.hel.cca$CA$eig[1:2])/sum(varespec.hel.cca$CA$eig))*100
+sum(varespec.hel.cca$CA$eig)*100
+```
+
+4) Apply a chi-squared test on the varespec dataset.
+```{r}
+chisq.test(varespec)
+```

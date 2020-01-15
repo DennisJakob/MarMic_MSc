@@ -1,5 +1,5 @@
 ---
-title: "Ex4"
+title: "PCA"
 author: "Dennis Jakob"
 date: "1/13/2020"
 output: html_document
@@ -10,7 +10,6 @@ require(corrgram)
 require(viridis)
 data("varespec")
 ```
-
 
 1) Analyze the distribution and correlation of the variables of the varespec dataset 
 1.1) What is in varespec?
@@ -27,6 +26,7 @@ corrgram(varespec,
          text.panel = panel.txt,
          col.regions = viridis)
 ```
+The varespec dataset shows species abundances at different sites.
 
 2) Perform a PCA with this data
 ```{r}
@@ -75,6 +75,8 @@ biplot(varespec.rda.scale,
 ```{r}
 summary(varespec.rda)
 summary(varespec.rda.scale)
+screeplot(varespec.rda,
+          type = "barplot")
 ```
 
 5) What is the difference between standardizing and not standardizing the data matrix?

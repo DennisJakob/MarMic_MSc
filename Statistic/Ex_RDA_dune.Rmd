@@ -1,0 +1,65 @@
+---
+title: "RDA"
+author: "Dennis Jakob"
+date: "1/15/2020"
+output: html_document
+---
+This script will be a tutorial on using RDA. This tutorial should be run with an instructor present, but independent development is encouraged.
+```{r}
+require(vegan)
+data(dune)
+data(dune.env)
+?dune
+?dune.env
+```
+
+Important to understand your data!
+```{r}
+class(dune.env$Moisture)
+class(dune.env$Management)
+
+dune.rda <- rda(formula = dune ~ A1 + Moisture + Management + Use + Manure,
+                data = dune.env)
+
+str(dune.rda)
+summary(dune.rda)
+dune.rda$terminfo
+```
+
+Some variables are so well correlated that the vegan RDA routine removes all but one and uses that as the "alias" for the others. Let's find out which ones were aliased...
+```{r}
+dune.rda$CCA$alias
+# [1] "Manure^4" is the alias of the others
+alias(dune.rda)
+
+hist(residuals(dune.rda))
+# right skewed histogram of risiduals
+
+dune.hel <- decostand(dune,
+                      method = "hellinger")
+dune.hel.rda <- rda(dune.hel ~ A1 + Moisture + Management + Use + Manure, # or dune.hel ~ .,
+                    data = dune.env)
+hist(residuals(dune.hel.rda))
+# still right skewed histogram of risiduals but residuals lowered by factor 10
+```
+
+```{r}
+ordiplot(dune.hel.rda,
+         type = "text")
+```
+
+ANOVA
+```{r}
+set.seed(15081992)
+dune.hel.rda.anova <- anova.cca(dune.hel.rda)
+dune.hel.rda.anova
+# populations/groups are constrained (model) or unconstrained (residual)
+# model variance is the covered spread of the hyperspace 
+```
+
+
+
+
+
+
+

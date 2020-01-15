@@ -1,0 +1,92 @@
+---
+title: "NMDS"
+author: "Dennis Jakob"
+date: "1/14/2020"
+output: html_document
+---
+```{r}
+require(vegan)
+require(corrgram)
+require(viridis)
+require(scatterplot3d)
+require(tidyverse)
+data("varespec")
+```
+
+# NMDS exercise
+1) Perform an NMDS analysis using the varespec dataset, based on the Bray-Curtis distance (see ?metaMDS).
+```{r}
+# compute distance matrix based on Bray Curtis distances
+varespec.bc.dist.nmds2 <- metaMDS(comm = varespec,
+                                 distance ="bray",
+                                 k = 2,
+                                 trymax = 1000,
+                                 trace = F)
+varespec.bc.dist.nmds2$stress
+```
+
+
+2) Plot the results. What can you say about the different sampling sites?
+```{r}
+plot(varespec.bc.dist.nmds,
+     type = "t")
+```
+
+- not much can be said about sampling site as NMDS does not resolve any grouping
+
+3) Did the algorithm converge?
+```{r}
+varespec.bc.dist.nmds$converged
+```
+
+4) Construct four NMDS varying from 1 to 4 the number of dimensions allowed, and make a plot of the stress values vs the number of dimensions.
+```{r}
+varespec.bc.dist.nmds1 <- metaMDS(comm = varespec,
+                                 distance ="bray",
+                                 k = 1,
+                                 trymax = 1000,
+                                 trace = F)
+varespec.bc.dist.nmds3 <- metaMDS(comm = varespec,
+                                 distance ="bray",
+                                 k = 3,
+                                 trymax = 1000,
+                                 trace = F)
+varespec.bc.dist.nmds4 <- metaMDS(comm = varespec,
+                                 distance ="bray",
+                                 k = 4,
+                                 trymax = 1000,
+                                 trace = F)
+varespec.bc.dist.nmds1$stress
+varespec.bc.dist.nmds3$stress
+varespec.bc.dist.nmds4$stress
+
+plot(seq(1,4,1),
+     c(varespec.bc.dist.nmds1$stress,
+       varespec.bc.dist.nmds2$stress,
+       varespec.bc.dist.nmds3$stress,
+       varespec.bc.dist.nmds4$stress))
+```
+
+
+5) Perform a Shepard plot. (see ?stressplot).
+```{r}
+stressplot(varespec.bc.dist.nmds1)
+stressplot(varespec.bc.dist.nmds2)
+stressplot(varespec.bc.dist.nmds3)
+stressplot(varespec.bc.dist.nmds4)
+```
+
+```{r}
+varespec.bc.dist.nmds10 <- metaMDS(comm = varespec,
+                                    distance ="bray",
+                                    k = 10,
+                                    trymax = 100,
+                                    trace = F)
+scatterplot3d(x = varespec.bc.dist.nmds3$points[,1], y  = varespec.bc.dist.nmds3$points[,2], z = varespec.bc.dist.nmds3$points[,3])
+plot(varespec.bc.dist.nmds10,
+     type = "t")
+stressplot(varespec.bc.dist.nmds10)
+
+p <- plot_ly(x = varespec.bc.dist.nmds3$points[,1], y = varespec.bc.dist.nmds3$points[,2], z = varespec.bc.dist.nmds3$points[,3])
+```
+

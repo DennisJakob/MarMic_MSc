@@ -1,0 +1,78 @@
+---
+title: "PCoA"
+author: "Dennis Jakob"
+date: "1/15/2020"
+output: html_document
+---
+```{r}
+require(vegan)
+require(corrgram)
+require(viridis)
+require(scatterplot3d)
+require(tidyverse)
+data("varespec")
+```
+
+# PCoA exercise
+
+1) Compute a distance matrix for the varespec dataset based on the Bray-Curtis dissimilarity measure.
+```{r}
+# compute distance matrix based on Bray Curtis distances
+varespec.bc.dist <- vegdist(varespec,
+                            method = "bray")
+```
+
+2) Perform a PCoA on the distance matrix and the plot the first two axes.
+```{r}
+varespec.bc.dist.PCoA <- cmdscale(varespec.bc.dist,
+                                  k = 2,
+                                  eig = T)
+summary(varespec.bc.dist.PCoA)
+
+x <- varespec.bc.dist.PCoA$points[,1]
+y <- varespec.bc.dist.PCoA$points[,2]
+plot(x, y, pch = 19, xlim=range(x) + c(-0.1,0.1), ylim=range(y)+c(-0.1,0.1))
+text(x, y, pos = 4, labels = rownames(varespec), cex = 0.8)
+```
+
+3) Inspect the eigenvalues of the PCoA axes. Is there something unexpected?
+4) Make an appropriate transformation of the distance matrix, apply PCoA and repeat tasks 1 to 3.
+```{r}
+# 3) negative values
+barplot(varespec.bc.dist.PCoA$eig)
+
+# 4)
+varespec.bc.dist.cor.PCoA <- cmdscale(varespec.bc.dist,
+                                  k = 2,
+                                  eig = T,
+                                  add = T)
+summary(varespec.bc.dist.cor.PCoA)
+
+x <- varespec.bc.dist.cor.PCoA$points[,1]
+y <- varespec.bc.dist.cor.PCoA$points[,2]
+plot(x, y, pch = 19, xlim=range(x) + c(-0.1,0.1), ylim=range(y)+c(-0.1,0.1))
+text(x, y, pos = 4, labels = rownames(varespec), cex = 0.8)
+barplot(varespec.bc.dist.cor.PCoA$eig)
+# also a sqrt transformation works to turn eigenvalues positive
+```
+
+5) What happens if the distance matrix is based on Euclidean distance?
+```{r}
+varespec.euc.dist <- vegdist(varespec,
+                            method = "euclidean")
+varespec.euc.dist.PCoA <- cmdscale(varespec.euc.dist,
+                                  k = 2,
+                                  eig = T)
+summary(varespec.euc.dist.PCoA)
+
+barplot(varespec.euc.dist.PCoA$eig)
+
+x <- varespec.euc.dist.PCoA$points[,1]
+y <- varespec.euc.dist.PCoA$points[,2]
+plot(x, y, pch = 19, xlim=range(x) + c(-0.1,0.1), ylim=range(y)+c(-0.1,0.1))
+text(x, y, pos = 4, labels = rownames(varespec), cex = 0.8)
+```
+
+- eigenvalues do not become negative
+- tail is a lot longer and flatter because the zeros are taken into account
+- better separation of sites with low lycan coverage

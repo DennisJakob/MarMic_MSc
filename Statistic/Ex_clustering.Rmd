@@ -1,0 +1,81 @@
+---
+title: "Ex_Clustering"
+author: "Dennis Jakob"
+date: "1/15/2020"
+output: html_document
+---
+# Clustering exercise
+
+1) Cluster the samples sites from the dune dataset based on the kmeans method (see ?kmeans).
+```{r}
+library(vegan)
+library(cluster)
+data(dune)
+?dune
+
+
+### non hierarchical clustering: kmeans
+dune.kc5 <- kmeans(dune,
+                   centers = 5) # check reference to choose k (centers)
+class(dune.kc5)
+dune.kc5$cluster
+
+dune.eu.dist <- dist(dune,
+                     method = "euclidean")
+clusplot(x=dune.eu.dist,
+         diss = TRUE,
+         clus = dune.kc5$cluste,
+         lines = 0,
+         labels = 2)
+```
+
+
+2) Compute a distance matrix based on the Euclidean distances and make a hierarchical clustering using the average linkage and ward's methods (see ?cluster).
+```{r}
+dune.eu.dist <- dist(dune,
+                     method = "euclidean")
+dune.eu.dist.ac <- hclust(dune.eu.dist,
+                  method = "average")
+dune.eu.dist.wc <- hclust(dune.eu.dist,
+                  method = "ward.D2")
+dune.eu.dist.cc <- hclust(dune.eu.dist,
+                  method = "complete")
+```
+
+3) Plot the previous three clusters.
+```{r}
+plot(dune.eu.dist.ac)
+plot(dune.eu.dist.wc)
+plot(dune.eu.dist.cc)
+```
+
+
+4) Compare the average and ward clustering methods (see ?cutree and ?table).
+```{r}
+table(cutree(dune.eu.dist.ac,
+             k = 5),
+      cutree(dune.eu.dist.wc,
+             k = 5),
+      cutree(dune.eu.dist.cc,
+             k = 5))
+```
+
+
+5)  Apply a PCA on the data matrix, and use the first three PCs to cluster the sampling sites based on the ward's method. Compare the clustering with the results obtained in part 2).
+```{r}
+dune.pca <- rda(dune,
+                scale = T)
+dune.pca.eu.dist <- dist(dune.pca$CA$u[,1:3],
+                         method = "euclidean")
+dune.pca.eu.dist.wc <- hclust(dune.pca.eu.dist,
+                              method = "ward.D2")
+
+plot(dune.eu.dist.wc)
+plot(dune.pca.eu.dist.wc)
+
+table(cutree(dune.eu.dist.wc,
+             k=5),
+      cutree(dune.pca.eu.dist.wc,
+             k=5))
+```
+

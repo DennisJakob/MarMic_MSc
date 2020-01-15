@@ -1749,18 +1749,16 @@ summary {
 
 
 <!-- rnb-text-begin -->
-<div id="lecture-1" class="section level1">
-<h1>Lecture 1</h1>
-</div>
-<div id="introduction" class="section level1">
-<h1>introduction</h1>
-<p>Q: What does the zero say to the eight? A: Nice belt!</p>
-<p>What is the difference between logic and statistic? Logic is a systematic method for getting the wrong conclusion with confidence. Statistics is a systematic method for getting the wrong conclusion with 95% confidence.</p>
+<div id="a-flavour-of-multivariate-statistical-methods-in-aid-of-microbial-ecology---day-1" class="section level1">
+<h1>A flavour of multivariate statistical methods in aid of microbial ecology - Day 1</h1>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
 <p><a href="https://mb3is.megx.net/gustame">GUSTA ME</a></p>
 <p>normal distribution is</p>
 <p><span class="math display">\[\alpha = 0.05 \rightarrow 5\%\]</span> chance of FP type I error <span class="math display">\[1-(1-\alpha)^n\]</span> is still <span class="math inline">\(\alpha\)</span> for n=1 but gets higher for more n&gt;1</p>
 <p>multiple testing problem</p>
 <p>hypercube</p>
+</div>
 <div id="aims" class="section level2">
 <h2>aims</h2>
 <div id="sorting-and-grouping" class="section level3">
@@ -1790,8 +1788,10 @@ summary {
 <p>dissimilarity matrix –&gt; dissimilarity value for each pair of samples</p>
 <p>similarty coefficient - simple matching (example of a symmetrical coefficient –&gt; 1,1 0,0) – <span class="math display">\[\frac{a+d}{a+b+c+d}\]</span></p>
 <ul>
-<li>jaccard coefficient – <span class="math display">\[\frac{a}{a+b+c}\]</span></li>
+<li><p>jaccard coefficient – <span class="math display">\[\frac{a}{a+b+c}\]</span></p></li>
+<li><p>bray-curtis coefficient – <span class="math display">\[\frac{2a}{a+b+c}\]</span></p></li>
 </ul>
+<p>Transformation - center-scale - z-scoring - log-transformation</p>
 </div>
 </div>
 <div id="euclidean-space" class="section level1">
@@ -1800,30 +1800,223 @@ summary {
 </div>
 <div id="bray-curtis-dissimilarity" class="section level1">
 <h1>Bray-Curtis dissimilarity</h1>
-<p><span class="math display">\[D_{eucledian}=\sqrt{(\sum{y_{1,j}-y_{1,j}})^2}\]</span> <span class="math display">\[D_{Bray-Curtis}=\frac{\sum_{j=1}^{p}y_{1,j}-y_{2,j}{\sum_{j=1}^{p}(y_{1,j}-y_{2,j})}\]</span></p>
+<p><span class="math display">\[D_{eucledian}=\sqrt{(\sum{y_{1,j}-y_{1,j}})^2}\]</span> <span class="math display">\[D_{Bray-Curtis}=\frac{\sum_{j=1}^{p} |y_{1,j}-y_{2,j}|}{\sum_{j=1}^{p}(y_{1,j}-y_{2,j})}\]</span></p>
 </div>
-<div id="pca" class="section level1">
-<h1>PCA</h1>
+<div id="pca-factor-analysis---fa" class="section level1">
+<h1>PCA (Factor Analysis - FA)</h1>
+<p><em>linear transformations between all variables</em></p>
 <p>first PCA is the axis that separates the data points the most</p>
-<p>pca builds PCs with a combination of linear regressions from the variable</p>
+<p><em>p &gt;&gt; n problem</em></p>
+<p>needs linear relationships between variables</p>
+<p>pca builds PCs with a combination of linear transformations from the variable</p>
 <ul>
-<li>standardize</li>
+<li>captures the variance</li>
+<li>PCA and CA do not explain something! They only summarize data.</li>
+</ul>
+<div id="procedure" class="section level2">
+<h2>Procedure</h2>
+<ol style="list-style-type: decimal">
+<li>sampling –&gt; dataframe</li>
+<li>standardize/transform dataframe</li>
+<li>SVD (singular value decomposition)/SD (spectral decomposition)/EA (eigen analysis)</li>
 <li>build PCs</li>
 <li>sort PCs</li>
-<li>plot</li>
-</ul>
-<p>SVD singular value decomposition</p>
+<li>plot (assumes that bimodal or trimodal samples are unimodal)</li>
+</ol>
+<p>Contingency matrix –&gt; Chi^2 test Transformation to a Chi^2 distance matrix –&gt; used for spectral decomposition</p>
 </div>
-<div id="coenospace" class="section level1">
-<h1>coenospace</h1>
+</div>
+<div id="correspondance-analysis-ca" class="section level1">
+<h1>Correspondance Analysis (CA)</h1>
 <ul>
-<li>PCA - principal component analysis</li>
-<li>CA - correspondance analysis</li>
+<li>non-linear</li>
+<li>Chi-square to get table with linear data</li>
+<li>captures inertia</li>
+</ul>
+</div>
+<div id="pcoa-principal-coordniates-analysis-mds-metric-dimentrional-scaling" class="section level1">
+<h1>PCoA (Principal coordniates analysis) / MDS (metric dimentrional scaling)</h1>
+<ul>
+<li>no linear assumption</li>
+<li>BC, Jaccard, etc. can be used</li>
+<li>not suitable for environmental data (e.g. Temperature etc)</li>
+<li>metric –&gt; because we don’t rank anything compared to NMDS</li>
+<li>negative eigenvalues are not euclidean / the method couldn’t project the non eucledian matrix (BC)</li>
+</ul>
+<p>but, you use the sites and vectors</p>
+<ol style="list-style-type: decimal">
+<li>dataframe (x=site/sample, y=Kegg Ortholog)</li>
+<li>dissimilarity matrix</li>
+<li>svd, sd, ea (eigen analysis)</li>
+<li>dataframe (x=site/sample, y=PCoAs)</li>
+</ol>
+</div>
+<div id="nmds" class="section level1">
+<h1>NMDS</h1>
+<ul>
+<li>used when you don’t know if your data values are accurate, but the order is right</li>
+<li>it’s an algorithm</li>
+<li>stress of &lt; 0.2 is acceptable</li>
+<li>needs to run multiple times because it doesn’t no the optimum (it’s an algorithm)</li>
+<li>tries to reduce stress</li>
+<li>metadata can be added, but always indirect gradient analysis (GA)! because we didn’t do any regression, just fitting</li>
+<li>uses a dissimilarity matrix –&gt; data is not independent anymore</li>
+<li>shepard plot can be produced from NMDS and illustrates the stress</li>
+<li>dissimilarity data gets ranks</li>
+<li>for non-parametric data</li>
+<li>shepards plot represents stress in the NMDS. outliers are not properly represented in the NMDS</li>
+</ul>
+</div>
+<div id="regression" class="section level1">
+<h1>Regression</h1>
+<ul>
+<li>x: independent variable</li>
+<li>y: responce variable</li>
+<li>fit is determined by R^2 and the residuals</li>
+<li><p>F statistic tells us how good the model fits</p></li>
+<li>multivariable regression</li>
+<li><p><span class="math display">\[y=m_{1}x_{1}+m_{2}x_{2}+...+m_{n}x_{n}+b\]</span></p></li>
+<li>multivariate regression</li>
+<li><span class="math display">\[Y=MX+B\]</span></li>
+<li><p>Y, M, X, B are matrices</p></li>
+</ul>
+</div>
+<div id="ecology" class="section level1">
+<h1>ecology</h1>
+<div id="coenospace" class="section level2">
+<h2>coenospace</h2>
+</div>
+<div id="ecosystem" class="section level2">
+<h2>ecosystem</h2>
+<ul>
+<li>biome (tundra) – succession abiotic environment + biotic live</li>
+</ul>
+</div>
+<div id="environment" class="section level2">
+<h2>environment</h2>
+<ul>
+<li>does not have live</li>
+<li>abiotic</li>
+</ul>
+</div>
+<div id="habitat" class="section level2">
+<h2>habitat</h2>
+<ul>
+<li>population – min 2 individuals of the same species</li>
+<li>habitat is part of a ecosystem that provides everything for a population to maintain their community or grow</li>
+</ul>
+</div>
+<div id="niche" class="section level2">
+<h2>niche</h2>
+<ul>
+<li>abstract of an habitat</li>
+<li>covers environmental parameters that is suited for a population</li>
+</ul>
+</div>
+</div>
+<div id="cluster-analysis" class="section level1">
+<h1>Cluster Analysis</h1>
+<div id="k-means-clustering" class="section level2">
+<h2>k means clustering</h2>
+<p>non-hierarchical clustering</p>
+<ul>
+<li>only euclidean distances</li>
+<li><p>but PCoA dataframe can be used because it captures the variation of the original data</p></li>
+<li>k is the number of means (center of groups)</li>
+<li>number of means should come from the hypothesis!!!</li>
+<li><p>provides mean ordination values for the cluster</p></li>
+</ul>
+</div>
+<div id="em-algorithm-expectation-maximisation-algorith" class="section level2">
+<h2>EM algorithm (expectation maximisation algorith)</h2>
+</div>
+<div id="hierarchical-clustering" class="section level2">
+<h2>Hierarchical clustering</h2>
+<ul>
+<li>provides discrete data</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>dissimilarity matrix</li>
+<li>dendrogram (divisive or oglomorative) –&gt; differences between divisive and oglomorative, because there could be local optima that are approached first from different sites –&gt; chaining phenomena could indicate that the area was undersampled –&gt; no bigger splits possible –&gt; one sample is killed after each other</li>
+</ol>
+<ul>
+<li>single linkage cluster (closest members are linked) – e.g. a new species is contaminating a site / high sensitivity</li>
+<li>complete linkage cluster (members that are furthest away are linked) – for show that something is definately separated</li>
+<li>average linkage cluster (or UPGMA, all members of one group are linked with all members of the other group) – for a general impression</li>
+</ul>
+</div>
+</div>
+<div id="from-biplots-to-triplots" class="section level1">
+<h1>from biplots to triplots</h1>
+<div id="biplots" class="section level2">
+<h2>biplots</h2>
+<ul>
+<li>direct gradient analysis</li>
+<li>PCA &amp; CA</li>
+<li></li>
+</ul>
+<p>check <em>multiple testing problem</em></p>
+</div>
+</div>
+<div id="redundancy-analysis-rda" class="section level1">
+<h1>Redundancy Analysis (RDA)</h1>
+<ul>
+<li>the overlay of idependent and responce variable is the part the is explaint (or redundant)</li>
+<li>constraint analysis</li>
+<li>direct gradient analysis</li>
+<li>combines exploration of data (PCA, CA, NMDS, PCoA) and combines it with metadata (environmental integration)</li>
+</ul>
+</div>
+<div id="canonical-correspondance-analysis-cca" class="section level1">
+<h1>Canonical Correspondance Analysis (CCA)</h1>
+<ul>
+<li>contrained CA</li>
+<li><p>a CA with a linear regression on top</p></li>
+<li><p>similar to PCA but uses Chi-squared matrix</p></li>
+</ul>
+</div>
+<div id="hypothesis-testing" class="section level1">
+<h1>Hypothesis testing</h1>
+<div id="hotellings-t2-test" class="section level2">
+<h2>Hotelling’s t^2-test</h2>
+<ul>
+<li>uses the hypernormal space</li>
+<li>does a PCA to simplify the hypernomal distribution as lower dimentional distribution (1 dimention is classic)</li>
+<li>performes t-test</li>
+</ul>
+</div>
+<div id="multivariate-anova-manova" class="section level2">
+<h2>multivariate ANOVA (MANOVA)</h2>
+<ul>
+<li>analysis of variance</li>
+<li><p>needs hypernormal space – do manova, check the residuals, if they are normally distributed around zero, the data are hypernormally distributed</p></li>
+<li>PERMANOVA if MANOVA does not work</li>
+<li><p>if PERMANOVA does not work do ANOSIM</p></li>
+</ul>
+</div>
+<div id="anosim-anosim" class="section level2">
+<h2>ANOSIM (ANOSIM)</h2>
+<ul>
+<li>analysis of similarity</li>
+<li>dissimilarity and rank-based</li>
+</ul>
+</div>
+<div id="be-aware" class="section level2">
+<h2>be aware</h2>
+<ul>
+<li>outliers</li>
+<li>multicollinearity</li>
+<li>missing data</li>
+<li>MAR, MNAE, MCAR</li>
+<li>heteroscedasticity</li>
+<li>autocorrelation (e.g. time, space, patchyness) – lag effect</li>
+<li>pseudoreplication – independent application of a treatment to an experimental unit that is also independent from other experimental untis</li>
 </ul>
 <!-- rnb-text-end -->
 </div>
+</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAibXVsdGl2YXJpYXRlIHN0YXRpc3RpY3MiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KIyBMZWN0dXJlIDEKCiMgaW50cm9kdWN0aW9uCgpROiBXaGF0IGRvZXMgdGhlIHplcm8gc2F5IHRvIHRoZSBlaWdodD8gCkE6IE5pY2UgYmVsdCEKCldoYXQgaXMgdGhlIGRpZmZlcmVuY2UgYmV0d2VlbiBsb2dpYyBhbmQgc3RhdGlzdGljPyAKTG9naWMgaXMgYSBzeXN0ZW1hdGljIG1ldGhvZCBmb3IgZ2V0dGluZyB0aGUgd3JvbmcgY29uY2x1c2lvbiB3aXRoIGNvbmZpZGVuY2UuClN0YXRpc3RpY3MgaXMgYSBzeXN0ZW1hdGljIG1ldGhvZCBmb3IgZ2V0dGluZyB0aGUgd3JvbmcgY29uY2x1c2lvbiB3aXRoIDk1JSBjb25maWRlbmNlLgoKCgoKW0dVU1RBIE1FXShodHRwczovL21iM2lzLm1lZ3gubmV0L2d1c3RhbWUpCgpub3JtYWwgZGlzdHJpYnV0aW9uIGlzIAoKJCRcYWxwaGEgPSAwLjA1IFxyaWdodGFycm93IDVcJSQkIGNoYW5jZSBvZiBGUCB0eXBlIEkgZXJyb3IKJCQxLSgxLVxhbHBoYSlebiQkIGlzIHN0aWxsICRcYWxwaGEkIGZvciBuPTEgYnV0IGdldHMgaGlnaGVyIGZvciBtb3JlIG4+MQoKbXVsdGlwbGUgdGVzdGluZyBwcm9ibGVtCgpoeXBlcmN1YmUKCiMjIGFpbXMKCiMjIyBzb3J0aW5nIGFuZCBncm91cGluZwoKbm1kcwotIG11bHRpZGltZW50aW9uYWwgc3BhY2UgcHV0IGludG8gdHdvIGRpbWVuc2lvbnMKCmRlbmRyb2dyYW0KLSBoaWVyYWNoaWNhbCBjbHVzdGVyIGFuYWx5c2lzCgojIyMgaW52ZXN0aWdhdGlvbiBvZiBkZXBlbmRlbmNlIChjby12YXJpYXRpb24sIGRlcGVuZGVuY2UpCgpkZXBlbmRlbmNlIGFuYWx5c2lzICRccmlnaHRhcnJvdyQgcmVncmVzc2lvbgoKLSB0d28gZGltZW5zaW9ucyAtLT4gbGluZQotIHRocmVlIGRpbWVuc2lvbnMgLS0+IHBsYW5lCi0gZm91ciBkaW1lbnNpb25zIC0tPiB2b2x1bWUKCmFub3NpbSAoaXMgc2ltaWxhciB0byBhbm92YSkKCnRvIGV4cGxhaW4gYSBkZXBlbmRlbmNlIHdlIGJ1aWxkIGEgbW9kZWwgKFJEQSwgZXRjLikKCiMjIyBpbnZlc3RpZ2F0aW9uIG9mIGNvcnJlbGF0aW9uCnNhbXBsZSBtYXRyaXggLS0+IGNvcnJlbGF0aW9uIG1hdHJpeApkcm9wIHZhcmlhYmxlcyB3aXRoIGxvdyB2YXJpYW5jZQoKIyMgRGlzc2ltaWxhcml0eQpldmVyeXRoaW5nIGlzIGRpc3NpbWlsYXJpdHksIGRpc3RhbmNlIGlzIG9ubHkgYSBzdWJzZXQKCmRpc3NpbWlsYXJpdHkgbWF0cml4Ci0tPiBkaXNzaW1pbGFyaXR5IHZhbHVlIGZvciBlYWNoIHBhaXIgb2Ygc2FtcGxlcwoKc2ltaWxhcnR5IGNvZWZmaWNpZW50Ci0gc2ltcGxlIG1hdGNoaW5nIChleGFtcGxlIG9mIGEgc3ltbWV0cmljYWwgY29lZmZpY2llbnQgLS0+IDEsMSAwLDApCi0tICQkXGZyYWN7YStkfXthK2IrYytkfSQkCgotIGphY2NhcmQgY29lZmZpY2llbnQKLS0gJCRcZnJhY3thfXthK2IrY30kJAoKIyBFdWNsaWRlYW4gc3BhY2UKZXVjbGlkZWFuIGRpc3RhbmNlIGJldHdlZW4gdHdvIHBvaW50cyBpbiB0d28gZGltZW5zaW9uYWwgc3BhY2UgaXMgYSBsaW5lCm9mdGVuIHdlIG5lZWQgbm9uIGV1Y2xpZGVhbiBtZWFzdXJlcyB0byBleHBsYWluIGVjb2xvZ2ljYWwgcHJvYmxlbXMKCiMgQnJheS1DdXJ0aXMgZGlzc2ltaWxhcml0eQoKJCREX3tldWNsZWRpYW59PVxzcXJ0eyhcc3Vte3lfezEsan0teV97MSxqfX0pXjJ9JCQKJCREX3tCcmF5LUN1cnRpc309XGZyYWN7XHN1bV97aj0xfV57cH15X3sxLGp9LXlfezIsan17XHN1bV97aj0xfV57cH0oeV97MSxqfS15X3syLGp9KX0kJAoKCgoKIyBQQ0EKCmZpcnN0IFBDQSBpcyB0aGUgYXhpcyB0aGF0IHNlcGFyYXRlcyB0aGUgZGF0YSBwb2ludHMgdGhlIG1vc3QKCnBjYSBidWlsZHMgUENzIHdpdGggYSBjb21iaW5hdGlvbiBvZiBsaW5lYXIgcmVncmVzc2lvbnMgZnJvbSB0aGUgdmFyaWFibGUKCi0gc3RhbmRhcmRpemUKLSBidWlsZCBQQ3MKLSBzb3J0IFBDcyAKLSBwbG90IAoKU1ZEIHNpbmd1bGFyIHZhbHVlIGRlY29tcG9zaXRpb24KCiMgY29lbm9zcGFjZQotIFBDQSAtIHByaW5jaXBhbCBjb21wb25lbnQgYW5hbHlzaXMKLSBDQSAtIGNvcnJlc3BvbmRhbmNlIGFuYWx5c2lzCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAibXVsdGl2YXJpYXRlIHN0YXRpc3RpY3MiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KIyBBIGZsYXZvdXIgb2YgbXVsdGl2YXJpYXRlIHN0YXRpc3RpY2FsIG1ldGhvZHMgaW4gYWlkIG9mIG1pY3JvYmlhbCBlY29sb2d5IC0gRGF5IDEKCiMjIEludHJvZHVjdGlvbgoKW0dVU1RBIE1FXShodHRwczovL21iM2lzLm1lZ3gubmV0L2d1c3RhbWUpCgpub3JtYWwgZGlzdHJpYnV0aW9uIGlzIAoKJCRcYWxwaGEgPSAwLjA1IFxyaWdodGFycm93IDVcJSQkIGNoYW5jZSBvZiBGUCB0eXBlIEkgZXJyb3IKJCQxLSgxLVxhbHBoYSlebiQkIGlzIHN0aWxsICRcYWxwaGEkIGZvciBuPTEgYnV0IGdldHMgaGlnaGVyIGZvciBtb3JlIG4+MQoKbXVsdGlwbGUgdGVzdGluZyBwcm9ibGVtCgpoeXBlcmN1YmUKCiMjIGFpbXMKCiMjIyBzb3J0aW5nIGFuZCBncm91cGluZwoKbm1kcwotIG11bHRpZGltZW50aW9uYWwgc3BhY2UgcHV0IGludG8gdHdvIGRpbWVuc2lvbnMKCmRlbmRyb2dyYW0KLSBoaWVyYWNoaWNhbCBjbHVzdGVyIGFuYWx5c2lzCgojIyMgaW52ZXN0aWdhdGlvbiBvZiBkZXBlbmRlbmNlIChjby12YXJpYXRpb24sIGRlcGVuZGVuY2UpCgpkZXBlbmRlbmNlIGFuYWx5c2lzICRccmlnaHRhcnJvdyQgcmVncmVzc2lvbgoKLSB0d28gZGltZW5zaW9ucyAtLT4gbGluZQotIHRocmVlIGRpbWVuc2lvbnMgLS0+IHBsYW5lCi0gZm91ciBkaW1lbnNpb25zIC0tPiB2b2x1bWUKCmFub3NpbSAoaXMgc2ltaWxhciB0byBhbm92YSkKCnRvIGV4cGxhaW4gYSBkZXBlbmRlbmNlIHdlIGJ1aWxkIGEgbW9kZWwgKFJEQSwgZXRjLikKCiMjIyBpbnZlc3RpZ2F0aW9uIG9mIGNvcnJlbGF0aW9uCnNhbXBsZSBtYXRyaXggLS0+IGNvcnJlbGF0aW9uIG1hdHJpeApkcm9wIHZhcmlhYmxlcyB3aXRoIGxvdyB2YXJpYW5jZQoKIyMgRGlzc2ltaWxhcml0eQpldmVyeXRoaW5nIGlzIGRpc3NpbWlsYXJpdHksIGRpc3RhbmNlIGlzIG9ubHkgYSBzdWJzZXQKCmRpc3NpbWlsYXJpdHkgbWF0cml4Ci0tPiBkaXNzaW1pbGFyaXR5IHZhbHVlIGZvciBlYWNoIHBhaXIgb2Ygc2FtcGxlcwoKc2ltaWxhcnR5IGNvZWZmaWNpZW50Ci0gc2ltcGxlIG1hdGNoaW5nIChleGFtcGxlIG9mIGEgc3ltbWV0cmljYWwgY29lZmZpY2llbnQgLS0+IDEsMSAwLDApCi0tICQkXGZyYWN7YStkfXthK2IrYytkfSQkCgotIGphY2NhcmQgY29lZmZpY2llbnQKLS0gJCRcZnJhY3thfXthK2IrY30kJAoKLSBicmF5LWN1cnRpcyBjb2VmZmljaWVudAotLSAkJFxmcmFjezJhfXthK2IrY30kJAoKClRyYW5zZm9ybWF0aW9uCi0gY2VudGVyLXNjYWxlCi0gei1zY29yaW5nCi0gbG9nLXRyYW5zZm9ybWF0aW9uCgojIEV1Y2xpZGVhbiBzcGFjZQpldWNsaWRlYW4gZGlzdGFuY2UgYmV0d2VlbiB0d28gcG9pbnRzIGluIHR3byBkaW1lbnNpb25hbCBzcGFjZSBpcyBhIGxpbmUKb2Z0ZW4gd2UgbmVlZCBub24gZXVjbGlkZWFuIG1lYXN1cmVzIHRvIGV4cGxhaW4gZWNvbG9naWNhbCBwcm9ibGVtcwoKIyBCcmF5LUN1cnRpcyBkaXNzaW1pbGFyaXR5CgokJERfe2V1Y2xlZGlhbn09XHNxcnR7KFxzdW17eV97MSxqfS15X3sxLGp9fSleMn0kJAokJERfe0JyYXktQ3VydGlzfT1cZnJhY3tcc3VtX3tqPTF9XntwfSB8eV97MSxqfS15X3syLGp9fH17XHN1bV97aj0xfV57cH0oeV97MSxqfS15X3syLGp9KX0kJAoKCgojIFBDQSAoRmFjdG9yIEFuYWx5c2lzIC0gRkEpCgoqbGluZWFyIHRyYW5zZm9ybWF0aW9ucyBiZXR3ZWVuIGFsbCB2YXJpYWJsZXMqCgpmaXJzdCBQQ0EgaXMgdGhlIGF4aXMgdGhhdCBzZXBhcmF0ZXMgdGhlIGRhdGEgcG9pbnRzIHRoZSBtb3N0CgoqcCA+PiBuIHByb2JsZW0qCgpuZWVkcyBsaW5lYXIgcmVsYXRpb25zaGlwcyBiZXR3ZWVuIHZhcmlhYmxlcwoKcGNhIGJ1aWxkcyBQQ3Mgd2l0aCBhIGNvbWJpbmF0aW9uIG9mIGxpbmVhciB0cmFuc2Zvcm1hdGlvbnMgZnJvbSB0aGUgdmFyaWFibGUKCi0gY2FwdHVyZXMgdGhlIHZhcmlhbmNlCi0gUENBIGFuZCBDQSBkbyBub3QgZXhwbGFpbiBzb21ldGhpbmchIFRoZXkgb25seSBzdW1tYXJpemUgZGF0YS4KCiMjIFByb2NlZHVyZQoKMSkgc2FtcGxpbmcgLS0+IGRhdGFmcmFtZQoyKSBzdGFuZGFyZGl6ZS90cmFuc2Zvcm0gZGF0YWZyYW1lCjMpIFNWRCAoc2luZ3VsYXIgdmFsdWUgZGVjb21wb3NpdGlvbikvU0QgKHNwZWN0cmFsIGRlY29tcG9zaXRpb24pL0VBIChlaWdlbiBhbmFseXNpcykKNCkgYnVpbGQgUENzCjUpIHNvcnQgUENzIAo2KSBwbG90IChhc3N1bWVzIHRoYXQgYmltb2RhbCBvciB0cmltb2RhbCBzYW1wbGVzIGFyZSB1bmltb2RhbCkKCgpDb250aW5nZW5jeSBtYXRyaXggLS0+IENoaV4yIHRlc3QKVHJhbnNmb3JtYXRpb24gdG8gYSBDaGleMiBkaXN0YW5jZSBtYXRyaXgKLS0+IHVzZWQgZm9yIHNwZWN0cmFsIGRlY29tcG9zaXRpb24KCiMgQ29ycmVzcG9uZGFuY2UgQW5hbHlzaXMgKENBKQoKLSBub24tbGluZWFyCi0gQ2hpLXNxdWFyZSB0byBnZXQgdGFibGUgd2l0aCBsaW5lYXIgZGF0YQotIGNhcHR1cmVzIGluZXJ0aWEKCiMgUENvQSAoUHJpbmNpcGFsIGNvb3JkbmlhdGVzIGFuYWx5c2lzKSAvIE1EUyAobWV0cmljIGRpbWVudHJpb25hbCBzY2FsaW5nKQoKLSBubyBsaW5lYXIgYXNzdW1wdGlvbgotIEJDLCBKYWNjYXJkLCBldGMuIGNhbiBiZSB1c2VkCi0gbm90IHN1aXRhYmxlIGZvciBlbnZpcm9ubWVudGFsIGRhdGEgKGUuZy4gVGVtcGVyYXR1cmUgZXRjKQotIG1ldHJpYyAtLT4gYmVjYXVzZSB3ZSBkb24ndCByYW5rIGFueXRoaW5nIGNvbXBhcmVkIHRvIE5NRFMKLSBuZWdhdGl2ZSBlaWdlbnZhbHVlcyBhcmUgbm90IGV1Y2xpZGVhbiAvIHRoZSBtZXRob2QgY291bGRuJ3QgcHJvamVjdCB0aGUgbm9uIGV1Y2xlZGlhbiBtYXRyaXggKEJDKSAKCmJ1dCwgeW91IHVzZSB0aGUgc2l0ZXMgYW5kIHZlY3RvcnMKCjEpIGRhdGFmcmFtZSAoeD1zaXRlL3NhbXBsZSwgeT1LZWdnIE9ydGhvbG9nKQoyKSBkaXNzaW1pbGFyaXR5IG1hdHJpeAozKSBzdmQsIHNkLCBlYSAoZWlnZW4gYW5hbHlzaXMpCjQpIGRhdGFmcmFtZSAoeD1zaXRlL3NhbXBsZSwgeT1QQ29BcykKCiMgTk1EUwoKLSB1c2VkIHdoZW4geW91IGRvbid0IGtub3cgaWYgeW91ciBkYXRhIHZhbHVlcyBhcmUgYWNjdXJhdGUsIGJ1dCB0aGUgb3JkZXIgaXMgcmlnaHQKLSBpdCdzIGFuIGFsZ29yaXRobQotIHN0cmVzcyBvZiA8IDAuMiBpcyBhY2NlcHRhYmxlCi0gbmVlZHMgdG8gcnVuIG11bHRpcGxlIHRpbWVzIGJlY2F1c2UgaXQgZG9lc24ndCBubyB0aGUgb3B0aW11bSAoaXQncyBhbiBhbGdvcml0aG0pCi0gdHJpZXMgdG8gcmVkdWNlIHN0cmVzcwotIG1ldGFkYXRhIGNhbiBiZSBhZGRlZCwgYnV0IGFsd2F5cyBpbmRpcmVjdCBncmFkaWVudCBhbmFseXNpcyAoR0EpISBiZWNhdXNlIHdlIGRpZG4ndCBkbyBhbnkgcmVncmVzc2lvbiwganVzdCBmaXR0aW5nCi0gdXNlcyBhIGRpc3NpbWlsYXJpdHkgbWF0cml4IC0tPiBkYXRhIGlzIG5vdCBpbmRlcGVuZGVudCBhbnltb3JlCi0gc2hlcGFyZCBwbG90IGNhbiBiZSBwcm9kdWNlZCBmcm9tIE5NRFMgYW5kIGlsbHVzdHJhdGVzIHRoZSBzdHJlc3MKLSBkaXNzaW1pbGFyaXR5IGRhdGEgZ2V0cyByYW5rcwotIGZvciBub24tcGFyYW1ldHJpYyBkYXRhCi0gc2hlcGFyZHMgcGxvdCByZXByZXNlbnRzIHN0cmVzcyBpbiB0aGUgTk1EUy4gb3V0bGllcnMgYXJlIG5vdCBwcm9wZXJseSByZXByZXNlbnRlZCBpbiB0aGUgTk1EUwoKIyBSZWdyZXNzaW9uCgotIHg6IGluZGVwZW5kZW50IHZhcmlhYmxlCi0geTogcmVzcG9uY2UgdmFyaWFibGUKLSBmaXQgaXMgZGV0ZXJtaW5lZCBieSBSXjIgYW5kIHRoZSByZXNpZHVhbHMKLSBGIHN0YXRpc3RpYyB0ZWxscyB1cyBob3cgZ29vZCB0aGUgbW9kZWwgZml0cwoKLSBtdWx0aXZhcmlhYmxlIHJlZ3Jlc3Npb24KLSAkJHk9bV97MX14X3sxfSttX3syfXhfezJ9Ky4uLittX3tufXhfe259K2IkJAoKLSBtdWx0aXZhcmlhdGUgcmVncmVzc2lvbgotICQkWT1NWCtCJCQKLSBZLCBNLCBYLCBCIGFyZSBtYXRyaWNlcwoKCgoKCgoKCgoKCgojIGVjb2xvZ3kKIyMgY29lbm9zcGFjZQoKIyMgZWNvc3lzdGVtCi0gYmlvbWUgKHR1bmRyYSkKLS0gc3VjY2Vzc2lvbgphYmlvdGljIGVudmlyb25tZW50ICsgYmlvdGljIGxpdmUKCiMjIGVudmlyb25tZW50Ci0gZG9lcyBub3QgaGF2ZSBsaXZlCi0gYWJpb3RpYwoKIyMgaGFiaXRhdAotIHBvcHVsYXRpb24KLS0gbWluIDIgaW5kaXZpZHVhbHMgb2YgdGhlIHNhbWUgc3BlY2llcwotIGhhYml0YXQgaXMgcGFydCBvZiBhIGVjb3N5c3RlbSB0aGF0IHByb3ZpZGVzIGV2ZXJ5dGhpbmcgZm9yIGEgcG9wdWxhdGlvbiB0byBtYWludGFpbiB0aGVpciBjb21tdW5pdHkgb3IgZ3JvdwoKIyMgbmljaGUKLSBhYnN0cmFjdCBvZiBhbiBoYWJpdGF0Ci0gY292ZXJzIGVudmlyb25tZW50YWwgcGFyYW1ldGVycyB0aGF0IGlzIHN1aXRlZCBmb3IgYSBwb3B1bGF0aW9uCgojIENsdXN0ZXIgQW5hbHlzaXMKIyMgayBtZWFucyBjbHVzdGVyaW5nCm5vbi1oaWVyYXJjaGljYWwgY2x1c3RlcmluZwoKLSBvbmx5IGV1Y2xpZGVhbiBkaXN0YW5jZXMKLSBidXQgUENvQSBkYXRhZnJhbWUgY2FuIGJlIHVzZWQgYmVjYXVzZSBpdCBjYXB0dXJlcyB0aGUgdmFyaWF0aW9uIG9mIHRoZSBvcmlnaW5hbCBkYXRhCgotIGsgaXMgdGhlIG51bWJlciBvZiBtZWFucyAoY2VudGVyIG9mIGdyb3VwcykKLSBudW1iZXIgb2YgbWVhbnMgc2hvdWxkIGNvbWUgZnJvbSB0aGUgaHlwb3RoZXNpcyEhIQotIHByb3ZpZGVzIG1lYW4gb3JkaW5hdGlvbiB2YWx1ZXMgZm9yIHRoZSBjbHVzdGVyCgojIyBFTSBhbGdvcml0aG0gKGV4cGVjdGF0aW9uIG1heGltaXNhdGlvbiBhbGdvcml0aCkKCiMjIEhpZXJhcmNoaWNhbCBjbHVzdGVyaW5nCi0gcHJvdmlkZXMgZGlzY3JldGUgZGF0YQoKMSkgZGlzc2ltaWxhcml0eSBtYXRyaXgKMikgZGVuZHJvZ3JhbSAoZGl2aXNpdmUgb3Igb2dsb21vcmF0aXZlKQotLT4gZGlmZmVyZW5jZXMgYmV0d2VlbiBkaXZpc2l2ZSBhbmQgb2dsb21vcmF0aXZlLCBiZWNhdXNlIHRoZXJlIGNvdWxkIGJlIGxvY2FsIG9wdGltYSB0aGF0IGFyZSBhcHByb2FjaGVkIGZpcnN0IGZyb20gZGlmZmVyZW50IHNpdGVzCi0tPiBjaGFpbmluZyBwaGVub21lbmEgY291bGQgaW5kaWNhdGUgdGhhdCB0aGUgYXJlYSB3YXMgdW5kZXJzYW1wbGVkIC0tPiBubyBiaWdnZXIgc3BsaXRzIHBvc3NpYmxlIC0tPiBvbmUgc2FtcGxlIGlzIGtpbGxlZCBhZnRlciBlYWNoIG90aGVyCgotIHNpbmdsZSBsaW5rYWdlIGNsdXN0ZXIgKGNsb3Nlc3QgbWVtYmVycyBhcmUgbGlua2VkKQotLSBlLmcuIGEgbmV3IHNwZWNpZXMgaXMgY29udGFtaW5hdGluZyBhIHNpdGUgLyBoaWdoIHNlbnNpdGl2aXR5Ci0gY29tcGxldGUgbGlua2FnZSBjbHVzdGVyIChtZW1iZXJzIHRoYXQgYXJlIGZ1cnRoZXN0IGF3YXkgYXJlIGxpbmtlZCkKLS0gZm9yIHNob3cgdGhhdCBzb21ldGhpbmcgaXMgZGVmaW5hdGVseSBzZXBhcmF0ZWQKLSBhdmVyYWdlIGxpbmthZ2UgY2x1c3RlciAob3IgVVBHTUEsIGFsbCBtZW1iZXJzIG9mIG9uZSBncm91cCBhcmUgbGlua2VkIHdpdGggYWxsIG1lbWJlcnMgb2YgdGhlIG90aGVyIGdyb3VwKQotLSBmb3IgYSBnZW5lcmFsIGltcHJlc3Npb24KCiMgZnJvbSBiaXBsb3RzIHRvIHRyaXBsb3RzCiMjIGJpcGxvdHMKCi0gZGlyZWN0IGdyYWRpZW50IGFuYWx5c2lzCi0gUENBICYgQ0EKLSAKCgpjaGVjayAqbXVsdGlwbGUgdGVzdGluZyBwcm9ibGVtKgoKIyBSZWR1bmRhbmN5IEFuYWx5c2lzIChSREEpCgotIHRoZSBvdmVybGF5IG9mIGlkZXBlbmRlbnQgYW5kIHJlc3BvbmNlIHZhcmlhYmxlIGlzIHRoZSBwYXJ0IHRoZSBpcyBleHBsYWludCAob3IgcmVkdW5kYW50KQotIGNvbnN0cmFpbnQgYW5hbHlzaXMKLSBkaXJlY3QgZ3JhZGllbnQgYW5hbHlzaXMKLSBjb21iaW5lcyBleHBsb3JhdGlvbiBvZiBkYXRhIChQQ0EsIENBLCBOTURTLCBQQ29BKSBhbmQgY29tYmluZXMgaXQgd2l0aCBtZXRhZGF0YSAoZW52aXJvbm1lbnRhbCBpbnRlZ3JhdGlvbikKCiMgQ2Fub25pY2FsIENvcnJlc3BvbmRhbmNlIEFuYWx5c2lzIChDQ0EpCgotIGNvbnRyYWluZWQgQ0EKLSBhIENBIHdpdGggYSBsaW5lYXIgcmVncmVzc2lvbiBvbiB0b3AKCi0gc2ltaWxhciB0byBQQ0EgYnV0IHVzZXMgQ2hpLXNxdWFyZWQgbWF0cml4IAoKIyBIeXBvdGhlc2lzIHRlc3RpbmcKCiMjIEhvdGVsbGluZydzIHReMi10ZXN0CgotIHVzZXMgdGhlIGh5cGVybm9ybWFsIHNwYWNlIAotIGRvZXMgYSBQQ0EgdG8gc2ltcGxpZnkgdGhlIGh5cGVybm9tYWwgZGlzdHJpYnV0aW9uIGFzIGxvd2VyIGRpbWVudGlvbmFsIGRpc3RyaWJ1dGlvbiAoMSBkaW1lbnRpb24gaXMgY2xhc3NpYykKLSBwZXJmb3JtZXMgdC10ZXN0CgojIyBtdWx0aXZhcmlhdGUgQU5PVkEgKE1BTk9WQSkKCi0gYW5hbHlzaXMgb2YgdmFyaWFuY2UKLSBuZWVkcyBoeXBlcm5vcm1hbCBzcGFjZQotLSBkbyBtYW5vdmEsIGNoZWNrIHRoZSByZXNpZHVhbHMsIGlmIHRoZXkgYXJlIG5vcm1hbGx5IGRpc3RyaWJ1dGVkIGFyb3VuZCB6ZXJvLCB0aGUgZGF0YSBhcmUgaHlwZXJub3JtYWxseSBkaXN0cmlidXRlZAoKLSBQRVJNQU5PVkEgaWYgTUFOT1ZBIGRvZXMgbm90IHdvcmsKLSBpZiBQRVJNQU5PVkEgZG9lcyBub3Qgd29yayBkbyBBTk9TSU0KCiMjIEFOT1NJTSAoQU5PU0lNKQoKLSBhbmFseXNpcyBvZiBzaW1pbGFyaXR5Ci0gZGlzc2ltaWxhcml0eSBhbmQgcmFuay1iYXNlZAoKIyMgYmUgYXdhcmUKCi0gb3V0bGllcnMKLSBtdWx0aWNvbGxpbmVhcml0eQotIG1pc3NpbmcgZGF0YQotIE1BUiwgTU5BRSwgTUNBUgotIGhldGVyb3NjZWRhc3RpY2l0eQotIGF1dG9jb3JyZWxhdGlvbiAoZS5nLiB0aW1lLCBzcGFjZSwgcGF0Y2h5bmVzcykKLS0gbGFnIGVmZmVjdAotIHBzZXVkb3JlcGxpY2F0aW9uCi0tIGluZGVwZW5kZW50IGFwcGxpY2F0aW9uIG9mIGEgdHJlYXRtZW50IHRvIGFuIGV4cGVyaW1lbnRhbCB1bml0IHRoYXQgaXMgYWxzbyBpbmRlcGVuZGVudCBmcm9tIG90aGVyIGV4cGVyaW1lbnRhbCB1bnRpcwoKCgoKCgoKCgoKCgoKCgoKCgoKCg==</div>
 
 
 

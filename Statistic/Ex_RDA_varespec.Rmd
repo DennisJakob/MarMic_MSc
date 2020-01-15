@@ -1,0 +1,56 @@
+---
+title: "RDA"
+author: "Dennis Jakob"
+date: "1/15/2020"
+output: html_document
+---
+This script will be a tutorial on using RDA. This tutorial should be run with an instructor present, but independent development is encouraged.
+```{r}
+require(vegan)
+data(varespec)
+data(varechem)
+?varespec
+?varechem
+```
+
+Important to understand your data!
+```{r}
+class(varechem$Moisture)
+class(varechem$Management)
+
+varespec.rda <- rda(formula = varespec ~ N + P + K + Ca + Mg + S + Al + Fe + Mn + Zn + Mo + Baresoil + Humdepth + pH,
+                data = varechem)
+
+str(varespec.rda)
+summary(varespec.rda)
+varespec.rda$terminfo
+```
+
+Some variables are so well correlated that the vegan RDA routine removes all but one and uses that as the "alias" for the others. Let's find out which ones were aliased...
+```{r}
+varespec.rda$CCA$alias
+# [1] "Manure^4" is the alias of the others
+
+hist(residuals(varespec.rda))
+# right skewed histogram of risiduals
+
+varespec.hel <- decostand(varespec,
+                      method = "hellinger")
+varespec.hel.rda <- rda(varespec.hel ~ N + P + K + Ca + Mg + S + Al + Fe + Mn + Zn + Mo + Baresoil + Humdepth + pH,
+                    data = varechem)
+hist(residuals(varespec.hel.rda))
+# still right skewed histogram of risiduals but residuals lowered by factor 10
+```
+
+```{r}
+ordiplot(varespec.hel.rda,
+         type = "text")
+```
+
+ANOVA
+```{r}
+set.seed(15081992)
+varespec.hel.rda.anova <- anova.cca(varespec.hel.rda)
+str(varespec.hel.rda.anova)
+```
+

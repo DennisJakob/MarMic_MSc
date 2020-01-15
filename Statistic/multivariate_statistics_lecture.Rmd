@@ -2,19 +2,9 @@
 title: "multivariate statistics"
 output: html_notebook
 ---
-# Lecture 1
+# A flavour of multivariate statistical methods in aid of microbial ecology - Day 1
 
-# introduction
-
-Q: What does the zero say to the eight? 
-A: Nice belt!
-
-What is the difference between logic and statistic? 
-Logic is a systematic method for getting the wrong conclusion with confidence.
-Statistics is a systematic method for getting the wrong conclusion with 95% confidence.
-
-
-
+## Introduction
 
 [GUSTA ME](https://mb3is.megx.net/gustame)
 
@@ -66,6 +56,15 @@ similarty coefficient
 - jaccard coefficient
 -- $$\frac{a}{a+b+c}$$
 
+- bray-curtis coefficient
+-- $$\frac{2a}{a+b+c}$$
+
+
+Transformation
+- center-scale
+- z-scoring
+- log-transformation
+
 # Euclidean space
 euclidean distance between two points in two dimensional space is a line
 often we need non euclidean measures to explain ecological problems
@@ -73,29 +72,205 @@ often we need non euclidean measures to explain ecological problems
 # Bray-Curtis dissimilarity
 
 $$D_{eucledian}=\sqrt{(\sum{y_{1,j}-y_{1,j}})^2}$$
-$$D_{Bray-Curtis}=\frac{\sum_{j=1}^{p}y_{1,j}-y_{2,j}{\sum_{j=1}^{p}(y_{1,j}-y_{2,j})}$$
+$$D_{Bray-Curtis}=\frac{\sum_{j=1}^{p} |y_{1,j}-y_{2,j}|}{\sum_{j=1}^{p}(y_{1,j}-y_{2,j})}$$
 
 
 
+# PCA (Factor Analysis - FA)
 
-# PCA
+*linear transformations between all variables*
 
 first PCA is the axis that separates the data points the most
 
-pca builds PCs with a combination of linear regressions from the variable
+*p >> n problem*
 
-- standardize
-- build PCs
-- sort PCs 
-- plot 
+needs linear relationships between variables
 
-SVD singular value decomposition
+pca builds PCs with a combination of linear transformations from the variable
 
-# coenospace
-- PCA - principal component analysis
-- CA - correspondance analysis
+- captures the variance
+- PCA and CA do not explain something! They only summarize data.
+
+## Procedure
+
+1) sampling --> dataframe
+2) standardize/transform dataframe
+3) SVD (singular value decomposition)/SD (spectral decomposition)/EA (eigen analysis)
+4) build PCs
+5) sort PCs 
+6) plot (assumes that bimodal or trimodal samples are unimodal)
 
 
+Contingency matrix --> Chi^2 test
+Transformation to a Chi^2 distance matrix
+--> used for spectral decomposition
+
+# Correspondance Analysis (CA)
+
+- non-linear
+- Chi-square to get table with linear data
+- captures inertia
+
+# PCoA (Principal coordniates analysis) / MDS (metric dimentrional scaling)
+
+- no linear assumption
+- BC, Jaccard, etc. can be used
+- not suitable for environmental data (e.g. Temperature etc)
+- metric --> because we don't rank anything compared to NMDS
+- negative eigenvalues are not euclidean / the method couldn't project the non eucledian matrix (BC) 
+
+but, you use the sites and vectors
+
+1) dataframe (x=site/sample, y=Kegg Ortholog)
+2) dissimilarity matrix
+3) svd, sd, ea (eigen analysis)
+4) dataframe (x=site/sample, y=PCoAs)
+
+# NMDS
+
+- used when you don't know if your data values are accurate, but the order is right
+- it's an algorithm
+- stress of < 0.2 is acceptable
+- needs to run multiple times because it doesn't no the optimum (it's an algorithm)
+- tries to reduce stress
+- metadata can be added, but always indirect gradient analysis (GA)! because we didn't do any regression, just fitting
+- uses a dissimilarity matrix --> data is not independent anymore
+- shepard plot can be produced from NMDS and illustrates the stress
+- dissimilarity data gets ranks
+- for non-parametric data
+- shepards plot represents stress in the NMDS. outliers are not properly represented in the NMDS
+
+# Regression
+
+- x: independent variable
+- y: responce variable
+- fit is determined by R^2 and the residuals
+- F statistic tells us how good the model fits
+
+- multivariable regression
+- $$y=m_{1}x_{1}+m_{2}x_{2}+...+m_{n}x_{n}+b$$
+
+- multivariate regression
+- $$Y=MX+B$$
+- Y, M, X, B are matrices
+
+
+
+
+
+
+
+
+
+
+
+
+# ecology
+## coenospace
+
+## ecosystem
+- biome (tundra)
+-- succession
+abiotic environment + biotic live
+
+## environment
+- does not have live
+- abiotic
+
+## habitat
+- population
+-- min 2 individuals of the same species
+- habitat is part of a ecosystem that provides everything for a population to maintain their community or grow
+
+## niche
+- abstract of an habitat
+- covers environmental parameters that is suited for a population
+
+# Cluster Analysis
+## k means clustering
+non-hierarchical clustering
+
+- only euclidean distances
+- but PCoA dataframe can be used because it captures the variation of the original data
+
+- k is the number of means (center of groups)
+- number of means should come from the hypothesis!!!
+- provides mean ordination values for the cluster
+
+## EM algorithm (expectation maximisation algorith)
+
+## Hierarchical clustering
+- provides discrete data
+
+1) dissimilarity matrix
+2) dendrogram (divisive or oglomorative)
+--> differences between divisive and oglomorative, because there could be local optima that are approached first from different sites
+--> chaining phenomena could indicate that the area was undersampled --> no bigger splits possible --> one sample is killed after each other
+
+- single linkage cluster (closest members are linked)
+-- e.g. a new species is contaminating a site / high sensitivity
+- complete linkage cluster (members that are furthest away are linked)
+-- for show that something is definately separated
+- average linkage cluster (or UPGMA, all members of one group are linked with all members of the other group)
+-- for a general impression
+
+# from biplots to triplots
+## biplots
+
+- direct gradient analysis
+- PCA & CA
+- 
+
+
+check *multiple testing problem*
+
+# Redundancy Analysis (RDA)
+
+- the overlay of idependent and responce variable is the part the is explaint (or redundant)
+- constraint analysis
+- direct gradient analysis
+- combines exploration of data (PCA, CA, NMDS, PCoA) and combines it with metadata (environmental integration)
+
+# Canonical Correspondance Analysis (CCA)
+
+- contrained CA
+- a CA with a linear regression on top
+
+- similar to PCA but uses Chi-squared matrix 
+
+# Hypothesis testing
+
+## Hotelling's t^2-test
+
+- uses the hypernormal space 
+- does a PCA to simplify the hypernomal distribution as lower dimentional distribution (1 dimention is classic)
+- performes t-test
+
+## multivariate ANOVA (MANOVA)
+
+- analysis of variance
+- needs hypernormal space
+-- do manova, check the residuals, if they are normally distributed around zero, the data are hypernormally distributed
+
+- PERMANOVA if MANOVA does not work
+- if PERMANOVA does not work do ANOSIM
+
+## ANOSIM (ANOSIM)
+
+- analysis of similarity
+- dissimilarity and rank-based
+
+## be aware
+
+- outliers
+- multicollinearity
+- missing data
+- MAR, MNAE, MCAR
+- heteroscedasticity
+- autocorrelation (e.g. time, space, patchyness)
+-- lag effect
+- pseudoreplication
+-- independent application of a treatment to an experimental unit that is also independent from other experimental untis
 
 
 

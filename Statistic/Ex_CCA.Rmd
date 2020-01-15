@@ -1,0 +1,95 @@
+---
+title: "Ex_CCA"
+author: "Dennis Jakob"
+date: "1/15/2020"
+output: html_document
+---
+# CCA exercise
+1) What is the difference between the CCA and RDA?
+- RDA
+-- used for data with linear relations
+-- it uses the origin data
+-- shows variation
+
+- CCA
+-- unimodal/non-linear data can be used by performing Chi-squared analysis
+-- uses the Chi-squared
+-- shows inertia
+
+2) Perform a CCA on the varespec and varchem datasets (response and explanatory respectively).
+```{r}
+require(vegan)
+require(corrgram)
+data("varespec")
+data("varechem")
+?varespec
+?varechem
+
+# perform and plot CCA varespec ~ varechem
+varespec.cca <- cca(formula = varespec ~ .,
+             data = varechem)
+```
+
+3) Make a triplot (objects, and response and explanatory variables) for the first two canonical axes.
+ 3.1) How much inertia is captured by these axes?
+```{r}
+ordiplot(varespec.cca,
+         type="t",
+         scaling=1) # Type 1 scaling emphasises the relationships among objects
+ordiplot(varespec.cca,
+         type="t",
+         scaling=2) # Type 2 scaling emphasises the relationships among response variables
+ordiplot(varespec.cca,
+         choices = c(1,2),
+         type="t") # scaling 2 is default
+
+varespec.cca$CCA$tot.chi
+(sum(varespec.cca$CCA$eig[1:2])/sum(varespec.cca$CCA$eig))*100
+```
+
+4) What are the values of the constrained and total inertia? What does this mean? What is inertia in this case (compare it to the inertia reported in your RDA object).
+
+```{r}
+varespec.cca
+# total inertia
+varespec.cca$tot.chi
+# unconstrained inertia
+varespec.cca$CA$tot.chi
+# constrained inertia
+varespec.cca$CCA$tot.chi
+# proportion of constrained inertia (inertia means variance)
+varespec.cca$CCA$tot.chi/varespec.cca$tot.chi
+
+varespec.rda <- rda(formula = varespec ~ .,
+                    data = varechem)
+varespec.rda
+```
+
+5) What is the correlation between the first canonical axes and the explanatory matrix?
+```{r}
+# inertia captured in the CCA axes
+screeplot(varespec.cca)
+sum(varespec.cca$CCA$eig[1:2])/sum(varespec.cca$CCA$eig)
+```
+
+
+6) Test the significance of the overall solution and for the first two axes.
+```{r}
+set.seed(15081992)
+# test significance of the overall solution 
+anova.cca(varespec.cca)
+
+# test significance of the association between each canonical axes and explanatory variables
+varespec.cca.anova.axis <- anova.cca(varespec.cca,
+                                     by="axis")
+varespec.cca.anova.axis
+
+CCA1 <- varespec.cca$CCA$u[,"CCA1"]
+corrgram(cbind(CCA1, varechem), lower.panel = panel.shade, upper.panel = NULL, text.panel = panel.txt)
+CCA2 <-varespec.cca$CCA$u[,"CCA2"]
+corrgram(cbind(CCA2, varechem), lower.panel = panel.shade, upper.panel = NULL, text.panel = panel.txt)
+# analyze multi linear correlation coefficients
+varespec.cca.mlm <- as.mlm(varespec.cca)
+varespec.cca.mlm
+```
+
