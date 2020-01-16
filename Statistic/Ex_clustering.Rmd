@@ -8,8 +8,10 @@ output: html_document
 
 1) Cluster the samples sites from the dune dataset based on the kmeans method (see ?kmeans).
 ```{r}
-library(vegan)
-library(cluster)
+require(vegan)
+require(cluster)
+require(useful)
+require(factoextra)
 data(dune)
 ?dune
 
@@ -27,19 +29,20 @@ clusplot(x=dune.eu.dist,
          clus = dune.kc5$cluste,
          lines = 0,
          labels = 2)
+plot.kmeans(dune.kc5, dune)
+fviz_cluster(dune.kc5, dune)
 ```
-
 
 2) Compute a distance matrix based on the Euclidean distances and make a hierarchical clustering using the average linkage and ward's methods (see ?cluster).
 ```{r}
 dune.eu.dist <- dist(dune,
                      method = "euclidean")
 dune.eu.dist.ac <- hclust(dune.eu.dist,
-                  method = "average")
+                          method = "average")
 dune.eu.dist.wc <- hclust(dune.eu.dist,
-                  method = "ward.D2")
+                          method = "ward.D2")
 dune.eu.dist.cc <- hclust(dune.eu.dist,
-                  method = "complete")
+                          method = "complete")
 ```
 
 3) Plot the previous three clusters.
@@ -77,5 +80,15 @@ table(cutree(dune.eu.dist.wc,
              k=5),
       cutree(dune.pca.eu.dist.wc,
              k=5))
+```
+
+Additional: test significance of clustering
+```{r}
+# use as.factor for vector of clusters otherwise it may be interpreted as ordered
+anosim(dune, # data from of response variables
+       as.factor(dune.kc$cluster)) # factor for grouping
+adonis(dune ~ as.factor(dune.kc$cluster)) #adonis is PERMANOVA
+
+rda(dune ~ as.factor(dune.kc$cluster)) %>% plot
 ```
 
