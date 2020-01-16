@@ -179,6 +179,7 @@ $\rightarrow$ Spearman's rank coefficient:
 - the model transforms the x variable to an approximation of y
 
 # An ecologically-flavoured introduction to statistics - Day 3
+[](https://www.youtube.com/watch?v=5IlnXyGIEPI&feature=youtu.be)
 
 ## $H_{0}$: The null hypothesis
 
@@ -284,43 +285,111 @@ It is the probability that one would obtain a test statistic at least as exrtrem
 
 ### F-test
 
-[](https://www.youtube.com/watch?v=5IlnXyGIEPI&feature=youtu.be)
---> 50:41 min
+- usually used to test how good a model fits the data
+- follows after regression
+- tests the equality of two variances (modeled data vs. real data)
+- controlled by the degrees of freedom (df) of two distributions
+![](media/f-distribution.png)
+- in case of $df_{1}=1$ & $df_{2}=1$ replication is extremely low $\rightarrow$ extreme poisson distribution 
+- in case of $df_{1}=100$ & $df_{2}=100$ replication is high $\rightarrow$ normal distribution 
+- more dfs means more confident in the estimation
+- the mean of the distributions is connected as it is part of the variances
 
+- F-statistic comes out of the F-test
+-- sum of squares of the explained variation (modeled) & sum of squares of the unexplained variation
 
+### ANOVA
 
+- used to test whether groups are different from each other
+- ANOVA and t-test are closely liked together $\rightarrow$ two-sa mple ANOVA is equivalent to t-test
+- it doesn't matter if group 1 and group 2 are overlapping when group 3 is completly off $\rightarrow$ ANOVA will give you a significant result, that at least 1 group is different from the others
+- $H_{0}:\mu_{1}=\mu_{2}=\mu_{3}=...=\mu_{n} \rightarrow$ not treatment effect
+- $H_{A}$ at least one group has different mean
 
+- process
+-- partition *variation* into *modelled variation* and *error* (residuals)
+-- generates an f-statistic: modelled/error variance
+-- large F-values indicate that the model explains most of the variance 
 
+- assumptions
+-- response variables are normally distributed (check with Barlett's or Levene's test, but also look at it!!!)
+-- variances of responce variables are equal (check for heteroscedasticity, corrections available)
+-- samples are independent
+-- $$F_{N,K}=\frac{\sum_{i}{n_{i}(\overline{Y_{i}}-\overline{\overline{Y}})^2/K-1}}{\sum_{i,j}{(Y_{i,j}-\overline{Y_{i}})^2/N-K}}$$
+-- focus on $$F=\frac{SS_{between}}{SS_{within}}$$
+-- SSbetween --> fit
+-- SSwithin --> error
+-- N = overall sample size
+-- K = number of groups
+-- j = observations
+-- i = groups
+-- $\overline{Y}$ = group mean
+-- $\overline{\overline{Y}}$ = grand mean
 
+![](media/anova_overview.png)
 
 - interested in the shape
 
-### Analysis of Variance (ANOVA)
-- homoscedasticity
-- heteroscedasticity: the variance increases with the x variable
-- SSbetween --> fit
-- SSwithin --> error
-
 ### The $\chi^2$
 
+- used to relate the proportions of count data to the expected proportion under a $\chi^{2}$-distribution
+- campares proportions of observed counts to proportions of expected counts
+- hypotheses: probability of any individual count being in a given category
+- are the observations equal to the expectations
+- expected values are estimated from the data itself
+- contingency table $\rightarrow$ margins are used to calculate the expectations
+
+- expectations for any cell: E = (rowSum x colSums) / tableSum
+- if there is a difference between expected and observed $\rightarrow \chi$ 
+- $\chi^2$-statistic: $$\chi^{2}=\frac{\sum{(O_{i}-E_{i})^2}}{E_{i}}$$
+
 ### Fisher's exact test
+for categorical data
+
+- exact, because the p-value is calculated exactly $\rightarrow$ no distribution is used
+- n is usually small, but also usable for large n (but there are more powerful tests)
+-- p doesn't have to be estimated
+- non-parametric
+
+![](media/fisher.png)
 
 ## Non-parametric tests
-- more robust
+
+- for non-normal data, and when transformation doesn't help
+- don't assume a distribution 
+- more robust 
+- you loose power, because data are e.g. ranked, less sensitivity
+
+- most parametric test have a non-parametric equivalent
+![](media/par_npar_tests.png)
+
+- significance is test by creating our own distribution $\rightarrow$ resampling
 
 ## Resampling
+used to test significance of non-parametric tests
 
 ### Jackknifing
 
+1) calculate statistic from original data
+2) remove rows of the data randomly (as often as you can, limited by original data)
+3) recalculate test statistic
+4) the distribution of statistics is messed up
+$\rightarrow$ when original statistic falls into the new distribution there are no differences
+$\rightarrow$ when original statistic falls out of the new distribution there is a difference
+
 ### Bootstrapping
 
+1) calculate statistic from original data
+2) bootstrap the rows/columns (remove some / add some from original data )
+
 ### Permutation
-- within rows
-- of rows
-- within columns
-- of columns
 
-
-
-
+- it matters how we permute
+-- e.g. when we permute within a species column, the distribution over sites doesn't matter
+-- e.g. when complete species columns are moved, the species distribution is still intact
+- various permutation possibilities
+-- within rows
+-- of rows
+-- within columns
+-- of columns
 
