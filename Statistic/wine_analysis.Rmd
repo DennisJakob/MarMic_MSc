@@ -1,0 +1,19 @@
+---
+title: "wine_tasting"
+author: "Dennis Jakob"
+date: "1/16/2020"
+output: html_document
+---
+```{r}
+require(vegan)
+require(viridis)
+require(corrgram)
+require(tidyverse)
+require(scatterplot3d)
+```
+
+```{r import data}
+wine <- read.delim("wine_data.txt", header = T)
+meta <- read.delim("wine_meta.txt", header = T, dec = ",")
+```
+
