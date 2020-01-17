@@ -1,0 +1,224 @@
+---
+title: "wine_clean_up"
+author: "Dennis Jakob"
+date: "1/16/2020"
+output: html_document
+---
+```{r}
+require(tidyverse)
+require(reshape2)
+```
+
+```{r import data}
+wine <- read.delim("wine_data.txt", header = T)
+wine$wine <- factor(wine$wine)
+```
+
+```{r replace spelling mistakes}
+# split table by variable
+color     <- wine %>% filter(variable == "color")     %>% select(c(wine, value, name)) 
+legs      <- wine %>% filter(variable == "legs")      %>% select(c(wine, value, name))
+nose      <- wine %>% filter(variable == "nose")      %>% select(c(wine, value, name))
+mouthfeel <- wine %>% filter(variable == "mouthfeel") %>% select(c(wine, value, name))
+taste     <- wine %>% filter(variable == "taste")     %>% select(c(wine, value, name))
+
+# create vector of unique values for each variable
+color.unique <- color %>% {unique(color$value)} %>% as.vector() %>% sort()
+legs.unique <- legs %>% {unique(legs$value)} %>% as.vector() %>% sort()
+nose.unique <- nose %>% {unique(nose$value)} %>% as.vector() %>% sort()
+mouthfeel.unique <- mouthfeel %>% {unique(mouthfeel$value)} %>% as.vector() %>% sort()
+taste.unique <- taste %>% {unique(taste$value)} %>% as.vector() %>% sort()
+
+# replace values as needed
+wine[wine$value == "thin", "value"] <- "skinny"
+wine[wine$value == "berrys", "value"] <- "berry"
+wine[wine$value == "casis", "value"] <- "cassis"
+wine[wine$value == c("catspee", "cat'spee"), "value"] <- "catpee"
+wine[wine$value == "cheesey", "value"] <- "cheese"
+wine[wine$value == "cistrusblossom", "value"] <- "citrusblossom"
+wine[wine$value == c("grape", "grappy", "grapy"), "value"] <- "grapey"
+wine[wine$value == c("juiciy", "jucy"), "value"] <- "juicy"
+wine[wine$value == "quinche", "value"] <- "quince"
+wine[wine$value == "redfruit", "value"] <- "redfruits"
+wine[wine$value == c("sweettabaco", "sweettobaco"), "value"] <- "sweettobacco"
+wine[wine$value == "tropical", "value"] <- "tropicalfruit"
+wine[wine$value == "whiteflower", "value"] <- "whiteflowers"
+wine[wine$value == "acidity", "value"] <- "acidic"
+wine[wine$value == "agressive", "value"] <- "aggressive"
+wine[wine$value == "astingent", "value"] <- "astringent"
+wine[wine$value == "dilicate", "value"] <- "delicate"
+wine[wine$value == "powefull", "value"] <- "powerful"
+wine[wine$value == "velvet", "value"] <- "velvety"
+wine[wine$value == "plastics", "value"] <- "plastic"
+wine[wine$value == "thin", "value"] <- "skinny"
+wine[wine$value == "stammy", "value"] <- "stemmy"
+wine[wine$value == c("flower", "flowery"), "value"] <- "flowers"
+
+# Check that is has worked
+color     <- wine %>% filter(variable == "color")     %>% select(c(wine, value, name)) 
+legs      <- wine %>% filter(variable == "legs")      %>% select(c(wine, value, name))
+nose      <- wine %>% filter(variable == "nose")      %>% select(c(wine, value, name))
+mouthfeel <- wine %>% filter(variable == "mouthfeel") %>% select(c(wine, value, name))
+taste     <- wine %>% filter(variable == "taste")     %>% select(c(wine, value, name))
+
+color.unique     <- color     %>% {unique(.$value)} %>% as.vector() %>% sort()
+legs.unique      <- legs      %>% {unique(.$value)} %>% as.vector() %>% sort()
+nose.unique      <- nose      %>% {unique(.$value)} %>% as.vector() %>% sort()
+mouthfeel.unique <- mouthfeel %>% {unique(.$value)} %>% as.vector() %>% sort()
+taste.unique     <- taste     %>% {unique(.$value)} %>% as.vector() %>% sort()
+```
+
+```{r changing long to wide format}
+wine$name <- NULL
+wine.wide <- wine %>%
+  group_by_at(vars(wine, variable)) %>%  # group by everything other than the value column.
+  mutate(row_id=1:n()) %>% ungroup() %>%  # build group index
+  spread(key=variable, value=value) %>%    # spread
+  select(-row_id)  # drop the index
+```
+
+```{r Pier turning observations into counts}
+# the baseR way
+wine.mouthfeel <- wine %>% filter(variable == "mouthfeel") %>%
+  #filter(name == "dennis") %>%
+  dcast(data = ., formula = wine ~ value, length)
+write_delim(wine.mouthfeel, "mouthfeel.txt", delim = "\t")
+
+wine.color <- wine %>% filter(variable == "color") %>%
+  #filter(name == "dennis") %>%
+  dcast(data = ., formula = wine ~ value, length)
+write_delim(wine.color, "color.txt", delim = "\t")
+
+wine.legs <- wine %>% filter(variable == "legs") %>%
+  #filter(name == "dennis") %>%
+  dcast(data = ., formula = wine ~ value, length)
+write_delim(wine.legs, "legs.txt", delim = "\t")
+
+wine.nose <- wine %>% filter(variable == "nose") %>%
+  #filter(name == "dennis") %>%
+  dcast(data = ., formula = wine ~ value, length)
+write_delim(wine.nose, "nose.txt", delim = "\t")
+
+wine.taste <- wine %>% filter(variable == "taste") %>%
+  #filter(name == "dennis") %>%
+  dcast(data = ., formula = wine ~ value, length)
+write_delim(wine.taste, "taste.txt", delim = "\t")
+
+# the tidyR way
+# data %>%
+  # filter(name == "margot") %>%
+  # group_by(wine, value) %>%
+  # summarise(count = n())  %>%
+  # spread(value, count, fill = 0)
+```
+
+
+```{r Dennis turning observations into counts}
+# wine.wide$color <- paste("color", wine.wide$color,  sep = ".")
+# wine.wide$legs <- paste("legs", wine.wide$legs,  sep = ".")
+# wine.wide$nose <- paste("nose", wine.wide$nose,  sep = ".")
+# wine.wide$mouthfeel <- paste("mouthfeel", wine.wide$mouthfeel,  sep = ".")
+# wine.wide$taste <- paste("taste", wine.wide$taste,  sep = ".")
+# 
+# wine.color <- wine.wide[,c("wine","color")]
+# colnames(wine.color) <- c("wine", "variable")
+# wine.legs <- wine.wide[,c("wine","legs")]
+# colnames(wine.legs) <- c("wine", "variable")
+# wine.nose <- wine.wide[,c("wine","nose")]
+# colnames(wine.nose) <- c("wine", "variable")
+# wine.mouthfeel <- wine.wide[,c("wine","mouthfeel")]
+# colnames(wine.mouthfeel) <- c("wine", "variable")
+# wine.taste <- wine.wide[,c("wine","taste")]
+# colnames(wine.taste) <- c("wine", "variable")
+# 
+# wine.long <- rbind(wine.color, wine.legs, wine.nose, wine.mouthfeel, wine.taste)
+# 
+# counts_distinct <- counts %>% distinct()
+```
+
+```{r deal with legs}
+# legs <- select(filter(wine, variable == "legs"), c(wine, value, name))
+# 
+# long <- select(filter(legs, value == "long"), c(wine, value, name))
+# short <- select(filter(legs, value == "short"), c(wine, value, name))
+# skinny <- select(filter(legs, value == "skinny"), c(wine, value, name))
+# fat <- select(filter(legs, value == "fat"), c(wine, value, name))
+# 
+# width <- rbind(fat, skinny)
+# length <- rbind(long, short)
+# 
+# length[,4] <- "length"
+# colnames(length) <- c("wine", "value", "name", "variable")
+# width[,4] <- "width"
+# colnames(width) <- c("wine", "value", "name", "variable")
+# legs2 <- rbind(width, length)
+# 
+# wine_sub <- select(filter(wine, variable != "legs"), c(wine, value, name, variable))
+# colnames(wine_sub) <- c("wine", "value", "name", "variable")
+# wine_new <- rbind(wine_sub, legs2)
+
+# Margots code
+# legs <- wine %>% filter(variable == "legs") %>% mutate(variable = ifelse(value == c("long", "short"), yes = "legs_length", no = "legs_width"))
+# not.legs <- wine %>% filter(variable != "legs" )
+# wine.long <- rbind(legs, not.legs)
+```
+
+```{r how to not do it}
+# wine.long$variable <- factor(wine.long$variable)
+# wine.wide <- reshape(data = wine, idvar = "wine", timevar = "variable", direction = "wide")
+# 
+# wine_wide <- wine.long %>% pivot_wider(names_from = variable, values_from = value) 
+# mutate_at(vars(legs_width, legs_length), unlist) %>%
+# 
+# 
+# wine_wide <- wine.long %>%
+#   pivot_wider(names_from = "variable", values_from = "value", values_fn = list(value=list)) %>%
+#   mutate_at(vars(color, legs_width, legs_length), unlist) %>%
+#   mutate_at(c("nose", "mouthfeel", "taste"), unclass) %>%
+#   unnest_wider(c(nose, mouthfeel, taste), names_sep = "_", names_repair = ~sub("..." , "", ., fixed=TRUE))
+# 
+# wine_nose <- wine.long %>% 
+#              filter(variable == "nose") %>%
+#              group_by(wine) %>% 
+#              mutate(type = str_c(variable, row_number())) %>%
+#              spread(variable, value)
+# wine_mouthfeel <- wine.long %>% 
+#              filter(variable == "mouthfeel") %>%
+#              group_by(wine) %>% 
+#              mutate(type = str_c(variable, row_number())) %>%
+#              spread(variable, value)
+# wine_taste <- wine.long %>% 
+#              filter(variable == "taste") %>%
+#              group_by(wine) %>% 
+#              mutate(type = str_c(variable, row_number())) %>%
+#              spread(variable, value)
+# 
+# wine_df <- wine.long %>%
+#   filter(variable != "nose" & variable != "mouthfeel" & variable != "taste") %>%
+#   colnames(c("wine", "variable"))
+```
+
+```{r text mining}
+# require(SnowballC)
+# require(qdap)
+# require(tm)
+# 
+# # Create vector to be stemmed
+# val <- wine %>% select(value) %>% unlist %>% as.character() %>% sort %>% unique() %>% as.data.frame()
+# write_delim(val,
+#             "value.txt")
+# 
+# # Perform word stemming: stem_doc
+# stem_doc <- stemDocument(val)
+# 
+# # Create the completion dictionary: comp_dict
+# value_dict <- read_table("value.txt",
+#                          col_names = F)
+# 
+# # Perform stem completion: complete_text 
+# value_text <- stemCompletion(x = stem_doc,
+#                              dictionary = value_dict)
+# # Print complete_text
+# value_text
+```
+

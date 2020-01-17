@@ -1,2084 +1,1651 @@
 wine	variable	value	name
-1	color	pale garnet	raissa
+1	color	palegarnet	raissa
+2	color	deepgarnet	raissa
+3	color	paleruby	raissa
+4	color	paleruby	raissa
+5	color	paleruby	raissa
+6	color	palecopper	raissa
+7	color	paleruby	raissa
+8	color	paleruby	raissa
+10	color	mediumstraw	raissa
+11	color	palestraw	raissa
+12	color	paleyellow	raissa
+1	color	deeptawny	margot
+2	color	paleruby	margot
+3	color	palepurple	margot
+4	color	palepurple	margot
+5	color	paleruby	margot
+6	color	palecopper	margot
+7	color	mediumruby	margot
+8	color	mediumpurple	margot
+9	color	deepcopper	margot
+10	color	mediumstraw	margot
+11	color	mediumyellow	margot
+12	color	mediumstraw	margot
+1	color	deepgarnet	barbara
+2	color	mediumruby	barbara
+3	color	mediumpurple	barbara
+4	color	mediumpurple	barbara
+5	color	plaepurple	barbara
+6	color	palecopper	barbara
+7	color	mediumruby	barbara
+8	color	deeppurple	barbara
+9	color	deepsalmon	barbara
+10	color	mediumstraw	barbara
+11	color	palestraw	barbara
+12	color	mediumstraw	barbara
+1	color	palegarnet	cora
+2	color	palegarnet	cora
+3	color	paleruby	cora
+4	color	paleruby	cora
+5	color	paleruby	cora
+6	color	palecopper	cora
+7	color	paleruby	cora
+8	color	paleruby	cora
+9	color	darkcopper	cora
+10	color	mediumstraw	cora
+11	color	palestraw	cora
+12	color	deepstraw	cora
+1	color	mediumtawny	dennis
+2	color	mediumruby	dennis
+3	color	mediumpurple	dennis
+4	color	mediumpurple	dennis
+5	color	mediumruby	dennis
+6	color	palecopper	dennis
+7	color	mediumruby	dennis
+8	color	mediumpurple	dennis
+9	color	deepcopper	dennis
+10	color	paleyellow	dennis
+11	color	mediumstraw	dennis
+12	color	mediumstraw	dennis
+1	color	mediumruby	anj
+2	color	paleruby	anj
+4	color	paleruby	anj
+1	color	paleruby	unknownguy
+2	color	palepurple	unknownguy
+3	color	mediumpurple	unknownguy
+1	color	mediumgarnet	chiara
+2	color	mediumruby	chiara
+3	color	paleruby	chiara
+4	color	mediumpurple	chiara
+5	color	paleruby	chiara
+6	color	mediumcopper	chiara
+7	color	mediumruby	chiara
+8	color	mediumpurple	chiara
+9	color	paletawny	chiara
+10	color	mediumstraw	chiara
+11	color	palestraw	chiara
+12	color	deepstraw	chiara
+1	color	deepgarnet	benedict
+2	color	mediumpurple	benedict
+3	color	mediumruby	benedict
+4	color	deepruby	benedict
+5	color	paleruby	benedict
+6	color	palecopper	benedict
+7	color	deeppurple	benedict
+8	color	deeppurple	benedict
+9	color	deepcopper	benedict
+10	color	paleyellow	benedict
+11	color	palestraw	benedict
+12	color	deepstraw	benedict
+1	color	deepgarnet	hanna
+2	color	mediumruby	hanna
+3	color	mediumpurple	hanna
+4	color	mediumpurple	hanna
+5	color	mediumruby	hanna
+6	color	palecopper	hanna
+7	color	mediumruby	hanna
+8	color	mediumpurple	hanna
+9	color	deepsalmon	hanna
+10	color	palestraw	hanna
+11	color	mediumstraw	hanna
+12	color	paleyellow	hanna
+1	color	deepgarnet	david
+2	color	deepruby	david
+3	color	mediumpurple	david
+4	color	deeppurple	david
+5	color	mediumruby	david
+6	color	palecopper	david
+7	color	mediumruby	david
+8	color	deeppurple	david
+9	color	deepcopper	david
+10	color	palestraw	david
+11	color	mediumstraw	david
+12	color	paleyellow	david
+1	color	mediumgarnet	lisa
+2	color	paleruby	lisa
+3	color	mediumpurple	lisa
+4	color	mediumpurple	lisa
+5	color	mediumruby	lisa
+6	color	mediumcopper	lisa
+7	color	deepruby	lisa
+8	color	deeppurple	lisa
+9	color	paletawny	lisa
+10	color	paleyellow	lisa
+11	color	mediumstraw	lisa
+12	color	mediumstraw	lisa
+1	color	deepgarnet	juliane
+2	color	deepruby	juliane
+3	color	deeppurple	juliane
+4	color	mediumpurple	juliane
+5	color	mediumgarnet	juliane
+6	color	palecopper	juliane
+7	color	mediumruby	juliane
+8	color	mediumpurple	juliane
+9	color	deepsalmon	juliane
+10	color	paleyellow	juliane
+11	color	mediumstraw	juliane
+12	color	deepstraw	juliane
+1	color	mediumgarnet	tamara
+2	color	mediumruby	tamara
+3	color	palepurple	tamara
+4	color	palepurple	tamara
+5	color	palepurple	tamara
+6	color	palepink	tamara
+7	color	mediumruby	tamara
+8	color	mediumpurple	tamara
+9	color	paletawny	tamara
+10	color	paleyellow	tamara
+11	color	mediumstraw	tamara
+12	color	paleyellow	tamara
+1	color	mediumtawny	chyrene
+2	color	deeptawny	chyrene
+3	color	mediumgarnet	chyrene
+4	color	deepgarnet	chyrene
+5	color	deepruby	chyrene
+6	color	deepstraw	chyrene
+7	color	mediumgarnet	chyrene
+8	color	palepurple	chyrene
+9	color	deepamber	chyrene
+10	color	palestraw	chyrene
+11	color	mediumstraw	chyrene
+12	color	paleyellow	chyrene
+1	color	deeptawny	marta
+2	color	deepruby	marta
+3	color	deeppurple	marta
+4	color	deeppurple	marta
+5	color	mediumpurple	marta
+6	color	palecopper	marta
+7	color	deepruby	marta
+8	color	deeppurple	marta
+9	color	deepsalmon	marta
+10	color	deepstraw	marta
+11	color	paleyellow	marta
+12	color	paleyellow	marta
+1	color	deepruby	rodrigo
+2	color	deeppurple	rodrigo
+3	color	deepgarnet	rodrigo
+4	color	palepurple	rodrigo
+5	color	paleruby	rodrigo
+6	color	palepink	rodrigo
+7	color	palepurple	rodrigo
+8	color	mediumruby	rodrigo
+9	color	deepsalmon	rodrigo
+10	color	paleyellow	rodrigo
+11	color	mediumstraw	rodrigo
+12	color	palestraw	rodrigo
+1	color	deepcopper	grace
+2	color	mediumgarnet	grace
+3	color	mediumruby	grace
+4	color	deepruby	grace
+5	color	paleruby	grace
+6	color	palepink	grace
+7	color	palepurple	grace
+8	color	deeppurple	grace
+9	color	mediumcopper	grace
+10	color	palestraw	grace
+11	color	palestraw	grace
+12	color	mediumyellow	grace
+1	color	deeptawny	mikayla
+2	color	mediumruby	mikayla
+3	color	mediumpurple	mikayla
+4	color	palepurple	mikayla
+6	color	palecopper	mikayla
+7	color	deepruby	mikayla
+8	color	deeppurple	mikayla
+9	color	deepsalmon	mikayla
+10	color	deepstraw	mikayla
+11	color	paleyellow	mikayla
+12	color	paleyellow	mikayla
+1	color	deepgarnet	isidora
+2	color	palepurple	isidora
+2	color	palepurple	isidora
+3	color	mediumpurple	isidora
+4	color	mediumpurple	isidora
+5	color	mediumruby	isidora
+6	color	palecopper	isidora
+7	color	mediumruby	isidora
+8	color	mediumpurple	isidora
+9	color	deepsamon	isidora
+10	color	palegold	isidora
+11	color	paleyellow	isidora
+12	color	mediumstraw	isidora
 1	legs	long	raissa
 1	legs	fat	raissa
-1	nose	clean	raissa
-1	mouthfeel	mellow	raissa
-1	mouthfeel	delicate	raissa
-2	color	deep garnet	raissa
 2	legs	skinny	raissa
-2	nose	musky	raissa
-2	taste	oily	raissa
-2	mouthfeel	astringent	raissa
-2	taste	sour	raissa
-3	color	pale ruby	raissa
 3	legs	skinny	raissa
-3	nose	pepper	raissa
-3	taste	rubber	raissa
-3	taste	musky	raissa
-4	color	pale ruby	raissa
 4	legs	fat	raissa
-4	nose	jammy	raissa
-4	nose	caramel	raissa
-4	nose	vanilla	raissa
-4	mouthfeel	astringent	raissa
-4	taste 	musky	raissa
-5	color	pale ruby	raissa
 5	legs	skinny	raissa
-5	nose	petroleum	raissa
-5	taste	oily	raissa
-6	color	pale copper	raissa
 6	legs	skinny	raissa
 6	legs	long	raissa
-6	nose	perfumed	raissa
-6	nose	bright	raissa
-6	mouthfeel	velvety	raissa
-6	mouthfeel	round	raissa
-6	taste	apple	raissa
-7	color	pale ruby	raissa
 7	legs	skinny	raissa
 7	legs	short	raissa
-7	nose	stalky	raissa
-7	mouthfeel	tart	raissa
-7	taste 	charcoal	raissa
-8	color	pale ruby	raissa
 8	legs	long	raissa
 8	legs	skinny	raissa
-8	nose	quinche	raissa
-8	nose	berry	raissa
-8	mouthfeel	velvety	raissa
-8	taste	dark fruit	raissa
-10	color	medium straw	raissa
 10	legs	fat	raissa
 10	legs	short	raissa
-10	nose 	perfumed	raissa
-10	nose	apple	raissa
-10	mouthfeel	fresh	raissa
-10	taste	grapey	raissa
-10	taste	apple	raissa
-11	color	pale straw	raissa
-11	legs	short 	raissa
+11	legs	short	raissa
 11	legs	fat	raissa
-11	nose	citrus	raissa
-11	taste	grapey	raissa
-11	mouthfeel	light bodied	raissa
-12	color	pale yellow	raissa
 12	legs	long	raissa
 12	legs	skinny	raissa
-12	taste 	apple	raissa
-12	mouthfeel	delicate	raissa
-1	color	deep tawny	margot
 1	legs	long	margot
 1	legs	skinny	margot
-1	nose	earthy	margot
-1	mouthfeel	short	margot
-1	mouthfeel	thin	margot
-1	mouthfeel	coarse	margot
-1	taste	grapey	margot
-2	color	pale ruby	margot
 2	legs	short	margot
 2	legs	skinny	margot
-2	nose	flamboyant	margot
-2	mouthfeel	aggressive	margot
-2	mouthfeel	astringent	margot
-2	taste	closed	margot
-3	color	pale purple	margot
 3	legs	long	margot
 3	legs	skinny	margot
-3	nose	rich	margot
-3	mouthfeel	complex	margot
-3	mouthfeel	round	margot
-3	taste	ripe	margot
-3	taste	nutmeg	margot
-4	color	pale purple	margot
 4	legs	short	margot
 4	legs	fat	margot
-4	nose	thin	margot
-4	nose	juicy	margot
-4	mouthfeel	grippy	margot
-4	mouthfeel	aggressive	margot
-4	mouthfeel	austere	margot
-4	mouthfeel	thin	margot
-4	taste	quince	margot
-5	color	pale ruby	margot
 5	legs	long	margot
 5	legs	fat	margot
-5	nose	ripe	margot
-5	nose	plummy	margot
-5	mouthfeel	angular	margot
-5	mouthfeel	bright	margot
-5	taste	stemmy	margot
-6	color	pale copper	margot
 6	legs	long	margot
 6	legs	skinny	margot
-6	nose	melon	margot
-6	mouthfeel	bright	margot
-6	mouthfeel	crisp	margot
-6	taste	green	margot
-6	taste	citrus	margot
-7	color	medium ruby	margot
 7	legs	short	margot
 7	legs	skinny	margot
-7	nose	grapey	margot
-7	mouthfeel	harsh	margot
-7	mouthfeel	angular	margot
-7	mouthfeel	tart	margot
-7	taste	stemmy	margot
-7	taste	berry	margot
-8	color	medium purple	margot
 8	legs	short	margot
 8	legs	skinny	margot
-8	nose	sweet tobacco	margot
-8	nose	smoky	margot
-8	mouthfeel	full bodied	margot
-8	mouthfeel	structured	margot
-8	taste	dark fruit	margot
-8	taste	earthy	margot
-9	color	deep copper	margot
 9	legs	long	margot
 9	legs	fat	margot
-9	nose	citrus	margot
-9	nose	zesty	margot
-9	mouthfeel	silky	margot
-9	taste	refined	margot
-9	taste	juicy	margot
-9	taste	white flowers	margot
-10	color	medium straw	margot
 10	legs	long	margot
 10	legs	skinny	margot
-10	nose	citrus blossom	margot
-10	mouthfeel	delicate	margot
-10	mouthfeel	fresh	margot
-10	mouthfeel	polished	margot
-10	taste	clean	margot
-10	taste	citrus	margot
-11	color	medium yellow	margot
 11	legs	short	margot
 11	legs	fat	margot
-11	nose	citrus	margot
-11	mouthfeel	lean	margot
-11	mouthfeel	zippy	margot
-11	taste	grapey	margot
-11	taste	bright	margot
-12	color	medium straw	margot
 12	legs	short	margot
 12	legs	fat	margot
-12	nose	plastic	margot
-12	mouthfeel	astringent	margot
-12	mouthfeel	thin	margot
-12	taste	white flowers	margot
-12	taste	citrus	margot
 1	legs	long	barbara
 1	legs	skinny	barbara
-1	color	deep garnet	barbara
-1	mouthfeel	cassis	barbara
-1	mouthfeel	smooth	barbara
-1	nose	leather	barbara
-1	taste	minerality	barbara
 2	legs	long	barbara
 2	legs	skinny	barbara
-2	color	medium ruby	barbara
-2	nose	red fruit	barbara
-2	nose	apple	barbara
-2	mouthfeel	bitter	barbara
-2	mouthfeel	harsh	barbara
-2	mouthfeel	coarse	barbara
-2	mouthfeel	burn	barbara
-2	taste	plastic	barbara
 2	legs	long	barbara
 3	legs	skinny	barbara
-3	color	medium purple	barbara
-3	nose	ripe	barbara
-3	nose	plummy	barbara
-3	mouthfeel	chocolate	barbara
-3	mouthfeel	smooth	barbara
 4	legs	long	barbara
 4	legs	skinny	barbara
-4	color	medium purple	barbara
-4	nose	berrys	barbara
-4	nose	rose	barbara
-4	mouthfeel	silky	barbara
-4	mouthfeel	delicate	barbara
-4	taste	sage	barbara
 5	legs	long	barbara
 5	legs	skinny	barbara
-5	color	plae purple	barbara
-5	nose	grapey	barbara
-5	nose	spicy	barbara
-5	mouthfeel	racy	barbara
-5	mouthfeel	rigid	barbara
-5	taste	smoky	barbara
-5	taste	stalky	barbara
-6	color	pale copper	barbara
 6	legs	long	barbara
 6	legs	fat	barbara
-6	nose	rose	barbara
-6	nose	melon	barbara
-6	mouthfeel	bright	barbara
-6	mouthfeel	fresh	barbara
-7	color	medium ruby	barbara
 7	legs	long	barbara
 7	legs	skinny	barbara
-7	nose	plastic	barbara
-7	nose	jalapeno	barbara
-7	mouthfeel	agressive	barbara
-7	taste	rigid	barbara
-7	taste 	minerality	barbara
-8	nose	cassis	barbara
-8	nose	dark fruit	barbara
-8	nose	ripe	barbara
 8	legs	long	barbara
 8	legs	skinny	barbara
-8	color	deep purple	barbara
-8	mouthfeel	burn	barbara
-8	taste	stemmy	barbara
-8	taste	leathery	barbara
-8	taste	minerality	barbara
-9	color	deep salmon	barbara
 9	legs	long	barbara
 9	legs	short	barbara
-9	nose	citrus	barbara
-9	mouthfeel	soft	barbara
-9	taste	rose	barbara
 10	legs	short	barbara
 10	legs	fat	barbara
-10	color	medium straw	barbara
-10	nose	grassy	barbara
-10	nose	white flowers	barbara
-10	mouthfeel	zesty	barbara
-11	nose	stone fruit	barbara
-11	nose	tropical fruit	barbara
 11	legs	short	barbara
 11	legs	fat	barbara
-11	color	pale straw	barbara
-11	mouthfeel	zesty	barbara
-11	taste	apple	barbara
-11	taste	lavender	barbara
-12	color	medium straw	barbara
 12	legs	short	barbara
 12	legs	fat	barbara
-12	nose	citrus	barbara
-12	taste	stone fruit	barbara
-1	color	pale garnet	cora
 1	legs	fat	cora
-1	nose	musky	cora
-1	mouthfeel	light bodied	cora
-2	color	pale garnet	cora
 2	legs	skinny	cora
-2	nose	smoky	cora
-2	taste	sour	cora
-3	color	pale ruby	cora
 3	legs	skinny	cora
-3	nose	plummy	cora
-3	nose	pepper	cora
-3	taste	smooth	cora
-4	color	pale ruby	cora
-4	nose	vanilla	cora
-4	mouthfeel	astingent	cora
-4	taste	musky	cora
-5	color	pale ruby	cora
 5	legs	long	cora
-5	nose	smoky	cora
-5	nose	petroleum	cora
-5	taste	firm	cora
-6	color	pale copper	cora
-6	taste	apple	cora
-6	taste	berry	cora
-6	nose	sage	cora
-7	color	pale ruby	cora
 7	legs	fat	cora
-7	nose	stalky	cora
-7	mouthfeel	edgy	cora
-7	taste	charcoal	cora
-8	color	pale ruby	cora
 8	legs	skinny	cora
-8	nose	dark fruit	cora
-8	taste	dark fruit	cora
-9	color	dark copper	cora
 9	legs	fat	cora
-9	nose	earthy	cora
-9	nose	nutty	cora
-9	taste	nutmeg	cora
-9	mouthfeel	flat	cora
-10	color	medium straw	cora
 10	legs	fat	cora
-10	nose	apple	cora
-10	mouthfeel	fresh	cora
-10	taste	apple	cora
-10	taste	quince	cora
-11	color	pale straw	cora
-11	nose	white flower	cora
 11	legs	short	cora
-11	nose	citrus	cora
-12	color	deep straw	cora
 12	legs	fat	cora
-12	nose	asparagus	cora
-12	taste	apple	cora
-1	nose	red fruits	dennis
-1	color	medium tawny	dennis
 1	legs	long	dennis
 1	legs	fat	dennis
-1	mouthfeel	firm	dennis
-1	mouthfeel	jammy	dennis
-1	mouthfeel	coarse	dennis
-1	taste	plastics	dennis
-1	taste	berry	dennis
-2	nose	flamboyant	dennis
-2	nose	plummy	dennis
-2	color	medium ruby	dennis
 2	legs	long	dennis
 2	legs	skinny	dennis
-2	mouthfeel	closed	dennis
-2	mouthfeel	harsh	dennis
-2	mouthfeel	astringent	dennis
-2	taste	casis	dennis
-3	nose	geranium	dennis
-3	nose	grapey	dennis
-3	color	medium purple	dennis
 3	legs	long	dennis
 3	legs	skinny	dennis
-3	mouthfeel	complex	dennis
-3	mouthfeel	powerful	dennis
-3	taste	ripe	dennis
-3	taste	jammy	dennis
-3	taste	nutmeg	dennis
-4	nose	thin	dennis
-4	nose	juicy	dennis
-4	color	medium purple	dennis
 4	legs	short	dennis
 4	legs	fat	dennis
-4	mouthfeel	rubber	dennis
-4	mouthfeel	chewy	dennis
-4	mouthfeel	austere	dennis
-4	taste	zippy	dennis
-5	nose	dark fruit	dennis
-5	nose	jammy	dennis
-5	color	medium ruby	dennis
 5	legs	fat	dennis
 5	legs	long	dennis
-5	mouthfeel	jammy	dennis
-5	mouthfeel	leathery	dennis
-5	taste	extracted	dennis
-5	taste	jalapenos	dennis
-5	taste	stemmy	dennis
-6	nose	juicy	dennis
-6	nose	melon	dennis
-6	nose	white flowers	dennis
-6	color	pale copper	dennis
 6	legs	long	dennis
 6	legs	skinny	dennis
-6	mouthfeel	bright	dennis
-6	mouthfeel	elegant	dennis
-6	mouthfeel	opulent	dennis
-6	taste	green	dennis
-6	taste	grapefruit	dennis
-7	nose	thin	dennis
-7	nose	berry	dennis
-7	color	medium ruby	dennis
-7	legs	thin	dennis
+7	legs	skinny	dennis
 7	legs	long	dennis
-7	mouthfeel	rigid	dennis
-7	mouthfeel	firm	dennis
-7	taste	stemmy	dennis
-7	taste	zesty	dennis
-8	nose	sweet tabaco	dennis
-8	nose	smoky	dennis
-8	nose	barnyard	dennis
-8	color	medium purple	dennis
 8	legs	short	dennis
 8	legs	fat	dennis
-8	mouthfeel	jammy	dennis
-8	mouthfeel	structured	dennis
-8	taste	dark fruit	dennis
-8	taste	earthy	dennis
-8	taste	smoky	dennis
-9	nose	crisp	dennis
-9	nose	plummy	dennis
-9	color	deep copper	dennis
 9	legs	long	dennis
-9	legs	thin	dennis
-9	mouthfeel	silky	dennis
-9	mouthfeel	clean	dennis
-9	taste	apple	dennis
-9	taste	stone fruit	dennis
-9	taste	juicy	dennis
-10	nose	cistrus blossom	dennis
-10	nose	grassy	dennis
-10	color	pale yellow	dennis
+9	legs	skinny	dennis
 10	legs	long	dennis
 10	legs	skinny	dennis
-10	mouthfeel	delicate	dennis
-10	mouthfeel	crisp	dennis
-10	taste	citrus	dennis
-10	taste	lively	dennis
-10	taste	mellow	dennis
-11	nose	grapy	dennis
-11	nose	citrus	dennis
-11	color	medium straw	dennis
 11	legs	short	dennis
 11	legs	fat	dennis
-11	mouthfeel	light bodied	dennis
-11	mouthfeel	lean	dennis
-11	mouthfeel	zippy	dennis
-11	taste	pineapple	dennis
-11	taste	gooseberry	dennis
-12	nose	plastic	dennis
-12	nose	flat	dennis
-12	color	medium straw	dennis
-12	legs	 fat	dennis
+12	legs	fat	dennis
 12	legs	short	dennis
-12	mouthfeel	nerve	dennis
-12	mouthfeel	austere	dennis
-12	taste	perfumed	dennis
-12	taste	soft	dennis
-1	nose	smoky	anj
-1	nose	plummy	anj
 1	legs	long	anj
-1	legs	thin	anj
-1	color	medium ruby	anj
-1	mouthfeel	flabby	anj
-1	mouthfeel	flat	anj
-1	taste	flabby	anj
-2	nose	sweet tabaco	anj
+1	legs	skinny	anj
 2	legs	long	anj
-2	legs	thin	anj
-2	color	pale ruby	anj
-2	mouthfeel	astringent	anj
-2	mouthfeel	aggressive	anj
-2	mouthfeel	closed	anj
-3	nose	berry	anj
-3	nose	smoky	anj
-3	nose	spicy	anj
+2	legs	skinny	anj
 3	legs	long	anj
 3	legs	fat	anj
-3	mouthfeel	angular	anj
-3	mouthfeel	firm	anj
-4	nose	toasty	anj
 4	legs	long	anj
-4	legs	thin	anj
-4	color	pale ruby	anj
-4	mouthfeel	bitter	anj
-4	mouthfeel	thin	anj
-4	mouthfeel	grippy	anj
-1	legs	long	unknown guy
-1	mouthfeel	flat	unknown guy
-1	color	pale ruby	unknown guy
-2	legs	thin	unknown guy
-2	legs	long	unknown guy
-2	color	pale purple	unknown guy
-2	nose	petroleum	unknown guy
-3	color	medium purple	unknown guy
-3	taste	sweet	unknown guy
-3	taste	fruity	unknown guy
-1	nose	flower	chiara
-1	color	medium garnet	chiara
+4	legs	skinny	anj
+1	legs	long	unknownguy
+2	legs	skinny	unknownguy
+2	legs	long	unknownguy
 1	legs	long	chiara
 1	legs	fat	chiara
-1	mouthfeel	light bodied	chiara
-1	taste	perfumed	chiara
-1	taste	citrus	chiara
-1	taste	acidity	chiara
-2	nose	woody	chiara
-2	color	medium ruby	chiara
 2	legs	long	chiara
 2	legs	skinny	chiara
-2	mouthfeel	acidic	chiara
-2	mouthfeel	minerality	chiara
-2	taste	anise	chiara
-3	nose	ground herbs	chiara
-3	color	pale ruby	chiara
 3	legs	short	chiara
-3	taste	berry	chiara
-3	taste	red fruits	chiara
-4	nose	sweet	chiara
-4	color	medium purple	chiara
 4	legs	long	chiara
 4	legs	skinny	chiara
-4	mouthfeel	tannin	chiara
-5	color	pale ruby	chiara
 5	legs	long	chiara
 5	legs	fat	chiara
-5	mouthfeel	thick	chiara
-5	mouthfeel	rich	chiara
-5	taste	ripe	chiara
-6	nose	cheese	chiara
-6	nose	earthy	chiara
-6	color	medium copper	chiara
 6	legs	short	chiara
 6	legs	fat	chiara
-6	taste	flowers	chiara
-6	taste	fruity	chiara
-7	color	medium ruby	chiara
 7	legs	long	chiara
-7	mouthfeel	tannin	chiara
-7	mouthfeel	tight	chiara
-8	color	medium purple	chiara
 8	legs	short	chiara
 8	legs	fat	chiara
-8	mouthfeel	acidity	chiara
-8	taste	juicy	chiara
-9	color	pale tawny	chiara
 9	legs	long	chiara
 9	legs	skinny	chiara
-9	taste	sweet	chiara
-9	taste	fruity	chiara
-9	taste	flowers	chiara
-10	nose	cheese	chiara
-10	color	medium straw	chiara
 10	legs	long	chiara
 10	legs	skinny	chiara
-10	mouthfeel	fresh	chiara
-11	nose	citrus blossom	chiara
-11	color	pale straw	chiara
 11	legs	short	chiara
-11	taste	fruity	chiara
-11	mouthfeel	delicate	chiara
-12	color	deep straw	chiara
 12	legs	short	chiara
-12	taste	flowers	chiara
-12	taste	herbs	chiara
-1	nose	coarse	benedict
-1	nose	full bodied	benedict
 1	legs	long	benedict
 1	legs	fat	benedict
-1	color	deep garnet	benedict
-1	mouthfeel	firm	benedict
-1	mouthfeel	fallen over	benedict
-1	mouthfeel	hot	benedict
-1	taste	plummy	benedict
-2	nose	dark fruit	benedict
-2	nose	cassis	benedict
 2	legs	long	benedict
 2	legs	skinny	benedict
-2	color	medium purple	benedict
-2	mouthfeel	leathery	benedict
-2	mouthfeel	edgy	benedict
-2	mouthfeel	jammy	benedict
-2	taste	edgy	benedict
-3	nose	rubber	benedict
-3	nose	harsh	benedict
 3	legs	long	benedict
 3	legs	skinny	benedict
-3	color	medium ruby	benedict
-3	mouthfeel	harsh	benedict
-3	mouthfeel	racy	benedict
-3	mouthfeel	hot	benedict
-3	taste	opulent	benedict
-4	nose	pepper	benedict
 4	legs	short	benedict
 4	legs	fat	benedict
-4	color	deep ruby	benedict
-4	taste	chocolate	benedict
-4	taste	earthy	benedict
-4	mouthfeel	racy	benedict
-4	mouthfeel	jammy	benedict
-5	nose	dense	benedict
 5	legs	short	benedict
 5	legs	long	benedict
-5	color	pale ruby	benedict
-5	mouthfeel	chewy	benedict
-5	mouthfeel	astringent	benedict
-5	mouthfeel	hot	benedict
-5	taste	petroleum	benedict
-6	nose	cheesy	benedict
-6	nose	cats pee	benedict
 6	legs	long	benedict
 6	legs	skinny	benedict
-6	color	pale copper	benedict
-6	mouthfeel	supple	benedict
-6	mouthfeel	soft	benedict
-6	mouthfeel	jammy	benedict
-6	taste	cassis	benedict
-6	taste	citrus	benedict
-7	nose	rubber	benedict
-7	nose	red fruits	benedict
 7	legs	long	benedict
 7	legs	fat	benedict
-7	color	deep purple	benedict
-7	mouthfeel	voluptuous	benedict
-7	mouthfeel	crisp	benedict
-7	mouthfeel	burn	benedict
-7	taste	nutmeg	benedict
-7	taste	red fruits	benedict
-8	nose	caramel	benedict
-8	nose	fleshy	benedict
 8	legs	short	benedict
 8	legs	skinny	benedict
-8	color	deep purple	benedict
-8	mouthfeel	musky	benedict
-8	mouthfeel	zesty	benedict
-8	mouthfeel	burn	benedict
-8	taste	charcoal	benedict
-8	taste	creamy	benedict
-9	nose	sour	benedict
-9	nose	unctuous	benedict
-9	nose	opulent	benedict
 9	legs	short	benedict
 9	legs	fat	benedict
-9	color	deep copper	benedict
-9	mouthfeel	velvet	benedict
-9	mouthfeel	flat	benedict
-9	mouthfeel	jammy	benedict
-9	taste	coconut	benedict
-9	taste	polished	benedict
-10	nose	cats pee	benedict
-10	nose	grassy	benedict
 10	legs	skinny	benedict
 10	legs	short	benedict
-10	color	pale yellow	benedict
-10	mouthfeel	grippy	benedict
-10	mouthfeel	skinny	benedict
-10	mouthfeel	legs	benedict
-10	taste	citrus blossom	benedict
-10	taste	green	benedict
-11	nose	grape	benedict
-11	nose	apple	benedict
 11	legs	fat	benedict
 11	legs	long	benedict
-11	color	pale straw	benedict
-11	mouthfeel	structured	benedict
-11	mouthfeel	lively	benedict
-11	mouthfeel	jammy	benedict
-11	taste	sour	benedict
-11	taste	asparagus	benedict
-12	nose	violet	benedict
-12	nose	quince	benedict
 12	legs	short	benedict
 12	legs	fat	benedict
-12	color	deep straw	benedict
-12	mouthfeel	mellow	benedict
-12	mouthfeel	crisp	benedict
-12	mouthfeel	hot	benedict
-12	taste	cheesy	benedict
-12	taste	green	benedict
-1	color	deep garnet	hanna
-1	nose	fleshy	hanna
-1	nose	grippy	hanna
-1	nose	opulent	hanna
-1	mouthfeel	sour	hanna
-1	mouthfeel	rich	hanna
-1	mouthfeel	grippy	hanna
-1	taste	earthy	hanna
-1	taste	fleshy	hanna
-1	mouthfeel	firm	hanna
 2	legs	long	hanna
 2	legs	fat	hanna
-2	color	medium ruby	hanna
-2	nose	sour	hanna
-2	nose	wet asphalt	hanna
-2	taste	earthy	hanna
-2	mouthfeel	dense	hanna
-2	mouthfeel	firm	hanna
-2	taste	graphite	hanna
-2	taste	sour	hanna
-2	taste	ripe	hanna
 3	legs	long	hanna
 3	legs	skinny	hanna
-3	nose	dark fruit	hanna
-3	color	medium purple	hanna
-3	nose	flamboyant	hanna
-3	nose	juicy	hanna
-3	nose	tart	hanna
-3	nose	fleshy	hanna
-3	taste	delicate	hanna
-3	taste	elegant	hanna
-3	mouthfeel	voluptuous	hanna
-3	taste	rich	hanna
-3	taste	berry	hanna
 4	legs	fat	hanna
 4	legs	short	hanna
-4	color	medium purple	hanna
-4	nose	sour	hanna
-4	nose	full bodied	hanna
-4	nose	zesty	hanna
-4	mouthfeel	dense	hanna
-4	nose	jammy	hanna
-4	mouthfeel	rich	hanna
-4	mouthfeel	concentrated	hanna
-4	taste	berry	hanna
-4	taste	juicy	hanna
-4	taste	opulent	hanna
 5	legs	long	hanna
 5	legs	skinny	hanna
-5	color	medium ruby	hanna
-5	nose	plummy	hanna
-5	nose	ripe	hanna
-5	nose	jammy	hanna
-5	nose	rich	hanna
-5	mouthfeel	dense	hanna
-5	mouthfeel	rich	hanna
-5	taste	plummy	hanna
-5	taste	sand	hanna
-5	taste	soft	hanna
-6	color	pale copper	hanna
 6	legs	long	hanna
 6	legs	skinny	hanna
-6	nose	citrus	hanna
-6	nose	sour	hanna
-6	mouthfeel	light bodied	hanna
-6	taste	tropical fruit	hanna
-7	color	medium ruby	hanna
 7	legs	long	hanna
 7	legs	skinny	hanna
-7	nose	wet asphalt	hanna
-7	nose	petroleum	hanna
-7	nose	full bodied	hanna
-7	nose	sour	hanna
-7	mouthfeel	light bodied	hanna
-7	taste	smooth	hanna
-7	taste	plummy	hanna
 8	legs	long	hanna
 8	legs	skinny	hanna
-8	color	medium purple	hanna
-8	nose	berry	hanna
-8	nose	red fruits	hanna
-8	nose	flamboyant	hanna
-8	nose	ripe	hanna
-8	mouthfeel	rich	hanna
-8	mouthfeel	opulent	hanna
-8	taste	berry	hanna
-8	taste	dense	hanna
-9	color	deep salmon	hanna
 9	legs	short	hanna
-9	nose	yeast	hanna
-9	nose	concentrated	hanna
-9	nose	sour	hanna
-9	nose	cats pee	hanna
-9	mouthfeel	light bodied	hanna
-9	taste	peach	hanna
-9	taste	juicy	hanna
-9	taste	crisp	hanna
-9	taste	tart	hanna
-10	color	pale straw	hanna
 10	legs	skinny	hanna
 10	legs	long	hanna
-10	nose	soft	hanna
-10	nose	crisp	hanna
-10	nose	delicate	hanna
-10	nose	melon	hanna
-10	nose	white flowers	hanna
-10	nose	light bodied	hanna
-10	mouthfeel	light bodied	hanna
-10	taste	stone fruit	hanna
-10	mouthfeel	fresh	hanna
-11	color	medium straw	hanna
 11	legs	short	hanna
 11	legs	skinny	hanna
-11	nose	juicy	hanna
-11	nose	citrus	hanna
-11	nose	complex	hanna
-11	nose	clean	hanna
-11	mouthfeel	crisp	hanna
-11	mouthfeel	delicate	hanna
-11	taste	tart	hanna
-12	color	pale yellow	hanna
-12	nose	sour	hanna
-12	nose	citrus blossom	hanna
-12	nose	quince	hanna
-12	mouthfeel	sour	hanna
-12	mouthfeel	tart	hanna
-12	mouthfeel	zesty	hanna
-12	taste	stone fruit	hanna
-12	taste	white flowers	hanna
-1	color	deep garnet	david
-1	nose	vegetal	david
 1	legs	long	david
 1	legs	fat	david
-1	taste	citrus	david
-1	mouthfeel	light bodied	david
-1	taste	sour	david
 2	legs	long	david
 2	legs	fat	david
-2	color	deep ruby	david
-2	nose	tar	david
-2	nose	smoky	david
-2	taste	charcoal	david
-2	mouthfeel	tannin	david
-2	mouthfeel	elegant	david
-2	mouthfeel	opulent	david
-2	mouthfeel	dense	david
 3	legs	long	david
 3	legs	skinny	david
-3	nose	rose	david
-3	color	medium purple	david
-3	taste	quince	david
-3	taste	plummy	david
-3	taste	sweet	david
-3	mouthfeel	dense	david
-3	mouthfeel	rich	david
-4	color	deep purple	david
-4	nose	red fruits	david
-4	nose	jammy	david
-4	taste	zesty	david
-4	taste	juicy	david
-4	taste	ripe	david
-4	mouthfeel	mellow	david
-4	mouthfeel	complex	david
-5	color	medium ruby	david
 5	legs	short	david
 5	legs	skinny	david
-5	nose	ripe	david
-5	nose	jammy	david
-5	mouthfeel	coarse	david
-5	mouthfeel	tight	david
-5	taste	grassy	david
-6	color	pale copper	david
 6	legs	fat	david
 6	legs	long	david
-6	nose	white flowers	david
-6	nose	rose	david
-6	taste	flamboyant	david
-6	taste	tropical fruit	david
-6	taste	coconut	david
-6	mouthfeel	light bodied	david
-6	mouthfeel	finesse	david
 7	legs	short	david
 7	legs	fat	david
-7	color	medium ruby	david
-7	nose	oily	david
-7	nose	ripe	david
-7	mouthfeel	angular	david
-7	mouthfeel	velvet	david
-7	taste	spicy	david
-7	taste	clove	david
 8	legs	short	david
 8	legs	skinny	david
-8	color	deep purple	david
-8	nose	ripe	david
-8	mouthfeel	harsh	david
-8	taste	smoky	david
-8	taste	vegetal	david
-8	taste	earthy	david
-8	taste	stemmy	david
-9	color	deep copper	david
 9	legs	short	david
 9	legs	skinny	david
-9	nose	white flowers	david
-9	mouthfeel	skinny	david
-9	mouthfeel	light bodied	david
-9	mouthfeel	polished	david
-9	taste	grapey	david
-10	color	pale straw	david
 10	legs	fat	david
 10	legs	long	david
-10	nose	bright	david
-10	nose	incense	david
-10	taste	tropical fruit	david
-10	mouthfeel	smooth	david
-10	mouthfeel	thin	david
-10	taste	stemmy	david
-11	color	medium straw	david
 11	legs	fat	david
 11	legs	short	david
-11	nose	perfumed	david
-11	taste	grapey	david
-11	mouthfeel	zesty	david
-11	mouthfeel	light bodied	david
-11	taste	fleshy	david
-12	color	pale yellow	david
 12	legs	short	david
 12	legs	fat	david
-12	nose	grassy	david
-12	nose	eucalyptus	david
-12	taste	smoky	david
-12	taste	stemmy	david
-1	color	medium garnet	lisa
 1	legs	long	lisa
 1	legs	fat	lisa
-1	taste	thin	lisa
-1	taste	austere	lisa
-1	taste	sour	lisa
-2	color	pale ruby	lisa
 2	legs	long	lisa
 2	legs	skinny	lisa
-2	taste	sour	lisa
-2	mouthfeel	bitter	lisa
-3	color	medium purple	lisa
 3	legs	long	lisa
 3	legs	skinny	lisa
-3	taste	red fruits	lisa
-3	mouthfeel	round	lisa
-4	color	medium purple	lisa
 4	legs	long	lisa
 4	legs	skinny	lisa
-4	nose	hot	lisa
-4	taste	burn	lisa
-4	mouthfeel	harsh	lisa
-5	color	medium ruby	lisa
 5	legs	fat	lisa
 5	legs	short	lisa
-5	nose	hot	lisa
-5	mouthfeel	bitter	lisa
-5	taste	sour	lisa
-6	color	medium copper	lisa
 6	legs	fat	lisa
 6	legs	long	lisa
-6	nose	citrus	lisa
-6	taste	thin	lisa
-6	taste	citrus	lisa
-7	color	deep ruby	lisa
 7	legs	fat	lisa
 7	legs	long	lisa
-7	taste	sour	lisa
-7	mouthfeel	harsh	lisa
-7	mouthfeel	hot	lisa
-7	taste	austere	lisa
-8	color	deep purple	lisa
 8	legs	long	lisa
 8	legs	skinny	lisa
-8	taste	dark fruit	lisa
-8	mouthfeel	burn	lisa
-8	taste	sour	lisa
-9	color	pale tawny	lisa
 9	legs	fat	lisa
 9	legs	short	lisa
-9	nose	strawberry	lisa
-9	nose	light bodied	lisa
-9	taste	jucy	lisa
-9	taste	ripe	lisa
-9	taste	short	lisa
-10	color	pale yellow	lisa
 10	legs	skinny	lisa
 10	legs	long	lisa
-10	nose	citrus	lisa
-10	taste	cliff edge	lisa
-10	taste	jucy	lisa
-11	color	medium straw	lisa
 11	legs	fat	lisa
 11	legs	short	lisa
-11	nose	white flowers	lisa
-11	taste	citrus	lisa
-11	taste	delicate	lisa
-12	color	medium straw	lisa
 12	legs	fat	lisa
 12	legs	short	lisa
-12	nose	light bodied	lisa
-12	nose	white flowers	lisa
-12	taste	light bodied	lisa
-12	mouthfeel	soft	lisa
-12	taste	melon	lisa
-1	color	deep garnet	juliane
-1	nose	red fruit	juliane
 1	legs	long	juliane
 1	legs	skinny	juliane
-1	mouthfeel	burn	juliane
-1	mouthfeel	silky	juliane
-1	mouthfeel	tight	juliane
-1	mouthfeel	flabby	juliane
-1	taste	red fruit	juliane
-2	color	deep ruby	juliane
-2	nose	coarse	juliane
 2	legs	long	juliane
 2	legs	skinny	juliane
-2	mouthfeel	burn	juliane
-2	mouthfeel	harsh	juliane
-2	mouthfeel	firm	juliane
-2	mouthfeel	racy	juliane
-2	taste	rubber	juliane
-3	color	deep purple	juliane
-3	nose	perfumed	juliane
 3	legs	long	juliane
 3	legs	skinny	juliane
-3	mouthfeel	jammy	juliane
-3	mouthfeel	structured	juliane
-3	mouthfeel	delicate	juliane
-3	mouthfeel	thin	juliane
-3	taste	citrus	juliane
-4	color	medium purple	juliane
-4	nose	berry	juliane
 4	legs	long	juliane
 4	legs	skinny	juliane
-4	mouthfeel	burn	juliane
-4	mouthfeel	opulent	juliane
-4	mouthfeel	closed	juliane
-4	mouthfeel	nerve	juliane
-4	taste	flamboyant	juliane
-5	color	medium garnet	juliane
-5	nose	pepper	juliane
 5	legs	long	juliane
 5	legs	skinny	juliane
-5	mouthfeel	jammy	juliane
-5	mouthfeel	coarse	juliane
-5	mouthfeel	austere	juliane
-5	mouthfeel	crisp	juliane
-5	taste	nutty	juliane
-6	color	pale copper	juliane
-6	nose	grapey	juliane
 6	legs	long	juliane
 6	legs	fat	juliane
-6	mouthfeel	jammy	juliane
-6	mouthfeel	soft	juliane
-6	mouthfeel	light bodied	juliane
-6	mouthfeel	flat	juliane
-6	taste	rose	juliane
-7	color	medium ruby	juliane
-7	nose	spicy	juliane
 7	legs	long	juliane
 7	legs	skinny	juliane
-7	mouthfeel	burn	juliane
-7	mouthfeel	rigid	juliane
-7	mouthfeel	elegant	juliane
-7	mouthfeel	soft	juliane
-7	taste	spicy	juliane
-8	color	medium purple	juliane
-8	nose	rose	juliane
 8	legs	skinny	juliane
 8	legs	long	juliane
-8	mouthfeel	burn	juliane
-8	mouthfeel	firm	juliane
-8	mouthfeel	tight	juliane
-8	mouthfeel	racy	juliane
-8	taste	delicate	juliane
-9	color	deep salmon	juliane
-9	nose	jammy	juliane
 9	legs	long	juliane
 9	legs	skinny	juliane
-9	mouthfeel	jammy	juliane
-9	mouthfeel	silky	juliane
-9	mouthfeel	elegant	juliane
-9	mouthfeel	flat	juliane
-9	taste	juicy	juliane
-10	color	pale yellow	juliane
-10	nose	tropical fruit	juliane
 10	legs	short	juliane
 10	legs	fat	juliane
-10	mouthfeel	burn	juliane
-10	mouthfeel	smooth	juliane
-10	mouthfeel	delicate	juliane
-10	mouthfeel	thin	juliane
-10	taste	ripe	juliane
-11	color	medium straw	juliane
-11	nose	yeast	juliane
 11	legs	short	juliane
 11	legs	fat	juliane
-11	mouthfeel	burn	juliane
-11	mouthfeel	grippy	juliane
-11	mouthfeel	polished	juliane
-11	mouthfeel	soft	juliane
-11	taste	tropical fruit	juliane
-12	color	deep straw	juliane
-12	nose	citrus blossom	juliane
 12	legs	short	juliane
 12	legs	fat	juliane
-12	mouthfeel	jammy	juliane
-12	mouthfeel	firm	juliane
-12	mouthfeel	light bodied	juliane
-12	mouthfeel	crisp	juliane
-12	taste	rubber	juliane
-1	color	medium garnet	tamara
 1	legs	long	tamara
 1	legs	skinny	tamara
-1	mouthfeel	jammy	tamara
-1	mouthfeel	lean	tamara
-1	mouthfeel	thin	tamara
-1	mouthfeel	leathery	tamara
-1	nose	grapey	tamara
-1	taste	grapey	tamara
-1	taste	elegant	tamara
-1	taste	sour	tamara
-2	color	medium ruby	tamara
 2	legs	short	tamara
 2	legs	skinny	tamara
-2	mouthfeel	jammy	tamara
-2	mouthfeel	tart	tamara
-2	mouthfeel	elegant	tamara
-2	mouthfeel	structured	tamara
-2	nose	berry	tamara
-2	taste	dark fruit	tamara
-2	taste	grapey	tamara
-2	taste	sour	tamara
-3	color	pale purple	tamara
 3	legs	skinny	tamara
 3	legs	long	tamara
-3	mouthfeel	jammy	tamara
-3	mouthfeel	dilicate	tamara
-3	mouthfeel	rich	tamara
-3	mouthfeel	silky	tamara
-3	nose	grapey	tamara
-3	taste	plummy	tamara
-3	taste	flamboyant	tamara
-3	taste	ripe	tamara
-3	taste	nutmeg	tamara
-4	color	pale purple	tamara
 4	legs	long	tamara
 4	legs	fat	tamara
-4	nose	grapey	tamara
-4	mouthfeel	jammy	tamara
-4	mouthfeel	soft	tamara
-4	mouthfeel	polished	tamara
-4	mouthfeel	silky	tamara
-4	taste	grapey	tamara
-5	color	pale purple	tamara
 5	legs	short	tamara
 5	legs	fat	tamara
-5	nose	grapey	tamara
-5	mouthfeel	jammy	tamara
-5	mouthfeel	zippy	tamara
-5	mouthfeel	tight	tamara
-5	mouthfeel	firm	tamara
-5	taste	grapey	tamara
-5	taste	ripe	tamara
-6	color	pale pink	tamara
 6	legs	long	tamara
 6	legs	skinny	tamara
-6	nose	grapey	tamara
-6	mouthfeel	jammy	tamara
-6	mouthfeel	soft	tamara
-6	mouthfeel	elegant	tamara
-6	mouthfeel	velvety	tamara
-6	taste	musky	tamara
-6	taste	flamboyant	tamara
-6	taste	sweet tobaco	tamara
-7	color	medium ruby	tamara
 7	legs	long	tamara
 7	legs	fat	tamara
-7	nose	grapey	tamara
-7	mouthfeel	jammy	tamara
-7	mouthfeel	lively	tamara
-7	mouthfeel	firm	tamara
-7	mouthfeel	smooth	tamara
-7	taste	grapey	tamara
-7	taste	stone fruit	tamara
-8	color	medium purple	tamara
 8	legs	short	tamara
 8	legs	skinny	tamara
-8	nose	grapey	tamara
-8	mouthfeel	jammy	tamara
-8	mouthfeel	zippy	tamara
-8	mouthfeel	opulent	tamara
-8	mouthfeel	grippy	tamara
-8	taste	grapey	tamara
-8	taste	plummy	tamara
-9	color	pale tawny	tamara
-9	nose	flamboyant	tamara
 9	legs	short	tamara
 9	legs	fat	tamara
-9	taste	juciy	tamara
-9	taste	stone fruit	tamara
-9	mouthfeel	delicate	tamara
-9	mouthfeel	soft	tamara
-9	mouthfeel	silky	tamara
-9	mouthfeel	jammy	tamara
-10	color	pale yellow	tamara
-10	nose	rubber	tamara
 10	legs	short	tamara
 10	legs	fat	tamara
-10	mouthfeel	elegant	tamara
-10	mouthfeel	flat	tamara
-10	mouthfeel	silky	tamara
-10	mouthfeel	jammy	tamara
-10	taste	juciy	tamara
-10	taste	flamboyant	tamara
-11	color	medium straw	tamara
-11	nose	juciy	tamara
 11	legs	fat	tamara
 11	legs	short	tamara
-11	mouthfeel	elegant	tamara
-11	mouthfeel	flat	tamara
-11	mouthfeel	silky	tamara
-11	mouthfeel	jammy	tamara
-11	taste	tropical fruit	tamara
-11	taste	citrus	tamara
-12	color	pale yellow	tamara
-12	nose	juicy	tamara
 12	legs	long	tamara
 12	legs	skinny	tamara
-12	mouthfeel	elegant	tamara
-12	mouthfeel	flat	tamara
-12	mouthfeel	silky	tamara
-12	mouthfeel	jammy	tamara
-12	taste	plummy	tamara
-12	taste	stone fruit	tamara
-12	taste	apple	tamara
-12	taste	flamboyant	tamara
-12	taste	ripe	tamara
-1	color	medium tawny	chyrene
 1	legs	long	chyrene
 1	legs	fat	chyrene
-1	nose	sour	chyrene
-1	mouthfeel	cliff edge	chyrene
-1	mouthfeel	coarse	chyrene
-1	taste	plummy	chyrene
-2	color	deep tawny	chyrene
 2	legs	long	chyrene
 2	legs	skinny	chyrene
-2	nose	sour	chyrene
-2	mouthfeel	firm	chyrene
-2	taste	soft	chyrene
-3	color	medium garnet	chyrene
 3	legs	long	chyrene
 3	legs	skinny	chyrene
-3	nose	rubber	chyrene
-3	mouthfeel	soft	chyrene
-3	taste	barnyard	chyrene
-3	taste	pepper	chyrene
-4	color	deep garnet	chyrene
 4	legs	short	chyrene
 4	legs	fat	chyrene
-4	nose	berry	chyrene
-4	mouthfeel	powerful	chyrene
-4	taste	stalky	chyrene
-5	color	deep ruby	chyrene
 5	legs	long	chyrene
 5	legs	skinny	chyrene
-5	nose	cats pee	chyrene
-5	mouthfeel	leathery	chyrene
-5	taste	stemmy	chyrene
-6	color	deep straw	chyrene
 6	legs	long	chyrene
 6	legs	fat	chyrene
-6	nose	cheesy	chyrene
-6	mouthfeel	bright	chyrene
-6	taste	green	chyrene
-7	color	medium garnet	chyrene
 7	legs	short	chyrene
 7	legs	fat	chyrene
-7	nose	berry	chyrene
-7	mouthfeel	bright	chyrene
-7	taste	sweet tobacco	chyrene
-8	color	pale purple	chyrene
 8	legs	fat	chyrene
 8	legs	short	chyrene
-8	nose	sweet tobacco	chyrene
-8	nose	smoky	chyrene
-8	taste	earthy	chyrene
-8	mouthfeel	full bodied	chyrene
-9	color	deep amber	chyrene
 9	legs	fat	chyrene
 9	legs	short	chyrene
-9	nose	sour	chyrene
-9	mouthfeel	tart	chyrene
-9	taste	citrus	chyrene
-10	color	pale straw	chyrene
 10	legs	long	chyrene
 10	legs	skinny	chyrene
-10	nose	citrus blossom	chyrene
-10	mouthfeel	lively	chyrene
-10	taste	tropical fruit	chyrene
-11	color	medium straw	chyrene
 11	legs	short	chyrene
 11	legs	fat	chyrene
-11	nose	grapey	chyrene
-11	mouthfeel	tart	chyrene
-11	taste	sour	chyrene
-11	nose	citrus	chyrene
-12	color	pale yellow	chyrene
 12	legs	fat	chyrene
 12	legs	short	chyrene
-12	nose	plastic	chyrene
-12	mouthfeel	astringent	chyrene
-12	taste	perfumed	chyrene
 1	legs	long	marta
 1	legs	skinny	marta
-1	color	deep tawny	marta
-1	mouthfeel	smooth	marta
 2	legs	long	marta
 2	legs	skinny	marta
-2	color	deep ruby	marta
-2	nose	red fruit	marta
 3	legs	long	marta
 3	legs	skinny	marta
-3	color	deep purple	marta
 4	legs	long	marta
 4	legs	skinny	marta
-4	color	deep purple	marta
 5	legs	long	marta
 5	legs	skinny	marta
-5	color	medium purple	marta
-6	color	pale copper	marta
 6	legs	short	marta
 6	legs	fat	marta
-7	color	deep ruby	marta
 7	legs	short	marta
 7	legs	fat	marta
-8	color	deep purple	marta
 8	legs	short	marta
 8	legs	fat	marta
-9	color	deep salmon	marta
 9	legs	short	marta
 9	legs	fat	marta
-10	color	deep straw	marta
 10	legs	short	marta
 10	legs	fat	marta
-11	color	pale yellow	marta
 11	legs	short	marta
 11	legs	fat	marta
-12	color	pale yellow	marta
 12	legs	short	marta
 12	legs	fat	marta
-1	color	deep ruby	rodrigo
 1	legs	long	rodrigo
 1	legs	skinny	rodrigo
-1	mouthfeel	edgy	rodrigo
-1	nose	coarse	rodrigo
-1	taste	sour	rodrigo
-2	color	deep purple	rodrigo
 2	legs	short	rodrigo
 2	legs	skinny	rodrigo
-2	mouthfeel	rigid	rodrigo
-2	mouthfeel	lively	rodrigo
-2	nose	lively	rodrigo
-2	taste	lively	rodrigo
-3	color	deep garnet	rodrigo
 3	legs	long	rodrigo
 3	legs	fat	rodrigo
-3	mouthfeel	astringent	rodrigo
-3	mouthfeel	jammy	rodrigo
-3	nose	fresh	rodrigo
-3	taste	grapey	rodrigo
-4	color	pale purple	rodrigo
 4	legs	long	rodrigo
 4	legs	skinny	rodrigo
-4	mouthfeel	short	rodrigo
-4	nose	flat	rodrigo
-4	taste	spicy	rodrigo
-5	color	pale ruby	rodrigo
 5	legs	long	rodrigo
 5	legs	skinny	rodrigo
-5	mouthfeel	zippy	rodrigo
-5	mouthfeel	jammy	rodrigo
-5	nose	polished	rodrigo
-5	taste	grapey	rodrigo
-6	color	pale pink	rodrigo
 6	legs	fat	rodrigo
 6	legs	short	rodrigo
-6	mouthfeel	dense	rodrigo
-6	mouthfeel	powefull	rodrigo
-6	nose	citrus	rodrigo
-6	taste	citrus	rodrigo
-7	color	pale purple	rodrigo
 7	legs	fat	rodrigo
 7	legs	short	rodrigo
-7	mouthfeel	concentrated	rodrigo
-7	nose	fresh	rodrigo
-7	taste	grapey	rodrigo
-8	color	medium ruby	rodrigo
 8	legs	short	rodrigo
 8	legs	fat	rodrigo
-8	mouthfeel	opulent	rodrigo
-8	nose	grapey	rodrigo
-8	taste	grapey	rodrigo
-9	color	deep salmon	rodrigo
 9	legs	long	rodrigo
 9	legs	skinny	rodrigo
-9	mouthfeel	finesse	rodrigo
-9	mouthfeel	soft	rodrigo
-9	nose	juicy	rodrigo
-9	taste	juicy	rodrigo
-10	color	pale yellow	rodrigo
 10	legs	long	rodrigo
 10	legs	skinny	rodrigo
-10	mouthfeel	extracted	rodrigo
-10	nose	citrus blossom	rodrigo
-10	taste	citrus blossom	rodrigo
-11	color	medium straw	rodrigo
 11	legs	fat	rodrigo
 11	legs	short	rodrigo
-11	mouthfeel	thin	rodrigo
-11	nose	juicy	rodrigo
-11	taste	juicy	rodrigo
-12	color	pale straw	rodrigo
 12	legs	fat	rodrigo
 12	legs	short	rodrigo
-12	mouthfeel	delicate	rodrigo
-12	nose	stone fruit	rodrigo
-12	taste	perfumed	rodrigo
-1	nose	flower	grace
-1	nose	flower	grace
-1	color	deep copper	grace
-1	mouthfeel	grippy	grace
-1	taste	spicy	grace
-1	taste	bright	grace
 1	legs	long	grace
 1	legs	skinny	grace
-2	nose	smoky	grace
-2	nose	hot	grace
-2	color	medium garnet	grace
-2	mouthfeel	complex	grace
-2	mouthfeel	bitter	grace
-2	taste	ripe	grace
-2	taste	tart	grace
 2	legs	long	grace
 2	legs	skinny	grace
-3	nose	nutty	grace
-3	color	medium ruby	grace
-3	mouthfeel	leathery	grace
-3	mouthfeel	acidic	grace
-3	taste	rubber	grace
-3	taste	grassy	grace
 3	legs	long	grace
 3	legs	skinny	grace
-4	nose	sweet	grace
-4	nose	juicy	grace
-4	color	deep ruby	grace
-4	mouthfeel	bright	grace
-4	mouthfeel	dry	grace
-4	taste	grassy	grace
-4	taste	clove	grace
 4	legs	long	grace
 4	legs	skinny	grace
-5	color	pale ruby	grace
-5	mouthfeel	dry	grace
-5	mouthfeel	rigid	grace
 5	legs	short	grace
 5	legs	fat	grace
-6	nose	perfumed	grace
-6	nose	berry	grace
-6	color	pale pink	grace
-6	mouthfeel	soft	grace
-6	taste	fruity	grace
 6	legs	short	grace
 6	legs	skinny	grace
-7	nose	plastic	grace
-7	color	pale purple	grace
-7	mouthfeel	edgy	grace
-7	taste	clove	grace
 7	legs	short	grace
 7	legs	fat	grace
-8	nose	mineral	grace
-8	color	deep purple	grace
-8	mouthfeel	bitter	grace
-8	taste	tart	grace
-8	taste	ripe	grace
 8	legs	long	grace
 8	legs	skinny	grace
-9	nose	toasty	grace
-9	color	medium copper	grace
-9	mouthfeel	smooth	grace
-9	taste	flower	grace
-9	taste	juicy	grace
 9	legs	long	grace
 9	legs	skinny	grace
-10	nose	fleshy	grace
-10	nose	blossom	grace
-10	nose	creamy	grace
-10	color	pale straw	grace
-10	mouthfeel	velvety	grace
-10	taste	flowery	grace
-10	taste	tart	grace
 10	legs	short	grace
-11	nose	grapey	grace
-11	nose	perfumed	grace
-11	color	pale straw	grace
-11	mouthfeel	soft	grace
-11	mouthfeel	smooth	grace
-11	taste	grapey	grace
-11	taste	chewy	grace
-12	nose	perfumed	grace
-12	nose	sweet	grace
-12	color	medium yellow	grace
-12	mouthfeel	structured	grace
-12	taste	flower	grace
-12	taste	spicy	grace
 12	legs	long	grace
 12	legs	skinny	grace
 1	legs	long	mikayla
 1	legs	skinny	mikayla
-1	color	deep tawny	mikayla
-1	nose	tart	mikayla
-1	nose	velvety	mikayla
-1	nose	plummy	mikayla
-1	mouthfeel	chewy	mikayla
-1	mouthfeel	soft	mikayla
-1	taste	vegetal	mikayla
 2	legs	long	mikayla
 2	legs	skinny	mikayla
-2	color	medium ruby	mikayla
-2	nose	dill	mikayla
-2	nose	stalky	mikayla
+3	legs	long	mikayla
+3	legs	skinny	mikayla
+4	legs	skinny	mikayla
+5	legs	long	mikayla
+5	legs	skinny	mikayla
+6	legs	long	mikayla
+6	legs	fat	mikayla
+6	legs	short	mikayla
+7	legs	fat	mikayla
+8	legs	short	mikayla
+8	legs	fat	mikayla
+9	legs	fat	mikayla
+9	legs	short	mikayla
+10	legs	fat	mikayla
+10	legs	short	mikayla
+11	legs	fat	mikayla
+11	legs	short	mikayla
+12	legs	short	mikayla
+1	legs	long	isidora
+1	legs	fat	isidora
+2	legs	short	isidora
+2	legs	skinny	isidora
+3	legs	long	isidora
+3	legs	fat	isidora
+4	legs	short	isidora
+4	legs	fat	isidora
+5	legs	long	isidora
+5	legs	fat	isidora
+6	legs	long	isidora
+6	legs	fat	isidora
+7	legs	short	isidora
+7	legs	skinny	isidora
+8	legs	short	isidora
+8	legs	fat	isidora
+9	legs	long	isidora
+9	legs	skinny	isidora
+10	legs	long	isidora
+10	legs	skinny	isidora
+11	legs	short	isidora
+11	legs	fat	isidora
+12	legs	long	isidora
+12	legs	fat	isidora
+1	mouthfeel	mellow	raissa
+1	mouthfeel	delicate	raissa
+2	mouthfeel	astringent	raissa
+4	mouthfeel	astringent	raissa
+6	mouthfeel	velvety	raissa
+6	mouthfeel	round	raissa
+7	mouthfeel	tart	raissa
+8	mouthfeel	velvety	raissa
+10	mouthfeel	fresh	raissa
+11	mouthfeel	lightbodied	raissa
+12	mouthfeel	delicate	raissa
+1	mouthfeel	short	margot
+1	mouthfeel	thin	margot
+1	mouthfeel	coarse	margot
+2	mouthfeel	aggressive	margot
+2	mouthfeel	astringent	margot
+3	mouthfeel	complex	margot
+3	mouthfeel	round	margot
+4	mouthfeel	grippy	margot
+4	mouthfeel	aggressive	margot
+4	mouthfeel	austere	margot
+4	mouthfeel	thin	margot
+5	mouthfeel	angular	margot
+5	mouthfeel	bright	margot
+6	mouthfeel	bright	margot
+6	mouthfeel	crisp	margot
+7	mouthfeel	harsh	margot
+7	mouthfeel	angular	margot
+7	mouthfeel	tart	margot
+8	mouthfeel	fullbodied	margot
+8	mouthfeel	structured	margot
+9	mouthfeel	silky	margot
+10	mouthfeel	delicate	margot
+10	mouthfeel	fresh	margot
+10	mouthfeel	polished	margot
+11	mouthfeel	lean	margot
+11	mouthfeel	zippy	margot
+12	mouthfeel	astringent	margot
+12	mouthfeel	thin	margot
+1	mouthfeel	cassis	barbara
+1	mouthfeel	smooth	barbara
+2	mouthfeel	bitter	barbara
+2	mouthfeel	harsh	barbara
+2	mouthfeel	coarse	barbara
+2	mouthfeel	burn	barbara
+3	mouthfeel	chocolate	barbara
+3	mouthfeel	smooth	barbara
+4	mouthfeel	silky	barbara
+4	mouthfeel	delicate	barbara
+5	mouthfeel	racy	barbara
+5	mouthfeel	rigid	barbara
+6	mouthfeel	bright	barbara
+6	mouthfeel	fresh	barbara
+7	mouthfeel	agressive	barbara
+8	mouthfeel	burn	barbara
+9	mouthfeel	soft	barbara
+10	mouthfeel	zesty	barbara
+11	mouthfeel	zesty	barbara
+1	mouthfeel	lightbodied	cora
+4	mouthfeel	astingent	cora
+7	mouthfeel	edgy	cora
+9	mouthfeel	flat	cora
+10	mouthfeel	fresh	cora
+1	mouthfeel	firm	dennis
+1	mouthfeel	jammy	dennis
+1	mouthfeel	coarse	dennis
+2	mouthfeel	closed	dennis
+2	mouthfeel	harsh	dennis
+2	mouthfeel	astringent	dennis
+3	mouthfeel	complex	dennis
+3	mouthfeel	powerful	dennis
+4	mouthfeel	rubber	dennis
+4	mouthfeel	chewy	dennis
+4	mouthfeel	austere	dennis
+5	mouthfeel	jammy	dennis
+5	mouthfeel	leathery	dennis
+6	mouthfeel	bright	dennis
+6	mouthfeel	elegant	dennis
+6	mouthfeel	opulent	dennis
+7	mouthfeel	rigid	dennis
+7	mouthfeel	firm	dennis
+8	mouthfeel	jammy	dennis
+8	mouthfeel	structured	dennis
+9	mouthfeel	silky	dennis
+9	mouthfeel	clean	dennis
+10	mouthfeel	delicate	dennis
+10	mouthfeel	crisp	dennis
+11	mouthfeel	lightbodied	dennis
+11	mouthfeel	lean	dennis
+11	mouthfeel	zippy	dennis
+12	mouthfeel	nerve	dennis
+12	mouthfeel	austere	dennis
+1	mouthfeel	flabby	anj
+1	mouthfeel	flat	anj
+2	mouthfeel	astringent	anj
+2	mouthfeel	aggressive	anj
+2	mouthfeel	closed	anj
+3	mouthfeel	angular	anj
+3	mouthfeel	firm	anj
+4	mouthfeel	bitter	anj
+4	mouthfeel	thin	anj
+4	mouthfeel	grippy	anj
+1	mouthfeel	flat	unknownguy
+1	mouthfeel	lightbodied	chiara
+2	mouthfeel	acidic	chiara
+2	mouthfeel	minerality	chiara
+4	mouthfeel	tannin	chiara
+5	mouthfeel	thick	chiara
+5	mouthfeel	rich	chiara
+7	mouthfeel	tannin	chiara
+7	mouthfeel	tight	chiara
+8	mouthfeel	acidity	chiara
+10	mouthfeel	fresh	chiara
+11	mouthfeel	delicate	chiara
+1	mouthfeel	firm	benedict
+1	mouthfeel	fallenover	benedict
+1	mouthfeel	hot	benedict
+2	mouthfeel	leathery	benedict
+2	mouthfeel	edgy	benedict
+2	mouthfeel	jammy	benedict
+3	mouthfeel	harsh	benedict
+3	mouthfeel	racy	benedict
+3	mouthfeel	hot	benedict
+4	mouthfeel	racy	benedict
+4	mouthfeel	jammy	benedict
+5	mouthfeel	chewy	benedict
+5	mouthfeel	astringent	benedict
+5	mouthfeel	hot	benedict
+6	mouthfeel	supple	benedict
+6	mouthfeel	soft	benedict
+6	mouthfeel	jammy	benedict
+7	mouthfeel	voluptuous	benedict
+7	mouthfeel	crisp	benedict
+7	mouthfeel	burn	benedict
+8	mouthfeel	musky	benedict
+8	mouthfeel	zesty	benedict
+8	mouthfeel	burn	benedict
+9	mouthfeel	velvet	benedict
+9	mouthfeel	flat	benedict
+9	mouthfeel	jammy	benedict
+10	mouthfeel	grippy	benedict
+10	mouthfeel	skinny	benedict
+10	mouthfeel	legs	benedict
+11	mouthfeel	structured	benedict
+11	mouthfeel	lively	benedict
+11	mouthfeel	jammy	benedict
+12	mouthfeel	mellow	benedict
+12	mouthfeel	crisp	benedict
+12	mouthfeel	hot	benedict
+1	mouthfeel	sour	hanna
+1	mouthfeel	rich	hanna
+1	mouthfeel	grippy	hanna
+1	mouthfeel	firm	hanna
+2	mouthfeel	dense	hanna
+2	mouthfeel	firm	hanna
+3	mouthfeel	voluptuous	hanna
+4	mouthfeel	dense	hanna
+4	mouthfeel	rich	hanna
+4	mouthfeel	concentrated	hanna
+5	mouthfeel	dense	hanna
+5	mouthfeel	rich	hanna
+6	mouthfeel	lightbodied	hanna
+7	mouthfeel	lightbodied	hanna
+8	mouthfeel	rich	hanna
+8	mouthfeel	opulent	hanna
+9	mouthfeel	lightbodied	hanna
+10	mouthfeel	lightbodied	hanna
+10	mouthfeel	fresh	hanna
+11	mouthfeel	crisp	hanna
+11	mouthfeel	delicate	hanna
+12	mouthfeel	sour	hanna
+12	mouthfeel	tart	hanna
+12	mouthfeel	zesty	hanna
+1	mouthfeel	lightbodied	david
+2	mouthfeel	tannin	david
+2	mouthfeel	elegant	david
+2	mouthfeel	opulent	david
+2	mouthfeel	dense	david
+3	mouthfeel	dense	david
+3	mouthfeel	rich	david
+4	mouthfeel	mellow	david
+4	mouthfeel	complex	david
+5	mouthfeel	coarse	david
+5	mouthfeel	tight	david
+6	mouthfeel	lightbodied	david
+6	mouthfeel	finesse	david
+7	mouthfeel	angular	david
+7	mouthfeel	velvet	david
+8	mouthfeel	harsh	david
+9	mouthfeel	skinny	david
+9	mouthfeel	lightbodied	david
+9	mouthfeel	polished	david
+10	mouthfeel	smooth	david
+10	mouthfeel	thin	david
+11	mouthfeel	zesty	david
+11	mouthfeel	lightbodied	david
+2	mouthfeel	bitter	lisa
+3	mouthfeel	round	lisa
+4	mouthfeel	harsh	lisa
+5	mouthfeel	bitter	lisa
+7	mouthfeel	harsh	lisa
+7	mouthfeel	hot	lisa
+8	mouthfeel	burn	lisa
+12	mouthfeel	soft	lisa
+1	mouthfeel	burn	juliane
+1	mouthfeel	silky	juliane
+1	mouthfeel	tight	juliane
+1	mouthfeel	flabby	juliane
+2	mouthfeel	burn	juliane
+2	mouthfeel	harsh	juliane
+2	mouthfeel	firm	juliane
+2	mouthfeel	racy	juliane
+3	mouthfeel	jammy	juliane
+3	mouthfeel	structured	juliane
+3	mouthfeel	delicate	juliane
+3	mouthfeel	thin	juliane
+4	mouthfeel	burn	juliane
+4	mouthfeel	opulent	juliane
+4	mouthfeel	closed	juliane
+4	mouthfeel	nerve	juliane
+5	mouthfeel	jammy	juliane
+5	mouthfeel	coarse	juliane
+5	mouthfeel	austere	juliane
+5	mouthfeel	crisp	juliane
+6	mouthfeel	jammy	juliane
+6	mouthfeel	soft	juliane
+6	mouthfeel	lightbodied	juliane
+6	mouthfeel	flat	juliane
+7	mouthfeel	burn	juliane
+7	mouthfeel	rigid	juliane
+7	mouthfeel	elegant	juliane
+7	mouthfeel	soft	juliane
+8	mouthfeel	burn	juliane
+8	mouthfeel	firm	juliane
+8	mouthfeel	tight	juliane
+8	mouthfeel	racy	juliane
+9	mouthfeel	jammy	juliane
+9	mouthfeel	silky	juliane
+9	mouthfeel	elegant	juliane
+9	mouthfeel	flat	juliane
+10	mouthfeel	burn	juliane
+10	mouthfeel	smooth	juliane
+10	mouthfeel	delicate	juliane
+10	mouthfeel	thin	juliane
+11	mouthfeel	burn	juliane
+11	mouthfeel	grippy	juliane
+11	mouthfeel	polished	juliane
+11	mouthfeel	soft	juliane
+12	mouthfeel	jammy	juliane
+12	mouthfeel	firm	juliane
+12	mouthfeel	lightbodied	juliane
+12	mouthfeel	crisp	juliane
+1	mouthfeel	jammy	tamara
+1	mouthfeel	lean	tamara
+1	mouthfeel	thin	tamara
+1	mouthfeel	leathery	tamara
+2	mouthfeel	jammy	tamara
+2	mouthfeel	tart	tamara
+2	mouthfeel	elegant	tamara
+2	mouthfeel	structured	tamara
+3	mouthfeel	jammy	tamara
+3	mouthfeel	dilicate	tamara
+3	mouthfeel	rich	tamara
+3	mouthfeel	silky	tamara
+4	mouthfeel	jammy	tamara
+4	mouthfeel	soft	tamara
+4	mouthfeel	polished	tamara
+4	mouthfeel	silky	tamara
+5	mouthfeel	jammy	tamara
+5	mouthfeel	zippy	tamara
+5	mouthfeel	tight	tamara
+5	mouthfeel	firm	tamara
+6	mouthfeel	jammy	tamara
+6	mouthfeel	soft	tamara
+6	mouthfeel	elegant	tamara
+6	mouthfeel	velvety	tamara
+7	mouthfeel	jammy	tamara
+7	mouthfeel	lively	tamara
+7	mouthfeel	firm	tamara
+7	mouthfeel	smooth	tamara
+8	mouthfeel	jammy	tamara
+8	mouthfeel	zippy	tamara
+8	mouthfeel	opulent	tamara
+8	mouthfeel	grippy	tamara
+9	mouthfeel	delicate	tamara
+9	mouthfeel	soft	tamara
+9	mouthfeel	silky	tamara
+9	mouthfeel	jammy	tamara
+10	mouthfeel	elegant	tamara
+10	mouthfeel	flat	tamara
+10	mouthfeel	silky	tamara
+10	mouthfeel	jammy	tamara
+11	mouthfeel	elegant	tamara
+11	mouthfeel	flat	tamara
+11	mouthfeel	silky	tamara
+11	mouthfeel	jammy	tamara
+12	mouthfeel	elegant	tamara
+12	mouthfeel	flat	tamara
+12	mouthfeel	silky	tamara
+12	mouthfeel	jammy	tamara
+1	mouthfeel	cliffedge	chyrene
+1	mouthfeel	coarse	chyrene
+2	mouthfeel	firm	chyrene
+3	mouthfeel	soft	chyrene
+4	mouthfeel	powerful	chyrene
+5	mouthfeel	leathery	chyrene
+6	mouthfeel	bright	chyrene
+7	mouthfeel	bright	chyrene
+8	mouthfeel	fullbodied	chyrene
+9	mouthfeel	tart	chyrene
+10	mouthfeel	lively	chyrene
+11	mouthfeel	tart	chyrene
+12	mouthfeel	astringent	chyrene
+1	mouthfeel	smooth	marta
+1	mouthfeel	edgy	rodrigo
+2	mouthfeel	rigid	rodrigo
+2	mouthfeel	lively	rodrigo
+3	mouthfeel	astringent	rodrigo
+3	mouthfeel	jammy	rodrigo
+4	mouthfeel	short	rodrigo
+5	mouthfeel	zippy	rodrigo
+5	mouthfeel	jammy	rodrigo
+6	mouthfeel	dense	rodrigo
+6	mouthfeel	powefull	rodrigo
+7	mouthfeel	concentrated	rodrigo
+8	mouthfeel	opulent	rodrigo
+9	mouthfeel	finesse	rodrigo
+9	mouthfeel	soft	rodrigo
+10	mouthfeel	extracted	rodrigo
+11	mouthfeel	thin	rodrigo
+12	mouthfeel	delicate	rodrigo
+1	mouthfeel	grippy	grace
+2	mouthfeel	complex	grace
+2	mouthfeel	bitter	grace
+3	mouthfeel	leathery	grace
+3	mouthfeel	acidic	grace
+4	mouthfeel	bright	grace
+4	mouthfeel	dry	grace
+5	mouthfeel	dry	grace
+5	mouthfeel	rigid	grace
+6	mouthfeel	soft	grace
+7	mouthfeel	edgy	grace
+8	mouthfeel	bitter	grace
+9	mouthfeel	smooth	grace
+10	mouthfeel	velvety	grace
+11	mouthfeel	soft	grace
+11	mouthfeel	smooth	grace
+12	mouthfeel	structured	grace
+1	mouthfeel	chewy	mikayla
+1	mouthfeel	soft	mikayla
 2	mouthfeel	angular	mikayla
 2	mouthfeel	astringent	mikayla
 2	mouthfeel	short	mikayla
-3	color	medium purple	mikayla
-3	legs	long	mikayla
-3	legs	skinny	mikayla
-3	nose	stemmy	mikayla
 3	mouthfeel	nerve	mikayla
 3	mouthfeel	astringent	mikayla
 3	mouthfeel	angular	mikayla
-3	taste	extracted	mikayla
-4	legs	skinny	mikayla
-4	color	pale purple	mikayla
-4	nose	juicy	mikayla
 4	mouthfeel	silky	mikayla
 4	mouthfeel	supple	mikayla
 4	mouthfeel	delicate	mikayla
-4	mouthfeel	light bodied	mikayla
-4	taste	nutty	mikayla
-4	taste	clean	mikayla
-5	legs	long	mikayla
-5	legs	skinny	mikayla
-5	nose	hot	mikayla
+4	mouthfeel	lightbodied	mikayla
 5	mouthfeel	powerful	mikayla
 5	mouthfeel	aggressive	mikayla
 5	mouthfeel	short	mikayla
-5	taste	stammy	mikayla
 5	mouthfeel	opulent	mikayla
 5	mouthfeel	finesse	mikayla
-6	color	pale copper	mikayla
-6	legs	long	mikayla
-6	legs	fat	mikayla
-6	nose	cat pee	mikayla
 6	mouthfeel	polished	mikayla
 6	mouthfeel	delicate	mikayla
-6	legs	short	mikayla
-7	color	deep ruby	mikayla
-7	nose	sweet tobacco	mikayla
-7	legs	fat	mikayla
-7	nose	spicy	mikayla
 7	mouthfeel	velvety	mikayla
 7	mouthfeel	finesse	mikayla
-8	color	deep purple	mikayla
-8	legs	short	mikayla
-8	legs	fat	mikayla
-8	nose	flamboyant	mikayla
 8	mouthfeel	chewy	mikayla
 8	mouthfeel	sour	mikayla
-9	color	deep salmon	mikayla
-9	legs	fat	mikayla
-9	legs	short	mikayla
-9	taste	tropical	mikayla
-10	color	deep straw	mikayla
-10	legs	fat	mikayla
-10	legs	short	mikayla
 10	mouthfeel	chewy	mikayla
-10	taste	refined	mikayla
-11	color	pale yellow	mikayla
-11	legs	fat	mikayla
-11	legs	short	mikayla
-11	nose	tropical	mikayla
 11	mouthfeel	complex	mikayla
-12	color	pale yellow	mikayla
-12	legs	short	mikayla
-12	taste	coconut	mikayla
-1	color	deep garnet	isidora
-1	legs	long	isidora
-1	legs	fat	isidora
-1	nose	violet	isidora
-1	nose	casis	isidora
 1	mouthfeel	bright	isidora
 1	mouthfeel	muscular	isidora
 1	mouthfeel	burn	isidora
 1	mouthfeel	thin	isidora
-1	taste	spicy	isidora
 1	mouthfeel	short	isidora
-2	color	pale purple	isidora
-2	legs	short	isidora
-2	legs	skinny	isidora
-2	color	pale purple	isidora
-2	nose	berry	isidora
-2	nose	melon	isidora
-2	nose	rose	isidora
 2	mouthfeel	hot	isidora
 2	mouthfeel	aggressive	isidora
-2	taste	sour	isidora
-3	color	medium purple	isidora
-3	legs	long	isidora
-3	legs	fat	isidora
-3	nose	sweet tabaco	isidora
-3	nose	creamy	isidora
 3	mouthfeel	short	isidora
 3	mouthfeel	grippy	isidora
-3	taste	berry	isidora
-3	taste	white flowers	isidora
-4	color	medium purple	isidora
-4	legs	short	isidora
-4	legs	fat	isidora
-4	nose	vanilla	isidora
-4	nose	caramel	isidora
 4	mouthfeel	harsh	isidora
 4	mouthfeel	delicate	isidora
-4	taste	anise	isidora
-5	color	medium ruby	isidora
-5	legs	long	isidora
-5	legs	fat	isidora
-5	nose	cat's pee	isidora
-5	nose	berry	isidora
 5	mouthfeel	grippy	isidora
 5	mouthfeel	thin	isidora
-5	taste	juicy	isidora
-5	taste	spicy	isidora
-6	color	pale copper	isidora
-6	nose	perfumed	isidora
-6	nose	melon	isidora
-6	legs	long	isidora
-6	legs	fat	isidora
 6	mouthfeel	crisp	isidora
-6	taste	citrus	isidora
-6	taste	ginger	isidora
-7	color	medium ruby	isidora
-7	legs	short	isidora
-7	legs	thin	isidora
-7	nose	grappy	isidora
-7	taste	spicy	isidora
 7	mouthfeel	harsh	isidora
 7	mouthfeel	thin	isidora
-7	taste	eucalyptus	isidora
-8	color	medium purple	isidora
-8	legs	short	isidora
-8	legs	fat	isidora
-8	nose	smoky	isidora
-8	taste	earthy	isidora
 8	mouthfeel	juicy	isidora
-9	color	deep samon	isidora
-9	legs	long	isidora
-9	legs	thin	isidora
-9	taste	citrus blossom	isidora
-10	color	pale gold	isidora
-10	legs	long	isidora
-10	legs	thin	isidora
-10	nose	vanilla	isidora
-10	nose	citrus blossom	isidora
-10	taste	tropical fruit	isidora
 10	mouthfeel	short	isidora
 10	mouthfeel	elegant	isidora
 10	mouthfeel	fresh	isidora
 10	mouthfeel	soft	isidora
-11	color	pale yellow	isidora
-11	legs	short	isidora
-11	legs	fat	isidora
+11	mouthfeel	flabby	isidora
+12	mouthfeel	zesty	isidora
+1	nose	clean	raissa
+2	nose	musky	raissa
+3	nose	pepper	raissa
+4	nose	jammy	raissa
+4	nose	caramel	raissa
+4	nose	vanilla	raissa
+5	nose	petroleum	raissa
+6	nose	perfumed	raissa
+6	nose	bright	raissa
+7	nose	stalky	raissa
+8	nose	quinche	raissa
+8	nose	berry	raissa
+10	nose	perfumed	raissa
+10	nose	apple	raissa
+11	nose	citrus	raissa
+1	nose	earthy	margot
+2	nose	flamboyant	margot
+3	nose	rich	margot
+4	nose	thin	margot
+4	nose	juicy	margot
+5	nose	ripe	margot
+5	nose	plummy	margot
+6	nose	melon	margot
+7	nose	grapey	margot
+8	nose	sweettobacco	margot
+8	nose	smoky	margot
+9	nose	citrus	margot
+9	nose	zesty	margot
+10	nose	citrusblossom	margot
+11	nose	citrus	margot
+12	nose	plastic	margot
+1	nose	leather	barbara
+2	nose	redfruit	barbara
+2	nose	apple	barbara
+3	nose	ripe	barbara
+3	nose	plummy	barbara
+4	nose	berrys	barbara
+4	nose	rose	barbara
+5	nose	grapey	barbara
+5	nose	spicy	barbara
+6	nose	rose	barbara
+6	nose	melon	barbara
+7	nose	plastic	barbara
+7	nose	jalapeno	barbara
+8	nose	cassis	barbara
+8	nose	darkfruit	barbara
+8	nose	ripe	barbara
+9	nose	citrus	barbara
+10	nose	grassy	barbara
+10	nose	whiteflowers	barbara
+11	nose	stonefruit	barbara
+11	nose	tropicalfruit	barbara
+12	nose	citrus	barbara
+1	nose	musky	cora
+2	nose	smoky	cora
+3	nose	plummy	cora
+3	nose	pepper	cora
+4	nose	vanilla	cora
+5	nose	smoky	cora
+5	nose	petroleum	cora
+6	nose	sage	cora
+7	nose	stalky	cora
+8	nose	darkfruit	cora
+9	nose	earthy	cora
+9	nose	nutty	cora
+10	nose	apple	cora
+11	nose	whiteflower	cora
+11	nose	citrus	cora
+12	nose	asparagus	cora
+1	nose	redfruits	dennis
+2	nose	flamboyant	dennis
+2	nose	plummy	dennis
+3	nose	geranium	dennis
+3	nose	grapey	dennis
+4	nose	thin	dennis
+4	nose	juicy	dennis
+5	nose	darkfruit	dennis
+5	nose	jammy	dennis
+6	nose	juicy	dennis
+6	nose	melon	dennis
+6	nose	whiteflowers	dennis
+7	nose	thin	dennis
+7	nose	berry	dennis
+8	nose	sweettabaco	dennis
+8	nose	smoky	dennis
+8	nose	barnyard	dennis
+9	nose	crisp	dennis
+9	nose	plummy	dennis
+10	nose	cistrusblossom	dennis
+10	nose	grassy	dennis
+11	nose	grapy	dennis
+11	nose	citrus	dennis
+12	nose	plastic	dennis
+12	nose	flat	dennis
+1	nose	smoky	anj
+1	nose	plummy	anj
+2	nose	sweettabaco	anj
+3	nose	berry	anj
+3	nose	smoky	anj
+3	nose	spicy	anj
+4	nose	toasty	anj
+2	nose	petroleum	unknownguy
+1	nose	flower	chiara
+2	nose	woody	chiara
+3	nose	groundherbs	chiara
+4	nose	sweet	chiara
+6	nose	cheese	chiara
+6	nose	earthy	chiara
+10	nose	cheese	chiara
+11	nose	citrusblossom	chiara
+1	nose	coarse	benedict
+1	nose	fullbodied	benedict
+2	nose	darkfruit	benedict
+2	nose	cassis	benedict
+3	nose	rubber	benedict
+3	nose	harsh	benedict
+4	nose	pepper	benedict
+5	nose	dense	benedict
+6	nose	cheesy	benedict
+6	nose	catspee	benedict
+7	nose	rubber	benedict
+7	nose	redfruits	benedict
+8	nose	caramel	benedict
+8	nose	fleshy	benedict
+9	nose	sour	benedict
+9	nose	unctuous	benedict
+9	nose	opulent	benedict
+10	nose	catspee	benedict
+10	nose	grassy	benedict
+11	nose	grape	benedict
+11	nose	apple	benedict
+12	nose	violet	benedict
+12	nose	quince	benedict
+1	nose	fleshy	hanna
+1	nose	grippy	hanna
+1	nose	opulent	hanna
+2	nose	sour	hanna
+2	nose	wetasphalt	hanna
+3	nose	darkfruit	hanna
+3	nose	flamboyant	hanna
+3	nose	juicy	hanna
+3	nose	tart	hanna
+3	nose	fleshy	hanna
+4	nose	sour	hanna
+4	nose	fullbodied	hanna
+4	nose	zesty	hanna
+4	nose	jammy	hanna
+5	nose	plummy	hanna
+5	nose	ripe	hanna
+5	nose	jammy	hanna
+5	nose	rich	hanna
+6	nose	citrus	hanna
+6	nose	sour	hanna
+7	nose	wetasphalt	hanna
+7	nose	petroleum	hanna
+7	nose	fullbodied	hanna
+7	nose	sour	hanna
+8	nose	berry	hanna
+8	nose	redfruits	hanna
+8	nose	flamboyant	hanna
+8	nose	ripe	hanna
+9	nose	yeast	hanna
+9	nose	concentrated	hanna
+9	nose	sour	hanna
+9	nose	catspee	hanna
+10	nose	soft	hanna
+10	nose	crisp	hanna
+10	nose	delicate	hanna
+10	nose	melon	hanna
+10	nose	whiteflowers	hanna
+10	nose	lightbodied	hanna
+11	nose	juicy	hanna
+11	nose	citrus	hanna
+11	nose	complex	hanna
+11	nose	clean	hanna
+12	nose	sour	hanna
+12	nose	citrusblossom	hanna
+12	nose	quince	hanna
+1	nose	vegetal	david
+2	nose	tar	david
+2	nose	smoky	david
+3	nose	rose	david
+4	nose	redfruits	david
+4	nose	jammy	david
+5	nose	ripe	david
+5	nose	jammy	david
+6	nose	whiteflowers	david
+6	nose	rose	david
+7	nose	oily	david
+7	nose	ripe	david
+8	nose	ripe	david
+9	nose	whiteflowers	david
+10	nose	bright	david
+10	nose	incense	david
+11	nose	perfumed	david
+12	nose	grassy	david
+12	nose	eucalyptus	david
+4	nose	hot	lisa
+5	nose	hot	lisa
+6	nose	citrus	lisa
+9	nose	strawberry	lisa
+9	nose	lightbodied	lisa
+10	nose	citrus	lisa
+11	nose	whiteflowers	lisa
+12	nose	lightbodied	lisa
+12	nose	whiteflowers	lisa
+1	nose	redfruit	juliane
+2	nose	coarse	juliane
+3	nose	perfumed	juliane
+4	nose	berry	juliane
+5	nose	pepper	juliane
+6	nose	grapey	juliane
+7	nose	spicy	juliane
+8	nose	rose	juliane
+9	nose	jammy	juliane
+10	nose	tropicalfruit	juliane
+11	nose	yeast	juliane
+12	nose	citrusblossom	juliane
+1	nose	grapey	tamara
+2	nose	berry	tamara
+3	nose	grapey	tamara
+4	nose	grapey	tamara
+5	nose	grapey	tamara
+6	nose	grapey	tamara
+7	nose	grapey	tamara
+8	nose	grapey	tamara
+9	nose	flamboyant	tamara
+10	nose	rubber	tamara
+11	nose	juciy	tamara
+12	nose	juicy	tamara
+1	nose	sour	chyrene
+2	nose	sour	chyrene
+3	nose	rubber	chyrene
+4	nose	berry	chyrene
+5	nose	catspee	chyrene
+6	nose	cheesy	chyrene
+7	nose	berry	chyrene
+8	nose	sweettobacco	chyrene
+8	nose	smoky	chyrene
+9	nose	sour	chyrene
+10	nose	citrusblossom	chyrene
+11	nose	grapey	chyrene
+11	nose	citrus	chyrene
+12	nose	plastic	chyrene
+2	nose	redfruit	marta
+1	nose	coarse	rodrigo
+2	nose	lively	rodrigo
+3	nose	fresh	rodrigo
+4	nose	flat	rodrigo
+5	nose	polished	rodrigo
+6	nose	citrus	rodrigo
+7	nose	fresh	rodrigo
+8	nose	grapey	rodrigo
+9	nose	juicy	rodrigo
+10	nose	citrusblossom	rodrigo
+11	nose	juicy	rodrigo
+12	nose	stonefruit	rodrigo
+1	nose	flower	grace
+1	nose	flower	grace
+2	nose	smoky	grace
+2	nose	hot	grace
+3	nose	nutty	grace
+4	nose	sweet	grace
+4	nose	juicy	grace
+6	nose	perfumed	grace
+6	nose	berry	grace
+7	nose	plastic	grace
+8	nose	mineral	grace
+9	nose	toasty	grace
+10	nose	fleshy	grace
+10	nose	blossom	grace
+10	nose	creamy	grace
+11	nose	grapey	grace
+11	nose	perfumed	grace
+12	nose	perfumed	grace
+12	nose	sweet	grace
+1	nose	tart	mikayla
+1	nose	velvety	mikayla
+1	nose	plummy	mikayla
+2	nose	dill	mikayla
+2	nose	stalky	mikayla
+3	nose	stemmy	mikayla
+4	nose	juicy	mikayla
+5	nose	hot	mikayla
+6	nose	catpee	mikayla
+7	nose	sweettobacco	mikayla
+7	nose	spicy	mikayla
+8	nose	flamboyant	mikayla
+11	nose	tropical	mikayla
+1	nose	violet	isidora
+1	nose	casis	isidora
+2	nose	berry	isidora
+2	nose	melon	isidora
+2	nose	rose	isidora
+3	nose	sweettabaco	isidora
+3	nose	creamy	isidora
+4	nose	vanilla	isidora
+4	nose	caramel	isidora
+5	nose	cat'spee	isidora
+5	nose	berry	isidora
+6	nose	perfumed	isidora
+6	nose	melon	isidora
+7	nose	grappy	isidora
+8	nose	smoky	isidora
+10	nose	vanilla	isidora
+10	nose	citrusblossom	isidora
 11	nose	grappy	isidora
 11	nose	melon	isidora
-11	mouthfeel	flabby	isidora
-11	taste	grappy	isidora
-12	color	medium straw	isidora
-12	legs	long	isidora
-12	legs	fat	isidora
-12	nose	citrus blossom	isidora
-12	nose 	rose	isidora
+12	nose	citrusblossom	isidora
+12	nose	rose	isidora
 12	nose	grappy	isidora
+2	taste	oily	raissa
+2	taste	sour	raissa
+3	taste	rubber	raissa
+3	taste	musky	raissa
+4	taste	musky	raissa
+5	taste	oily	raissa
+6	taste	apple	raissa
+7	taste	charcoal	raissa
+8	taste	darkfruit	raissa
+10	taste	grapey	raissa
+10	taste	apple	raissa
+11	taste	grapey	raissa
+12	taste	apple	raissa
+1	taste	grapey	margot
+2	taste	closed	margot
+3	taste	ripe	margot
+3	taste	nutmeg	margot
+4	taste	quince	margot
+5	taste	stemmy	margot
+6	taste	green	margot
+6	taste	citrus	margot
+7	taste	stemmy	margot
+7	taste	berry	margot
+8	taste	darkfruit	margot
+8	taste	earthy	margot
+9	taste	refined	margot
+9	taste	juicy	margot
+9	taste	whiteflowers	margot
+10	taste	clean	margot
+10	taste	citrus	margot
+11	taste	grapey	margot
+11	taste	bright	margot
+12	taste	whiteflowers	margot
+12	taste	citrus	margot
+1	taste	minerality	barbara
+2	taste	plastic	barbara
+4	taste	sage	barbara
+5	taste	smoky	barbara
+5	taste	stalky	barbara
+7	taste	rigid	barbara
+7	taste	minerality	barbara
+8	taste	stemmy	barbara
+8	taste	leathery	barbara
+8	taste	minerality	barbara
+9	taste	rose	barbara
+11	taste	apple	barbara
+11	taste	lavender	barbara
+12	taste	stonefruit	barbara
+2	taste	sour	cora
+3	taste	smooth	cora
+4	taste	musky	cora
+5	taste	firm	cora
+6	taste	apple	cora
+6	taste	berry	cora
+7	taste	charcoal	cora
+8	taste	darkfruit	cora
+9	taste	nutmeg	cora
+10	taste	apple	cora
+10	taste	quince	cora
+12	taste	apple	cora
+1	taste	plastics	dennis
+1	taste	berry	dennis
+2	taste	casis	dennis
+3	taste	ripe	dennis
+3	taste	jammy	dennis
+3	taste	nutmeg	dennis
+4	taste	zippy	dennis
+5	taste	extracted	dennis
+5	taste	jalapenos	dennis
+5	taste	stemmy	dennis
+6	taste	green	dennis
+6	taste	grapefruit	dennis
+7	taste	stemmy	dennis
+7	taste	zesty	dennis
+8	taste	darkfruit	dennis
+8	taste	earthy	dennis
+8	taste	smoky	dennis
+9	taste	apple	dennis
+9	taste	stonefruit	dennis
+9	taste	juicy	dennis
+10	taste	citrus	dennis
+10	taste	lively	dennis
+10	taste	mellow	dennis
+11	taste	pineapple	dennis
+11	taste	gooseberry	dennis
+12	taste	perfumed	dennis
+12	taste	soft	dennis
+1	taste	flabby	anj
+3	taste	sweet	unknownguy
+3	taste	fruity	unknownguy
+1	taste	perfumed	chiara
+1	taste	citrus	chiara
+1	taste	acidity	chiara
+2	taste	anise	chiara
+3	taste	berry	chiara
+3	taste	redfruits	chiara
+5	taste	ripe	chiara
+6	taste	flowers	chiara
+6	taste	fruity	chiara
+8	taste	juicy	chiara
+9	taste	sweet	chiara
+9	taste	fruity	chiara
+9	taste	flowers	chiara
+11	taste	fruity	chiara
+12	taste	flowers	chiara
+12	taste	herbs	chiara
+1	taste	plummy	benedict
+2	taste	edgy	benedict
+3	taste	opulent	benedict
+4	taste	chocolate	benedict
+4	taste	earthy	benedict
+5	taste	petroleum	benedict
+6	taste	cassis	benedict
+6	taste	citrus	benedict
+7	taste	nutmeg	benedict
+7	taste	redfruits	benedict
+8	taste	charcoal	benedict
+8	taste	creamy	benedict
+9	taste	coconut	benedict
+9	taste	polished	benedict
+10	taste	citrusblossom	benedict
+10	taste	green	benedict
+11	taste	sour	benedict
+11	taste	asparagus	benedict
+12	taste	cheesy	benedict
+12	taste	green	benedict
+1	taste	earthy	hanna
+1	taste	fleshy	hanna
+2	taste	earthy	hanna
+2	taste	graphite	hanna
+2	taste	sour	hanna
+2	taste	ripe	hanna
+3	taste	delicate	hanna
+3	taste	elegant	hanna
+3	taste	rich	hanna
+3	taste	berry	hanna
+4	taste	berry	hanna
+4	taste	juicy	hanna
+4	taste	opulent	hanna
+5	taste	plummy	hanna
+5	taste	sand	hanna
+5	taste	soft	hanna
+6	taste	tropicalfruit	hanna
+7	taste	smooth	hanna
+7	taste	plummy	hanna
+8	taste	berry	hanna
+8	taste	dense	hanna
+9	taste	peach	hanna
+9	taste	juicy	hanna
+9	taste	crisp	hanna
+9	taste	tart	hanna
+10	taste	stonefruit	hanna
+11	taste	tart	hanna
+12	taste	stonefruit	hanna
+12	taste	whiteflowers	hanna
+1	taste	citrus	david
+1	taste	sour	david
+2	taste	charcoal	david
+3	taste	quince	david
+3	taste	plummy	david
+3	taste	sweet	david
+4	taste	zesty	david
+4	taste	juicy	david
+4	taste	ripe	david
+5	taste	grassy	david
+6	taste	flamboyant	david
+6	taste	tropicalfruit	david
+6	taste	coconut	david
+7	taste	spicy	david
+7	taste	clove	david
+8	taste	smoky	david
+8	taste	vegetal	david
+8	taste	earthy	david
+8	taste	stemmy	david
+9	taste	grapey	david
+10	taste	tropicalfruit	david
+10	taste	stemmy	david
+11	taste	grapey	david
+11	taste	fleshy	david
+12	taste	smoky	david
+12	taste	stemmy	david
+1	taste	thin	lisa
+1	taste	austere	lisa
+1	taste	sour	lisa
+2	taste	sour	lisa
+3	taste	redfruits	lisa
+4	taste	burn	lisa
+5	taste	sour	lisa
+6	taste	thin	lisa
+6	taste	citrus	lisa
+7	taste	sour	lisa
+7	taste	austere	lisa
+8	taste	darkfruit	lisa
+8	taste	sour	lisa
+9	taste	jucy	lisa
+9	taste	ripe	lisa
+9	taste	short	lisa
+10	taste	cliffedge	lisa
+10	taste	jucy	lisa
+11	taste	citrus	lisa
+11	taste	delicate	lisa
+12	taste	lightbodied	lisa
+12	taste	melon	lisa
+1	taste	redfruit	juliane
+2	taste	rubber	juliane
+3	taste	citrus	juliane
+4	taste	flamboyant	juliane
+5	taste	nutty	juliane
+6	taste	rose	juliane
+7	taste	spicy	juliane
+8	taste	delicate	juliane
+9	taste	juicy	juliane
+10	taste	ripe	juliane
+11	taste	tropicalfruit	juliane
+12	taste	rubber	juliane
+1	taste	grapey	tamara
+1	taste	elegant	tamara
+1	taste	sour	tamara
+2	taste	darkfruit	tamara
+2	taste	grapey	tamara
+2	taste	sour	tamara
+3	taste	plummy	tamara
+3	taste	flamboyant	tamara
+3	taste	ripe	tamara
+3	taste	nutmeg	tamara
+4	taste	grapey	tamara
+5	taste	grapey	tamara
+5	taste	ripe	tamara
+6	taste	musky	tamara
+6	taste	flamboyant	tamara
+6	taste	sweettobaco	tamara
+7	taste	grapey	tamara
+7	taste	stonefruit	tamara
+8	taste	grapey	tamara
+8	taste	plummy	tamara
+9	taste	juciy	tamara
+9	taste	stonefruit	tamara
+10	taste	juciy	tamara
+10	taste	flamboyant	tamara
+11	taste	tropicalfruit	tamara
+11	taste	citrus	tamara
+12	taste	plummy	tamara
+12	taste	stonefruit	tamara
+12	taste	apple	tamara
+12	taste	flamboyant	tamara
+12	taste	ripe	tamara
+1	taste	plummy	chyrene
+2	taste	soft	chyrene
+3	taste	barnyard	chyrene
+3	taste	pepper	chyrene
+4	taste	stalky	chyrene
+5	taste	stemmy	chyrene
+6	taste	green	chyrene
+7	taste	sweettobacco	chyrene
+8	taste	earthy	chyrene
+9	taste	citrus	chyrene
+10	taste	tropicalfruit	chyrene
+11	taste	sour	chyrene
+12	taste	perfumed	chyrene
+1	taste	sour	rodrigo
+2	taste	lively	rodrigo
+3	taste	grapey	rodrigo
+4	taste	spicy	rodrigo
+5	taste	grapey	rodrigo
+6	taste	citrus	rodrigo
+7	taste	grapey	rodrigo
+8	taste	grapey	rodrigo
+9	taste	juicy	rodrigo
+10	taste	citrusblossom	rodrigo
+11	taste	juicy	rodrigo
+12	taste	perfumed	rodrigo
+1	taste	spicy	grace
+1	taste	bright	grace
+2	taste	ripe	grace
+2	taste	tart	grace
+3	taste	rubber	grace
+3	taste	grassy	grace
+4	taste	grassy	grace
+4	taste	clove	grace
+6	taste	fruity	grace
+7	taste	clove	grace
+8	taste	tart	grace
+8	taste	ripe	grace
+9	taste	flower	grace
+9	taste	juicy	grace
+10	taste	flowery	grace
+10	taste	tart	grace
+11	taste	grapey	grace
+11	taste	chewy	grace
+12	taste	flower	grace
+12	taste	spicy	grace
+1	taste	vegetal	mikayla
+3	taste	extracted	mikayla
+4	taste	nutty	mikayla
+4	taste	clean	mikayla
+5	taste	stammy	mikayla
+9	taste	tropical	mikayla
+10	taste	refined	mikayla
+12	taste	coconut	mikayla
+1	taste	spicy	isidora
+2	taste	sour	isidora
+3	taste	berry	isidora
+3	taste	whiteflowers	isidora
+4	taste	anise	isidora
+5	taste	juicy	isidora
+5	taste	spicy	isidora
+6	taste	citrus	isidora
+6	taste	ginger	isidora
+7	taste	spicy	isidora
+7	taste	eucalyptus	isidora
+8	taste	earthy	isidora
+9	taste	citrusblossom	isidora
+10	taste	tropicalfruit	isidora
+11	taste	grappy	isidora
 12	taste	perfumed	isidora
-12	mouthfeel	zesty	isidora
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
