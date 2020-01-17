@@ -17,7 +17,7 @@ data("varespec")
 1) Perform an NMDS analysis using the varespec dataset, based on the Bray-Curtis distance (see ?metaMDS).
 ```{r}
 # compute distance matrix based on Bray Curtis distances
-varespec.bc.dist.nmds2 <- metaMDS(comm = varespec,
+varespec.bc.dist.nmds <- metaMDS(comm = varespec,
                                  distance ="bray",
                                  k = 2,
                                  trymax = 1000,
